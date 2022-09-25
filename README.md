@@ -38,9 +38,9 @@
 
   <p align="center">
     A simple web-blog CMS with <b>Admin</b>LTE Admin Panel
-
-    <p><b>Created</b>: December 15, 2017 | <b>By</b>: <a href="https://codecanyon.net/user/nath4n">nath4n</a> | <b>Email</b>: <a href="mailto:hashcat80@gmail.com">hashcat80@gmail.com</a>
-    <p/>
+    <br>
+    <br><b>Created</b>: December 15, 2017 | <b>By</b>: <a href="https://codecanyon.net/user/nath4n">nath4n</a> | <b>Email</b>: <a href="mailto:hashcat80@gmail.com">hashcat80@gmail.com</a>
+    <br/>
 
     <a href="https://github.com/arduino-uno/talif-blog"><strong>Explore the docs »</strong></a>
     <br/>

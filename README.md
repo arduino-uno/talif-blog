@@ -34,14 +34,15 @@
     <img src="./images/blog-logo.png" alt="Logo">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Simple Web-Blog CMS</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
+    A simple web-blog CMS with <b>Admin</b>LTE Admin Panel
+    <b>Created</b>: December 15, 2017 | <b>By</b>: CodeGlamour | <b>Email</b>: hashcat80@gmail.com
+    <br/>
     <a href="https://github.com/arduino-uno/talif-blog"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
+    <br/>
+    <br/>
     <a href="https://github.com/arduino-uno/talif-blog">View Demo</a>
     ·
     <a href="https://github.com/arduino-uno/talif-blog/issues">Report Bug</a>

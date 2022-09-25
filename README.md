@@ -39,7 +39,7 @@
   <p align="center">
     A simple web-blog CMS with <b>Admin</b>LTE Admin Panel
     <br/>
-    <b>Created</b>: December 15, 2017 | <b>By</b>: CodeGlamour | <b>Email</b>: hashcat80@gmail.com
+    <b>Created</b>: December 15, 2017 | <b>By</b>: nath4n | <b>Email</b>: <a href="mailto:hashcat80@gmail.com">hashcat80@gmail.com</a>
     <br/>
     <a href="https://github.com/arduino-uno/talif-blog"><strong>Explore the docs »</strong></a>
     <br/>

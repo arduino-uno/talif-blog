@@ -13,8 +13,8 @@ var table_activities = $('#activity_data').DataTable({
         {data: 'ip_address', className: 'font-weight-bold', name: 'ip_address', targets:2},
         {data: {icon:'icon', message:'message'}, className: 'font-weight-normal', name: 'message', targets:3,
             render: function(data,type,full,meta) {
-                return '<div class="info-box">' +
-                    '<span class="info-box-icon bg-info elevation-1"><i class="fas ' + data.icon + '"></i></span>' +
+                return '<div class="info-box" style="min-height:40px;">' +
+                    '<span class="info-box-icon bg-info elevation-1" style="height:40px;width:40px;"><i class="fas ' + data.icon + '"></i></span>' +
                     '<span class="info-box-text justify-content-center align-self-center m-2">' + data.message + '</span>' +
                     '</div>';
             }

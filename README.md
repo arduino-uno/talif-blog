@@ -2,7 +2,7 @@
 description: A Project Documentation for User
 ---
 
-# AdminLTE - تأليف Documentation
+# AdminLTE - تأليف Docs
 
 [![Contributors](https://img.shields.io/github/contributors/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/graphs/contributors) [![Forks](https://img.shields.io/github/forks/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/network/members) [![Stargazers](https://img.shields.io/github/stars/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/stargazers) [![Issues](https://img.shields.io/github/issues/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/issues) [![MIT License](https://img.shields.io/github/license/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/blob/master/LICENSE.txt) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge\&logo=linkedin\&colorB=555)](https://linkedin.com/in/agah-nata)
 
@@ -60,14 +60,10 @@ Use the `BLANK_README.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Next](https://img.shields.io/badge/next.js-000000?style=for-the-badge\&logo=nextdotjs\&logoColor=white)](https://nextjs.org/)
-* [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge\&logo=react\&logoColor=61DAFB)](https://reactjs.org/)
-* [![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge\&logo=vuedotjs\&logoColor=4FC08D)](https://vuejs.org/)
-* [![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge\&logo=angular\&logoColor=white)](https://angular.io/)
-* [![Svelte](https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge\&logo=svelte\&logoColor=FF3E00)](https://svelte.dev/)
-* [![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge\&logo=laravel\&logoColor=white)](https://laravel.com)
 * [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge\&logo=bootstrap\&logoColor=white)](https://getbootstrap.com)
 * [![JQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge\&logo=jquery\&logoColor=white)](https://jquery.com)
+
+
 
 ([back to top](./#readme-top))
 

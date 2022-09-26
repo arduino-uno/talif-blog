@@ -6,12 +6,11 @@ description: A Web Project Documentation
 
 [![Contributors](https://img.shields.io/github/contributors/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/graphs/contributors) [![Forks](https://img.shields.io/github/forks/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/network/members) [![Stargazers](https://img.shields.io/github/stars/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/stargazers) [![Issues](https://img.shields.io/github/issues/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/issues) [![MIT License](https://img.shields.io/github/license/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/blob/master/LICENSE.txt) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge\&logo=linkedin\&colorB=555)](https://linkedin.com/in/agah-nata)
 
-\
-[![Logo](images/ninja-logo.png)](https://github.com/arduino-uno/talif-blog)
+<figure><img src=".gitbook/assets/ninja-logo (2).png" alt=""><figcaption><p>Talif Web-Blog Logo</p></figcaption></figure>
 
-### Simple Web-Blog CMS
+### Talif Web-Blog
 
-`A simple web-blog CMS with`**`Admin`**`LTE Admin Panel`\
+`A Simple PHP Blogging System`\
 \
 **`Created:`**`December 15, 2017 |`**`By:`**[`nath4n`](https://codecanyon.net/user/nath4n)`|`**`Email:`**[`hashcat80@gmail.com`](mailto:hashcat80@gmail.com)\
 
@@ -62,10 +61,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 * [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge\&logo=bootstrap\&logoColor=white)](https://getbootstrap.com)
 * [![JQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge\&logo=jquery\&logoColor=white)](https://jquery.com)
-
-
-
-
 
 ([back to top](./#readme-top))
 

@@ -1,97 +1,47 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/arduino-uno/talif-blog/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
+# AdminLTE - تأليف
+
+[![Contributors](https://img.shields.io/github/contributors/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/graphs/contributors) [![Forks](https://img.shields.io/github/forks/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/network/members) [![Stargazers](https://img.shields.io/github/stars/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/stargazers) [![Issues](https://img.shields.io/github/issues/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/issues) [![MIT License](https://img.shields.io/github/license/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/blob/master/LICENSE.txt) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge\&logo=linkedin\&colorB=555)](https://linkedin.com/in/agah-nata)
+
+\
+[![Logo](images/blog-logo.png)](https://github.com/arduino-uno/talif-blog)
+
+### Simple Web-Blog CMS
+
+`A simple web-blog CMS with`**`Admin`**`LTE Admin Panel`\
+\
+**`Created`**`: December 15, 2017 |`` `**`By`**`:` [`nath4n`](https://codecanyon.net/user/nath4n) `|`` `**`Email`**`:` [`hashcat80@gmail.com`](mailto:hashcat80@gmail.com)\
 
 
+[**Explore the docs »**](https://github.com/arduino-uno/talif-blog)\
+\
+[View Demo](https://github.com/arduino-uno/talif-blog) · [Report Bug](https://github.com/arduino-uno/talif-blog/issues) · [Request Feature](https://github.com/arduino-uno/talif-blog/issues)
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/arduino-uno/talif-blog">
-    <img src="./images/blog-logo.png" alt="Logo">
-  </a>
-
-  <h3 align="center">Simple Web-Blog CMS</h3>
-
-  <p align="center">
-    A simple web-blog CMS with <b>Admin</b>LTE Admin Panel
-    <br>
-    <br><b>Created</b>: December 15, 2017 | <b>By</b>: <a href="https://codecanyon.net/user/nath4n">nath4n</a> | <b>Email</b>: <a href="mailto:hashcat80@gmail.com">hashcat80@gmail.com</a>
-    <br/>
-  </p>
-  <p align="center">
-    <a href="https://github.com/arduino-uno/talif-blog"><strong>Explore the docs »</strong></a>
-    <br/>
-    <br/>
-    <a href="https://github.com/arduino-uno/talif-blog">View Demo</a>
-    ·
-    <a href="https://github.com/arduino-uno/talif-blog/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/arduino-uno/talif-blog/issues">Request Feature</a>
-  </p>
-</div>
-
-
-
-<!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
+
+<summary>Table of Contents</summary>
+
+1. [About The Project](./#about-the-project)
+   * [Built With](./#built-with)
+2. [Getting Started](./#getting-started)
+   * [Prerequisites](./#prerequisites)
+   * [Installation](./#installation)
+3. [Usage](./#usage)
+4. [Roadmap](./#roadmap)
+5. [Contributing](./#contributing)
+6. [License](./#license)
+7. [Contact](./#contact)
+8. [Acknowledgments](./#acknowledgments)
+
 </details>
 
+### About The Project
 
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot](images/screenshot.png)](https://example.com)
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
 Here's why:
+
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
 * You shouldn't be doing the same tasks over and over like creating a README from scratch
 * You should implement DRY principles to the rest of your life :smile:
@@ -100,98 +50,87 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 Use the `BLANK_README.md` to get started.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+([back to top](./#readme-top))
 
-
-
-### Built With
+#### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Next](https://img.shields.io/badge/next.js-000000?style=for-the-badge\&logo=nextdotjs\&logoColor=white)](https://nextjs.org/)
+* [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge\&logo=react\&logoColor=61DAFB)](https://reactjs.org/)
+* [![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge\&logo=vuedotjs\&logoColor=4FC08D)](https://vuejs.org/)
+* [![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge\&logo=angular\&logoColor=white)](https://angular.io/)
+* [![Svelte](https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge\&logo=svelte\&logoColor=FF3E00)](https://svelte.dev/)
+* [![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge\&logo=laravel\&logoColor=white)](https://laravel.com)
+* [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge\&logo=bootstrap\&logoColor=white)](https://getbootstrap.com)
+* [![JQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge\&logo=jquery\&logoColor=white)](https://jquery.com)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+([back to top](./#readme-top))
 
+### Getting Started
 
+This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
+#### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
-### Installation
+*   npm
+
+    ```
+    npm install npm@latest -g
+    ```
+
+#### Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+2.  Clone the repo
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+    ```
+    git clone https://github.com/your_username_/Project-Name.git
+    ```
+3.  Install NPM packages
 
+    ```
+    npm install
+    ```
+4.  Enter your API in `config.js`
 
+    ```js
+    const API_KEY = 'ENTER YOUR API';
+    ```
 
-<!-- USAGE EXAMPLES -->
-## Usage
+([back to top](./#readme-top))
+
+### Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the_ [_Documentation_](https://example.com)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+([back to top](./#readme-top))
 
+### Roadmap
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+* [x] Add Changelog
+* [x] Add back to top links
+* [ ] Add Additional Templates w/ Examples
+* [ ] Add "components" document to easily copy & paste sections of the readme
+* [ ] Multi-language Support
+  * [ ] Chinese
+  * [ ] Spanish
 
 See the [open issues](https://github.com/arduino-uno/talif-blog/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+([back to top](./#readme-top))
 
-
-
-<!-- CONTRIBUTING -->
-## Contributing
+### Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -199,32 +138,23 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+([back to top](./#readme-top))
 
-
-
-<!-- LICENSE -->
-## License
+### License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+([back to top](./#readme-top))
 
+### Contact
 
+Your Name - [@your\_twitter](https://twitter.com/your\_username) - email@example.com
 
-<!-- CONTACT -->
-## Contact
+Project Link: [https://github.com/your\_username/repo\_name](https://github.com/your\_username/repo\_name)
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+([back to top](./#readme-top))
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+### Acknowledgments
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
@@ -237,38 +167,4 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/arduino-uno/talif-blog.svg?style=for-the-badge
-[contributors-url]: https://github.com/arduino-uno/talif-blog/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/arduino-uno/talif-blog.svg?style=for-the-badge
-[forks-url]: https://github.com/arduino-uno/talif-blog/network/members
-[stars-shield]: https://img.shields.io/github/stars/arduino-uno/talif-blog.svg?style=for-the-badge
-[stars-url]: https://github.com/arduino-uno/talif-blog/stargazers
-[issues-shield]: https://img.shields.io/github/issues/arduino-uno/talif-blog.svg?style=for-the-badge
-[issues-url]: https://github.com/arduino-uno/talif-blog/issues
-[license-shield]: https://img.shields.io/github/license/arduino-uno/talif-blog.svg?style=for-the-badge
-[license-url]: https://github.com/arduino-uno/talif-blog/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/agah-nata
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com
+([back to top](./#readme-top))

@@ -1,6 +1,6 @@
 # Table of contents
 
-* [AdminLTE - تأليف Docs](README.md)
+* [AdminLTE - تأليف Documentation](README.md)
 * [plugins](plugins/README.md)
   * [CKEditor 4](plugins/ckeditor/README.md)
     * [CKEditor 4 Changelog](plugins/ckeditor/CHANGES.md)

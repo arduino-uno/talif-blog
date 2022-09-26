@@ -2,7 +2,7 @@
 description: A Project Documentation for User
 ---
 
-# AdminLTE - تأليف Documentation
+# AdminLTE - تأليف Docs
 
 [![Contributors](https://img.shields.io/github/contributors/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/graphs/contributors) [![Forks](https://img.shields.io/github/forks/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/network/members) [![Stargazers](https://img.shields.io/github/stars/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/stargazers) [![Issues](https://img.shields.io/github/issues/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/issues) [![MIT License](https://img.shields.io/github/license/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/blob/master/LICENSE.txt) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge\&logo=linkedin\&colorB=555)](https://linkedin.com/in/agah-nata)
 
@@ -13,7 +13,7 @@ description: A Project Documentation for User
 
 `A simple web-blog CMS with`**`Admin`**`LTE Admin Panel`\
 \
-**`Created:`**`December 15, 2017 |`**`By:`**[`nath4n`](https://codecanyon.net/user/nath4n)`|`**`Email:`**[`hashcat80@gmail.com`](mailto:hashcat80@gmail.com)\
+**`Created`**`: December 15, 2017 |`` `**`By`**`:` [`nath4n`](https://codecanyon.net/user/nath4n) `|`` `**`Email`**`:` [`hashcat80@gmail.com`](mailto:hashcat80@gmail.com)\
 
 
 [**Explore the docs »**](https://github.com/arduino-uno/talif-blog)\

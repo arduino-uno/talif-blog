@@ -1,8 +1,8 @@
 ---
-description: A Project Documentation for User
+description: A Web Project Documentation
 ---
 
-# AdminLTE - تأليف Docs
+# Talif Documentation
 
 [![Contributors](https://img.shields.io/github/contributors/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/graphs/contributors) [![Forks](https://img.shields.io/github/forks/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/network/members) [![Stargazers](https://img.shields.io/github/stars/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/stargazers) [![Issues](https://img.shields.io/github/issues/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/issues) [![MIT License](https://img.shields.io/github/license/arduino-uno/talif-blog.svg?style=for-the-badge)](https://github.com/arduino-uno/talif-blog/blob/master/LICENSE.txt) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge\&logo=linkedin\&colorB=555)](https://linkedin.com/in/agah-nata)
 
@@ -13,7 +13,7 @@ description: A Project Documentation for User
 
 `A simple web-blog CMS with`**`Admin`**`LTE Admin Panel`\
 \
-**`Created`**`: December 15, 2017 |`` `**`By`**`:` [`nath4n`](https://codecanyon.net/user/nath4n) `|`` `**`Email`**`:` [`hashcat80@gmail.com`](mailto:hashcat80@gmail.com)\
+**`Created:`**`December 15, 2017 |`**`By:`**[`nath4n`](https://codecanyon.net/user/nath4n)`|`**`Email:`**[`hashcat80@gmail.com`](mailto:hashcat80@gmail.com)\
 
 
 [**Explore the docs »**](https://github.com/arduino-uno/talif-blog)\
@@ -42,7 +42,7 @@ description: A Project Documentation for User
 
 [![Product Name Screen Shot](images/screenshot.png)](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Talif is a simple CMS for easy blogging. It uses AdminLTE for Admin Panel & Dashboard. Talif is Easy to Install, after installation go to '/login.php' and you can login to the dashboard to do everything form creating a blog post or page to setting site preferences or even change Blog Template.
 
 Here's why:
 
@@ -62,6 +62,8 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 * [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge\&logo=bootstrap\&logoColor=white)](https://getbootstrap.com)
 * [![JQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge\&logo=jquery\&logoColor=white)](https://jquery.com)
+
+
 
 
 

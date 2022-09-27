@@ -4,9 +4,11 @@ description: Project Documentation for user
 
 # Talif Documentation
 
+<figure><img src="images/ninja-logo (1) (1).png" alt="ninja-logo"><figcaption><p>Talif Web-Blog</p></figcaption></figure>
+
 ## AdminLTE - Talif Web-Blog
 
-[![Build Status](https://img.shields.io/github/workflow/status/arduino-uno/talif-blog/Build?style=flat-square\&label=Build%20Status)](https://github.com/talif-blog) [![Docker pulls](https://img.shields.io/docker/pulls/library/talif-blog)](https://hub.docker.com/\_/talif-blog/) ![Lines of code](https://img.shields.io/tokei/lines/github/arduino-uno/talif-blog) [![Code coverage](https://img.shields.io/sonar/coverage/monica?server=https%3A%2F%2Fsonarcloud.io\&style=flat-square\&label=Coverage%20Status)](https://sonarcloud.io/project/activity?custom\_metrics=coverage\&graph=custom\&id=talif-blog) [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](https://github.com/arduino-uno/talif-blog/blob/main/LICENSE.md)
+[![Build Status](https://img.shields.io/github/workflow/status/arduino-uno/talif-blog/Build?style=flat-square\&label=Build%20Status)](https://github.com/talif-blog) [![Docker pulls](https://img.shields.io/docker/pulls/library/talif-blog)](https://hub.docker.com/\_/talif-blog/) ![Lines of code](https://img.shields.io/tokei/lines/github/arduino-uno/talif-blog) [![Code coverage](https://img.shields.io/sonar/coverage/monica?server=https%3A%2F%2Fsonarcloud.io\&style=flat-square\&label=Coverage%20Status)](https://sonarcloud.io/project/activity?custom\_metrics=coverage\&graph=custom\&id=talif-blog) [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
 
 Simple PHP blogging system.
 
@@ -78,18 +80,7 @@ OR follow gitbash commands
 6. browse the file in directory `"talif-blog/mysqldb`_`/`_`blog_db.sql"`.
 7. open any browser and type `"http://localhost/talif-blog"`.
    * first register and then login
-   * admin login details : **`Username`**`: admin |`` `**`Password`**`: admin`
-
-### Contact
-
-### Team
-
-Our team is made of two core members:
-
-* [Maazarin (djaiss)](https://github.com/djaiss)
-* [Alexis Saettler (asbiin)](https://github.com/asbiin)
-
-We are also fortunate to have an amazing [community of developers](https://github.com/monicahq/monica/graphs/contributors) who help us greatly.
+   * admin login details : **`Username`**`: admin |`**`Password`**`: admin`
 
 ### Thank you, open source
 
@@ -97,6 +88,6 @@ Monica uses a lot of open source projects and we thank them with all our hearts.
 
 ### License
 
-Copyright © 2016–2022
+Copyright © 2022
 
 Licensed under [the AGPL License](LICENSE.md).

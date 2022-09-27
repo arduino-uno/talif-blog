@@ -3,8 +3,6 @@ description: Project Documentation for user
 ---
 
 # Talif Documentation
-<div align="
-![ninja-logo](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/images/ninja-logo.png)
 
 ## AdminLTE - Talif Web-Blog
 
@@ -50,16 +48,7 @@ Talif is a simple CMS for easy blogging. It uses AdminLTE for Admin Panel & Dash
 
 #### Features
 
-Modern Dashboard
-Secured Login
-Activity Logs of users
-Messaging
-Web Contents Management (Pages, Posts, Post Categories, Post Comments etc)
-Roles & Permissions Management
-Users Management
-Site Settings
-Site Template Options
-Easy to Install and Setup
+Modern Dashboard Secured Login Activity Logs of users Messaging Web Contents Management (Pages, Posts, Post Categories, Post Comments etc) Roles & Permissions Management Users Management Site Settings Site Template Options Easy to Install and Setup
 
 #### Requirements
 
@@ -80,8 +69,8 @@ If you want to host Talif yourself, you will need a server with:
 OR follow gitbash commands
 
 ```
-- cd C:\\xampp\htdocs\
-- git clone https://github.com/PuneethReddyHC/online-shopping-system-advanced.git
+[+] cd C:\\xampp\htdocs\
+[+] git clone https://github.com/arduino-uno/talif-blog.git
 ```
 
 1. extract files in C:\xampp\htdocs.
@@ -90,12 +79,9 @@ OR follow gitbash commands
 4. give a database name as (onlineshop) hit on create button.
 5. after creating database name click on import.
 6. browse the file in directory `"talif-blog/mysqldb`_`/`_`blog_db.sql"`.
-7.  open any browser and type `"http://localhost/talif-blog"`.
-
-    * first register and then login
-    * admin login details :&#x20;
-
-    &#x20;  `Username: admin | Password: admin`
+7. open any browser and type `"http://localhost/talif-blog"`.
+   * first register and then login
+   * admin login details : **`Username`**`: admin |`` `**`Password`**`: admin`
 
 ### Contact
 

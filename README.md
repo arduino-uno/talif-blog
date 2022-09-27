@@ -4,15 +4,11 @@ description: Project Documentation for user
 
 # Talif Documentation
 
-<p align="center"><img src="images/ninja-logo.png" alt="ninja-logo"Talif Web-Blog</p>
+![ninja-logo](<images/ninja-logo (1).png>)
 
 ## AdminLTE - Talif Web-Blog
- 
-[![bootstrap](https://img.shields.io/badge/Bootstrap-4.6-informational.svg?logo=bootstrap&logoColor=white)](https://getbootstrap.com)
-[![jquery](https://img.shields.io/badge/jQuery-3.6.0-brightgreen.svg?logo=jquery&logoColor=white)](https://jquery.com)
-[![php](https://img.shields.io/badge/php-7.2-critical.svg?logo=php&logoColor=white)](https://www.php.net)
-[![mysql](https://img.shields.io/badge/mysql-8.0-blue.svg?logo=mysql&logoColor=white)](https://www.mysql.com)
-[![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
+
+[![bootstrap](https://img.shields.io/badge/Bootstrap-4.6-informational.svg?logo=bootstrap\&logoColor=white)](https://getbootstrap.com) [![jquery](https://img.shields.io/badge/jQuery-3.6.0-brightgreen.svg?logo=jquery\&logoColor=white)](https://jquery.com) [![php](https://img.shields.io/badge/php-7.2-critical.svg?logo=php\&logoColor=white)](https://www.php.net) [![mysql](https://img.shields.io/badge/mysql-8.0-blue.svg?logo=mysql\&logoColor=white)](https://www.mysql.com) [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
 
 Simple PHP blogging system.
 
@@ -31,12 +27,14 @@ Talif is a simple CMS for easy blogging. It uses AdminLTE for Admin Panel & Dash
 
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/images/screenshot.png)
 
+####
+
+#### Things I code with
+
 ### Demo
 
 * Website: [http://sintara.co.id/talif-blog](http://sintara.co.id/talif-blog)
 * App login: [http://sintara.co.id/talif-blog/login.php](http://sintara.co.id/talif-blog/login.php)
-
-
 
 ### Features
 
@@ -44,8 +42,7 @@ Modern Dashboard Secured Login Activity Logs of users Messaging Web Contents Man
 
 ## Get Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
 ### Requirements
 
@@ -70,16 +67,20 @@ If you want to host Talif yourself, you will need a server with:
 9. open any browser and type `http://localhost/talif-blog`.
    * first register and then login
    * admin login details : **`Username`**`: admin |`**`Password`**`: admin`
-   
+
 ## Contact
 
+Thank you for purchasing our product. If you have any questions that are beyond the scope of this help file, please feel free to email. Thanks so much!.&#x20;
+
 Created: 27 Sep 2022
-By: Agah Nata
+
+By: Agah Nata&#x20;
+
 Email: hashcat80@gmail.com
 
 ## Thank you for your purchase
 
-Thank you for purchasing our product. If you have any questions that are beyond the scope of this help file, please feel free to email. Thanks so much!. 
+Thank you for purchasing our product. If you have any questions that are beyond the scope of this help file, please feel free to email. Thanks so much!.
 
 ## License
 

@@ -9,6 +9,7 @@ description: Project Documentation for user
 ## AdminLTE - Talif Web-Blog
 
 [![bootstrap](https://img.shields.io/badge/Bootstrap-4.6-brightgreen.svg?logo=bootstrap)](https://getbootstrap.com)
+[![jquery](https://img.shields.io/badge/jQuery-3.6.0-brightgreen.svg?logo=jquery)](https://jquery.com)
 [![php](https://img.shields.io/badge/php-7.2-brightgreen.svg?logo=php)](https://www.php.net)
 [![mysql](https://img.shields.io/badge/mysql-8.0-brightgreen.svg?logo=mysql)](https://www.mysql.com)
 [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)

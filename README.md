@@ -1,6 +1,6 @@
 <p align="center">
 
-![Talif's Logo]('https://raw.githubusercontent.com/arduino-uno/talif-blog/main/images/ninja-logo.png')
+![Talif's Logo](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/images/ninja-logo.png)
 
 <p>
 <h1 align="center">Personal Relationship Manager</h1>

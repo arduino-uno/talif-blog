@@ -6,7 +6,7 @@ description: Project Documentation for user
 
 <p align="center"><img src="images/ninja-logo.png" alt="ninja-logo"Talif Web-Blog</p>
 
-## <h1 align="center">AdminLTE - Talif Web-Blog</h1>
+<h1 align="center">AdminLTE - Talif Web-Blog</h1>
 <div align="center">
  
 [![bootstrap](https://img.shields.io/badge/Bootstrap-4.6-informational.svg?logo=bootstrap&logoColor=white)](https://getbootstrap.com)
@@ -75,7 +75,7 @@ If you want to host Talif yourself, you will need a server with:
 
 <b>Created:</b> 27 Sep 2022</br>
 <b>By:</b> Agah Nata</br>
-<b>Email:</b> <a href:'mailto:hashcat80@gmail.com'>hashcat80@gmail.com</a>
+<b>Email:</b> [hashcat80@gmail.com](mailto:hashcat80@gmail.com)
 
 ## Thank you for your purchase
 

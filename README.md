@@ -8,7 +8,11 @@ description: Project Documentation for user
 
 ## AdminLTE - Talif Web-Blog
 
-[![bootstrap](https://img.shields.io/badge/Bootstrap-4.6-informational.svg?logo=bootstrap\&logoColor=white)](https://getbootstrap.com) [![jquery](https://img.shields.io/badge/jQuery-3.6.0-brightgreen.svg?logo=jquery\&logoColor=white)](https://jquery.com) [![php](https://img.shields.io/badge/php-7.2-critical.svg?logo=php\&logoColor=white)](https://www.php.net) [![mysql](https://img.shields.io/badge/mysql-8.0-blue.svg?logo=mysql\&logoColor=white)](https://www.mysql.com) [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
+[![bootstrap](https://img.shields.io/badge/Bootstrap-4.6-informational.svg?logo=bootstrap&logoColor=white)](https://getbootstrap.com)
+[![jquery](https://img.shields.io/badge/jQuery-3.6.0-brightgreen.svg?logo=jquery&logoColor=white)](https://jquery.com)
+[![php](https://img.shields.io/badge/php-7.2-critical.svg?logo=php&logoColor=white)](https://www.php.net)
+[![mysql](https://img.shields.io/badge/mysql-8.0-blue.svg?logo=mysql&logoColor=white)](https://www.mysql.com)
+[![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
 
 Simple PHP blogging system.
 
@@ -70,13 +74,11 @@ If you want to host Talif yourself, you will need a server with:
 
 ## Contact
 
-Thank you for purchasing our product. If you have any questions that are beyond the scope of this help file, please feel free to email. Thanks so much!.&#x20;
+Thank you for purchasing our product. If you have any questions that are beyond the scope of this help file, please feel free to email. Thanks so much!.
 
-Created: 27 Sep 2022
-
-By: Agah Nata&#x20;
-
-Email: hashcat80@gmail.com
+<b>Created:</b> 27 Sep 2022
+<b>By:</b> Agah Nata
+<b>Email:</b> hashcat80@gmail.com
 
 ## Thank you for your purchase
 

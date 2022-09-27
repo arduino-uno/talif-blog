@@ -74,8 +74,8 @@ If you want to host Talif yourself, you will need a server with:
 
 ## Contact
 
-<b>Created:</b> 27 Sep 2022
-<b>By:</b> Agah Nata
+<b>Created:</b> 27 Sep 2022</br>
+<b>By:</b> Agah Nata</br>
 <b>Email:</b> hashcat80@gmail.com
 
 ## Thank you for your purchase

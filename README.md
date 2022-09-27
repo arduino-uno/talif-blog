@@ -6,13 +6,16 @@ description: Project Documentation for user
 
 <p align="center"><img src="images/ninja-logo.png" alt="ninja-logo"Talif Web-Blog</p>
 
-## AdminLTE - Talif Web-Blog
-
+## <h1 align="center">AdminLTE - Talif Web-Blog</h1>
+<div align="center">
+ 
 [![bootstrap](https://img.shields.io/badge/Bootstrap-4.6-informational.svg?logo=bootstrap&logoColor=white)](https://getbootstrap.com)
 [![jquery](https://img.shields.io/badge/jQuery-3.6.0-brightgreen.svg?logo=jquery&logoColor=white)](https://jquery.com)
 [![php](https://img.shields.io/badge/php-7.2-critical.svg?logo=php&logoColor=white)](https://www.php.net)
 [![mysql](https://img.shields.io/badge/mysql-8.0-blue.svg?logo=mysql&logoColor=white)](https://www.mysql.com)
 [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
+
+</div>
 
 Simple PHP blogging system.
 
@@ -72,7 +75,7 @@ If you want to host Talif yourself, you will need a server with:
 
 <b>Created:</b> 27 Sep 2022</br>
 <b>By:</b> Agah Nata</br>
-<b>Email:</b> <a href:"mailto:hashcat80@gmail.com">hashcat80@gmail.com</a>
+<b>Email:</b> <a href:'mailto:hashcat80@gmail.com'>hashcat80@gmail.com</a>
 
 ## Thank you for your purchase
 

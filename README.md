@@ -31,10 +31,6 @@ Talif is a simple CMS for easy blogging. It uses AdminLTE for Admin Panel & Dash
 
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/images/screenshot.png)
 
-####
-
-#### Things I code with
-
 ### Demo
 
 * Website: [http://sintara.co.id/talif-blog](http://sintara.co.id/talif-blog)
@@ -76,7 +72,7 @@ If you want to host Talif yourself, you will need a server with:
 
 <b>Created:</b> 27 Sep 2022</br>
 <b>By:</b> Agah Nata</br>
-<b>Email:</b> hashcat80@gmail.com
+<b>Email:</b> <a href:"mailto:hashcat80@gmail.com">hashcat80@gmail.com</a>
 
 ## Thank you for your purchase
 

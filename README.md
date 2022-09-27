@@ -11,11 +11,8 @@ description: Project Documentation for user
 Simple PHP blogging system.
 
 * [Introduction](./#introduction)
-  * [Purpose](./#purpose)
+  * [Demo](./#demo)
   * [Features](./#features)
-  * [Who is it for?](./#who-is-it-for)
-  * [What Monica isn’t](./#what-monica-isnt)
-  * [Where does this tool come from?](./#where-does-this-tool-come-from)
 * [Get started](./#get-started)
   * [Requirements](./#requirements)
   * [Update your instance](./#update-your-instance)
@@ -41,16 +38,16 @@ Talif is a simple CMS for easy blogging. It uses AdminLTE for Admin Panel & Dash
 
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/images/screenshot.png)
 
-#### Demo
+### Demo
 
 * Website: [http://sintara.co.id/talif-blog](http://sintara.co.id/talif-blog)
 * App login: [http://sintara.co.id/talif-blog/login.php](http://sintara.co.id/talif-blog/login.php)
 
-#### Features
+### Features
 
 Modern Dashboard Secured Login Activity Logs of users Messaging Web Contents Management (Pages, Posts, Post Categories, Post Comments etc) Roles & Permissions Management Users Management Site Settings Site Template Options Easy to Install and Setup
 
-#### Requirements
+### Requirements
 
 If you want to host Talif yourself, you will need a server with:
 
@@ -60,7 +57,7 @@ If you want to host Talif yourself, you will need a server with:
 [+] mod_rewrite Apache
 ```
 
-#### Installation
+### Installation
 
 * Install XAMPP or WAMPP.
 * Open XAMPP Control panal and start \[apache] and \[mysql] .

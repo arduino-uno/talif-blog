@@ -22,7 +22,7 @@ Simple PHP blogging system.
 * [Get started](./#get-started)
   * [Requirements](./#requirements)
 * [Contact](./#contact)
-* [Thank you, open source](./#thank-you-open-source)
+* [Thank you for your purchase](./#thank-you-open-source)
 * [License](./#license)
 
 ## Introduction
@@ -73,8 +73,6 @@ If you want to host Talif yourself, you will need a server with:
    * admin login details : **`Username`**`: admin |`**`Password`**`: admin`
 
 ## Contact
-
-Thank you for purchasing our product. If you have any questions that are beyond the scope of this help file, please feel free to email. Thanks so much!.
 
 <b>Created:</b> 27 Sep 2022
 <b>By:</b> Agah Nata

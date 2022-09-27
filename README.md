@@ -9,8 +9,8 @@ description: Project Documentation for user
 ## AdminLTE - Talif Web-Blog
 
 [![Codeship Status for hrshadhin/school-management-system](https://app.codeship.com/projects/09010350-b97f-0136-1477-5a7589b245e6/status?branch=master)](https://app.codeship.com/projects/312233)
-[![php](https://img.shields.io/badge/php-7.2-brightgreen.svg?logo=php)](https://www.php.net)
-[![mysql](img.shields.io/badge/MySQL-00000F?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com)
+[![php](https://img.shields.io/badge/mysql-8.0-brightgreen.svg?logo=mysql)](https://www.php.net)
+[![mysql](https://img.shields.io/badge/MySQL-00000F?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com)
 [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
 
 Simple PHP blogging system.

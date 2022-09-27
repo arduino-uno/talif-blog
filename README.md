@@ -8,10 +8,9 @@ description: Project Documentation for user
 
 ## AdminLTE - Talif Web-Blog
 
-[![Build Status](https://img.shields.io/github/workflow/status/arduino-uno/talif-blog/Build?style=flat-square\&label=Build%20Status)](https://github.com/talif-blog) 
-[![Docker pulls](https://img.shields.io/docker/pulls/library/talif-blog)](https://hub.docker.com/\_/talif-blog/) 
-![Lines of code](https://img.shields.io/tokei/lines/github/arduino-uno/talif-blog)
-[![Code coverage](https://img.shields.io/sonar/coverage/talif-blog?server=https%3A%2F%2Fsonarcloud.io\&style=flat-square\&label=Coverage%20Status)](https://sonarcloud.io/project/activity?custom\_metrics=coverage\&graph=custom\&id=talif-blog) 
+[![Codeship Status for hrshadhin/school-management-system](https://app.codeship.com/projects/09010350-b97f-0136-1477-5a7589b245e6/status?branch=master)](https://app.codeship.com/projects/312233)
+[![license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![php](https://img.shields.io/badge/php-7.2-brightgreen.svg?logo=php)](https://www.php.net)
 [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
 
 Simple PHP blogging system.

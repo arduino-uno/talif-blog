@@ -4,14 +4,11 @@ description: Project Documentation for user
 
 # Talif Documentation
 
-<figure  align="center"><img src="images/ninja-logo.png" alt="ninja-logo"><figcaption><p align="center">Talif Web-Blog</p></figcaption></figure>
+<figure><img src="images/ninja-logo.png" alt="ninja-logo"><figcaption><p>Talif Web-Blog</p></figcaption></figure>
 
 ## AdminLTE - Talif Web-Blog
 
-[![Codeship Status for arduino-uno/talif-blog](https://app.codeship.com/projects/ba4ba686cc925af9e9a06a472d8e06283574df8c/status?branch=main)](https://app.codeship.com/projects/312233)
-[![php](https://img.shields.io/badge/php-7.2-brightgreen.svg?logo=php)](https://www.php.net)
-[![mysql](https://img.shields.io/badge/mysql-8.0-brightgreen.svg?logo=mysql)](https://www.mysql.com)
-[![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
+[![Codeship Status for arduino-uno/talif-blog](https://app.codeship.com/projects/ba4ba686cc925af9e9a06a472d8e06283574df8c/status?branch=main)](https://app.codeship.com/projects/312233) [![php](https://img.shields.io/badge/php-7.2-brightgreen.svg?logo=php)](https://www.php.net) [![mysql](https://img.shields.io/badge/mysql-8.0-brightgreen.svg?logo=mysql)](https://www.mysql.com) [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
 
 Simple PHP blogging system.
 
@@ -54,22 +51,15 @@ If you want to host Talif yourself, you will need a server with:
 
 * Install XAMPP or WAMPP.
 * Open XAMPP Control panal and start \[apache] and \[mysql] .
-* Download project from github(https://github.com/PuneethReddyHC/online-shopping-system-advanced.git).
-
-OR follow gitbash commands
-
-```
-[+] cd C:\\xampp\htdocs\
-[+] git clone https://github.com/arduino-uno/talif-blog.git
-```
+* Download unzip the given files and moving them to `htdocs`.
 
 1. extract files in C:\xampp\htdocs.
 2. open link localhost/phpmyadmin
 3. click on new at side navbar.
-4. give a database name as (onlineshop) hit on create button.
+4. give a database name as (`blog_db`) hit on create button.
 5. after creating database name click on import.
 6. browse the file in directory `"talif-blog/mysqldb`_`/`_`blog_db.sql"`.
-7. open any browser and type `"http://localhost/talif-blog"`.
+7. open any browser and type `"`http://localhost/talif-blog`"`.
    * first register and then login
    * admin login details : **`Username`**`: admin |`**`Password`**`: admin`
 

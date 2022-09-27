@@ -8,7 +8,7 @@ description: Project Documentation for user
 
 ## AdminLTE - Talif Web-Blog
 
-[![Codeship Status for arduino-uno/talif-blog](https://app.codeship.com/projects/ba4ba686cc925af9e9a06a472d8e06283574df8c/status?branch=main)](https://app.codeship.com/projects/312233)
+[![bootstrap](https://img.shields.io/badge/Bootstrap-4.6-brightgreen.svg?logo=bootstrap)](https://getbootstrap.com)
 [![php](https://img.shields.io/badge/php-7.2-brightgreen.svg?logo=php)](https://www.php.net)
 [![mysql](https://img.shields.io/badge/mysql-8.0-brightgreen.svg?logo=mysql)](https://www.mysql.com)
 [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
@@ -20,6 +20,7 @@ Simple PHP blogging system.
   * [Features](./#features)
 * [Get started](./#get-started)
   * [Requirements](./#requirements)
+* [Contact](./#contact)
 * [Thank you, open source](./#thank-you-open-source)
 * [License](./#license)
 
@@ -33,6 +34,8 @@ Talif is a simple CMS for easy blogging. It uses AdminLTE for Admin Panel & Dash
 
 * Website: [http://sintara.co.id/talif-blog](http://sintara.co.id/talif-blog)
 * App login: [http://sintara.co.id/talif-blog/login.php](http://sintara.co.id/talif-blog/login.php)
+
+
 
 ### Features
 
@@ -66,11 +69,16 @@ If you want to host Talif yourself, you will need a server with:
 9. open any browser and type `http://localhost/talif-blog`.
    * first register and then login
    * admin login details : **`Username`**`: admin |`**`Password`**`: admin`
+   
+## Contact
 
-## Thank you, open source
+Created: 27 Sep 2022
+By: Agah Nata
+Email: hashcat80@gmail.com
 
-Hi, I always try to create the high quality PHP Projects for my customers. Please check my Updates Talif-Blog.
-Thank you for your purchase!
+## Thank you for your purchase
+
+Thank you for purchasing our product. If you have any questions that are beyond the scope of this help file, please feel free to email. Thanks so much!. 
 
 ## License
 

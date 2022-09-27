@@ -8,7 +8,11 @@ description: Project Documentation for user
 
 ## AdminLTE - Talif Web-Blog
 
-[![Build Status](https://img.shields.io/github/workflow/status/arduino-uno/talif-blog/Build?style=flat-square\&label=Build%20Status)](https://github.com/talif-blog) [![Docker pulls](https://img.shields.io/docker/pulls/library/talif-blog)](https://hub.docker.com/\_/talif-blog/) ![Lines of code](https://img.shields.io/tokei/lines/github/arduino-uno/talif-blog) [![Code coverage](https://img.shields.io/sonar/coverage/talif-blog?server=https%3A%2F%2Fsonarcloud.io\&style=flat-square\&label=Coverage%20Status)](https://sonarcloud.io/project/activity?custom\_metrics=coverage\&graph=custom\&id=talif-blog) [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
+[![Build Status](https://img.shields.io/github/workflow/status/arduino-uno/talif-blog/Build?style=flat-square\&label=Build%20Status)](https://github.com/talif-blog) 
+[![Docker pulls](https://img.shields.io/docker/pulls/library/talif-blog)](https://hub.docker.com/\_/talif-blog/) 
+![Lines of code](https://img.shields.io/tokei/lines/github/arduino-uno/talif-blog)
+[![Code coverage](https://img.shields.io/sonar/coverage/talif-blog?server=https%3A%2F%2Fsonarcloud.io\&style=flat-square\&label=Coverage%20Status)](https://sonarcloud.io/project/activity?custom\_metrics=coverage\&graph=custom\&id=talif-blog) 
+[![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
 
 Simple PHP blogging system.
 
@@ -17,20 +21,6 @@ Simple PHP blogging system.
   * [Features](./#features)
 * [Get started](./#get-started)
   * [Requirements](./#requirements)
-  * [Update your instance](./#update-your-instance)
-* [Contribute](./#contribute)
-  * [Contribute as a community](./#contribute-as-a-community)
-  * [Contribute as a developer](./#contribute-as-a-developer)
-* [Principles, vision, goals and strategy](./#principles-vision-goals-and-strategy)
-  * [Principles](./#principles)
-  * [Vision](./#vision)
-  * [Goals](./#goals)
-  * [Strategy](./#strategy)
-  * [Monetization](./#monetization)
-  * [Why Open Source?](./#why-open-source)
-  * [Patreon](./#patreon)
-* [Contact](./#contact)
-* [Team](./#team)
 * [Thank you, open source](./#thank-you-open-source)
 * [License](./#license)
 
@@ -40,16 +30,18 @@ Talif is a simple CMS for easy blogging. It uses AdminLTE for Admin Panel & Dash
 
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/images/screenshot.png)
 
-## Demo
+### Demo
 
 * Website: [http://sintara.co.id/talif-blog](http://sintara.co.id/talif-blog)
 * App login: [http://sintara.co.id/talif-blog/login.php](http://sintara.co.id/talif-blog/login.php)
 
-## Features
+### Features
 
 Modern Dashboard Secured Login Activity Logs of users Messaging Web Contents Management (Pages, Posts, Post Categories, Post Comments etc) Roles & Permissions Management Users Management Site Settings Site Template Options Easy to Install and Setup
 
-## Requirements
+## Get Started
+
+### Requirements
 
 If you want to host Talif yourself, you will need a server with:
 
@@ -59,7 +51,7 @@ If you want to host Talif yourself, you will need a server with:
 [+] mod_rewrite Apache
 ```
 
-## Installation
+### Installation
 
 * Install XAMPP or WAMPP.
 * Open XAMPP Control panal and start \[apache] and \[mysql] .

@@ -69,7 +69,8 @@ If you want to host Talif yourself, you will need a server with:
 
 ## Thank you, open source
 
-Monica uses a lot of open source projects and we thank them with all our hearts. We hope that providing Monica as an free, open source project will help other people the same way those softwares have helped us.
+Hi, I always try to create the high quality PHP Projects for my customers. Please check my Updates Talif-Blog.
+Thank you for your purchase!
 
 ## License
 

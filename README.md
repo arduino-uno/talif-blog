@@ -3,7 +3,7 @@ description: Project Documentation for user
 ---
 
 # Talif Documentation
-
+<div align="
 ![ninja-logo](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/images/ninja-logo.png)
 
 ## AdminLTE - Talif Web-Blog
@@ -50,35 +50,26 @@ Talif is a simple CMS for easy blogging. It uses AdminLTE for Admin Panel & Dash
 
 #### Features
 
-Modern Dashboard&#x20;
-
-Secured Login&#x20;
-
-Activity Logs of users&#x20;
-
-Messaging&#x20;
-
-Web Contents Management (Pages, Posts, Post Categories, Post Comments etc)&#x20;
-
-Roles & Permissions Management&#x20;
-
-Users Management&#x20;
-
+Modern Dashboard
+Secured Login
+Activity Logs of users
+Messaging
+Web Contents Management (Pages, Posts, Post Categories, Post Comments etc)
+Roles & Permissions Management
+Users Management
 Site Settings
-
 Site Template Options
-
 Easy to Install and Setup
 
 #### Requirements
 
 If you want to host Talif yourself, you will need a server with:
 
-`[+] Minimum PHP v5.6`&#x20;
-
-`[+] Minimum MySQL v8.0`&#x20;
-
-`[+] mod_rewrite Apache`
+```
+[+] Minimum PHP v5.6
+[+] Minimum MySQL v8.0
+[+] mod_rewrite Apache
+```
 
 #### Installation
 
@@ -89,9 +80,8 @@ If you want to host Talif yourself, you will need a server with:
 OR follow gitbash commands
 
 ```
-i>cd C:\\xampp\htdocs\
-
-ii>git clone https://github.com/PuneethReddyHC/online-shopping-system-advanced.git
+- cd C:\\xampp\htdocs\
+- git clone https://github.com/PuneethReddyHC/online-shopping-system-advanced.git
 ```
 
 1. extract files in C:\xampp\htdocs.

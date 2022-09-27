@@ -4,11 +4,14 @@ description: Project Documentation for user
 
 # Talif Documentation
 
-<figure><img src="images/ninja-logo.png" alt="ninja-logo"><figcaption><p>Talif Web-Blog</p></figcaption></figure>
+<p align="center"><img src="images/ninja-logo.png" alt="ninja-logo"Talif Web-Blog</p>
 
 ## AdminLTE - Talif Web-Blog
 
-[![Codeship Status for arduino-uno/talif-blog](https://app.codeship.com/projects/ba4ba686cc925af9e9a06a472d8e06283574df8c/status?branch=main)](https://app.codeship.com/projects/312233) [![php](https://img.shields.io/badge/php-7.2-brightgreen.svg?logo=php)](https://www.php.net) [![mysql](https://img.shields.io/badge/mysql-8.0-brightgreen.svg?logo=mysql)](https://www.mysql.com) [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
+[![Codeship Status for arduino-uno/talif-blog](https://app.codeship.com/projects/ba4ba686cc925af9e9a06a472d8e06283574df8c/status?branch=main)](https://app.codeship.com/projects/312233)
+[![php](https://img.shields.io/badge/php-7.2-brightgreen.svg?logo=php)](https://www.php.net)
+[![mysql](https://img.shields.io/badge/mysql-8.0-brightgreen.svg?logo=mysql)](https://www.mysql.com)
+[![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](LICENSE.md)
 
 Simple PHP blogging system.
 
@@ -37,6 +40,9 @@ Modern Dashboard Secured Login Activity Logs of users Messaging Web Contents Man
 
 ## Get Started
 
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
 ### Requirements
 
 If you want to host Talif yourself, you will need a server with:
@@ -49,17 +55,15 @@ If you want to host Talif yourself, you will need a server with:
 
 ### Installation
 
-* Install XAMPP or WAMPP.
-* Open XAMPP Control panal and start \[apache] and \[mysql] .
-* Download unzip the given files and moving them to `htdocs`.
-
-1. extract files in C:\xampp\htdocs.
-2. open link localhost/phpmyadmin
-3. click on new at side navbar.
-4. give a database name as (`blog_db`) hit on create button.
-5. after creating database name click on import.
-6. browse the file in directory `"talif-blog/mysqldb`_`/`_`blog_db.sql"`.
-7. open any browser and type `"`http://localhost/talif-blog`"`.
+1. Install XAMPP or WAMPP.
+2. Open XAMPP Control panal and start \[apache] and \[mysql] .
+3. Download and Unzipp the given files and moving them to htdocs `C:\xampp\htdocs`.
+4. open link `localhost/phpmyadmin`.
+5. click on new at side navbar.
+6. give a database name as `blog_db` hit on create button.
+7. after creating database name click on import.
+8. browse the file in directory `talif-blog/database/blog_db.sql`.
+9. open any browser and type `http://localhost/talif-blog`.
    * first register and then login
    * admin login details : **`Username`**`: admin |`**`Password`**`: admin`
 

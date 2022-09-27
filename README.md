@@ -6,7 +6,7 @@ description: Project Documentation for user
 
 ## AdminLTE - Talif Web-Blog
 
-[![Build Status](https://img.shields.io/github/workflow/status/monicahq/monica/Build?style=flat-square\&label=Build%20Status)](https://github.com/monicahq/monica/actions) [![Docker pulls](https://img.shields.io/docker/pulls/library/monica)](https://hub.docker.com/\_/monica/) ![Lines of code](https://img.shields.io/tokei/lines/github/monicahq/monica) [![Code coverage](https://img.shields.io/sonar/coverage/monica?server=https%3A%2F%2Fsonarcloud.io\&style=flat-square\&label=Coverage%20Status)](https://sonarcloud.io/project/activity?custom\_metrics=coverage\&graph=custom\&id=monica) [![License](https://img.shields.io/github/license/monicahq/monica)](https://github.com/monicahq/monica/blob/main/LICENSE.md)
+[![Build Status](https://img.shields.io/github/workflow/status/arduino-uno/talif-blog/Build?style=flat-square\&label=Build%20Status)](https://github.com/talif-blog) [![Docker pulls](https://img.shields.io/docker/pulls/library/talif-blog)](https://hub.docker.com/\_/talif-blog/) ![Lines of code](https://img.shields.io/tokei/lines/github/arduino-uno/talif-blog) [![Code coverage](https://img.shields.io/sonar/coverage/monica?server=https%3A%2F%2Fsonarcloud.io\&style=flat-square\&label=Coverage%20Status)](https://sonarcloud.io/project/activity?custom\_metrics=coverage\&graph=custom\&id=talif-blog) [![License](https://img.shields.io/github/license/arduino-uno/talif-blog)](https://github.com/arduino-uno/talif-blog/blob/main/LICENSE.md)
 
 Simple PHP blogging system.
 

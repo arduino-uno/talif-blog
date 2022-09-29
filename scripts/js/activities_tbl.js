@@ -37,8 +37,8 @@ var table_activities = $('#activity_data').DataTable({
     dom: 'lBfrtip',
     buttons: [{
         className: 'btn btn-primary btn-sm mr-2',
-        text: '<i class="fas fa-plus text-success"></i> Add New',
-        titleAttr: 'Add New Activity',
+        text: '<i class="fas fa-trash-alt text-warning"></i> Delete All',
+        titleAttr: 'Delete All',
         action: function ( e, dt, node, config ) {
             $('#form_newcat')[0].reset();
             $('#modal_newcat').modal('show');

@@ -1,10 +1,13 @@
 <?php
+/**
+*	Author nath4n <hashcat80@gmail.com>
+*	Simple_PHP_CRUD_Class
+*	CRUD Methods ("GET", "PUT", "POST" & "DELETE") for Database Connection
+*	Use array of table objects for MySQL operations
+*/
+
 class Simple_PHP_CRUD_Class {
-	/*
-		Simple_PHP_CRUD_Class
-		CRUD Methods ("GET", "PUT", "POST" & "DELETE") for Database Connection
-		Use array of table objects
-	*/
+
 	public $conn = null;
 	public $rows = array();
 

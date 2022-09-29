@@ -2,6 +2,8 @@
 description: Project Documentation for user
 ---
 
+# Talif Documentation
+
 <p align="center"><img src="images/ninja-logo.png" alt="ninja-logo"Talif Web-Blog</p>
 
 <h1 align="center">AdminLTE - Talif Web-Blog</h1>
@@ -26,26 +28,26 @@ Simple PHP blogging system.
 * [Thank you for your purchase](./#thank-you-open-source)
 * [License](./#license)
 
-#### Introduction
+## Introduction
 
 Talif is a simple CMS for easy blogging. It uses AdminLTE for Admin Panel & Dashboard. Talif is Easy to Install. You can login to the dashboard to do everything form creating a blog post or page to setting site preferences or even change your Blog Template. This is what it currently looks like:
 
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/images/screenshot.png)
 
-**Demo**
+### Demo
 
 * Website: [http://sintara.co.id/talif-blog](http://sintara.co.id/talif-blog)
 * App login: [http://sintara.co.id/talif-blog/login.php](http://sintara.co.id/talif-blog/login.php)
 
-**Features**
+### Features
 
 Modern Dashboard Secured Login Activity Logs of users Messaging Web Contents Management (Pages, Posts, Post Categories, Post Comments etc) Roles & Permissions Management Users Management Site Settings Site Template Options Easy to Install and Setup
 
-#### Get Started
+## Get Started
 
 This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
-**Requirements**
+### Requirements
 
 If you want to host Talif yourself, you will need a server with:
 
@@ -55,7 +57,7 @@ If you want to host Talif yourself, you will need a server with:
 [+] mod_rewrite Apache
 ```
 
-**Installation**
+### Installation
 
 1. Install XAMPP or WAMPP.
 2. Open XAMPP Control panal and start \[apache] and \[mysql] .
@@ -69,17 +71,17 @@ If you want to host Talif yourself, you will need a server with:
    * first register and then login
    * admin login details : **`Username`**`: admin |`**`Password`**`: admin`
 
-#### Contact
+## Contact
 
-**Created:** 27 Sep 2022\
-**By:** Agah Nata\
-**Email:** [hashcat80@gmail.com](mailto:hashcat80@gmail.com)
+<b>Created:</b> 27 Sep 2022</br>
+<b>By:</b> Agah Nata</br>
+<b>Email:</b> [hashcat80@gmail.com](mailto:hashcat80@gmail.com)
 
-#### Thank you for your purchase
+## Thank you for your purchase
 
 Thank you for purchasing our product. If you have any questions that are beyond the scope of this help file, please feel free to email. Thanks so much!.
 
-#### License
+## License
 
 Copyright © 2022
 

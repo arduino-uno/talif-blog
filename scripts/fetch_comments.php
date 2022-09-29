@@ -41,7 +41,7 @@ $rows = json_decode( $result, true );
 			$sub_array["post_id"] = $post["post_id"];
 			$sub_array["title"] = $post["title"];
 			$sub_array["body"] = $short_post;
-			$sub_array["status"] = $post["status"];
+			$sub_array["post_status"] = $post["status"];
 			$sub_array["cat_id"] = $post["cat_id"];
 			$sub_array["category"] = $post["category"];
 			$sub_array["image"] = $post["image"];
@@ -49,6 +49,7 @@ $rows = json_decode( $result, true );
 			$sub_array["email"] = $row["email"];
 			$sub_array["website"] = $row["website"];
 			$sub_array["message"] = $short_msg;
+			$sub_array["status"] = $row["status"];
 			$sub_array["created"] = date( "M j, Y", strtotime( $post["created"] ) );
 
   		$data[] = $sub_array;

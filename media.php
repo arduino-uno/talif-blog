@@ -343,34 +343,6 @@ if ( !$AVAILABLE_PAGES[$module] ) {
                 </li>
               </ul>
             </li>
-            <li class="nav-header">DOCS</li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-file"></i>
-                <p>
-                  Documentations
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="https://adminlte.io/docs/3.1" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>
-                      <strong>Admin</strong>LTE Docs
-                    </p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="./media.php?module=site-templates" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>
-                      <strong>Admin</strong>LTE - <span class="arabic-font" style="font-size: 1rem;font-weight: bold;">تأليف</span>&nbsp;Docs
-                    </p>
-                  </a>
-                </li>
-              </ul>
-            </li>
             <li class="nav-header">LOGOUT</li>
             <li class="nav-item">
               <a href="#" onclick="logoutModal()" class="nav-link">
@@ -432,34 +404,6 @@ if ( !$AVAILABLE_PAGES[$module] ) {
                 </a>
               </li>
             </ul>
-            <li class="nav-header">DOCS</li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-file"></i>
-                <p>
-                  Documentations
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="https://adminlte.io/docs/3.1" class="nav-link">
-                    <i class="nav-icon fas fa-info-circle"></i>
-                    <p>
-                      <strong>Admin</strong>LTE Docs
-                    </p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="./media.php?module=site-templates" class="nav-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90" fill="inherit" width="30" height="30"><path d="M64.7,38.9c0,2.1-1.7,3.9-3.9,3.9S57,41,57,38.9s1.7-3.9,3.9-3.9S64.7,36.8,64.7,38.9z M25.9,35c-2.1,0-3.9,1.7-3.9,3.9  s1.7,3.9,3.9,3.9s3.9-1.7,3.9-3.9S28,35,25.9,35z M75.1,23.5c4.8,6.6,7.7,14.7,7.7,23.5c0,22-17.8,39.7-39.7,39.7S3.3,68.9,3.3,47  S21.1,7.2,43.1,7.2c6.3,0,12.3,1.5,17.6,4.1l8.1-8.1l4.7,4.7L78,3.3l8.7,8.7L75.1,23.5z M71.1,39c0-4.4-3.6-8-8-8h-41  c-4.4,0-8,3.6-8,8s3.6,8,8,8h41C67.5,47,71.1,43.4,71.1,39z"></path></svg>
-                    <p>
-                      <strong>Admin</strong>LTE - <span class="arabic-font" style="font-size: 1rem;font-weight: bold;">تأليف</span>&nbsp;Docs
-                    </p>
-                  </a>
-                </li>
-              </ul>
-            </li>
             <li class="nav-header">LOGOUT</li>
             <li class="nav-item">
               <a href="#" onclick="logoutModal()" class="nav-link">
@@ -759,17 +703,30 @@ function chat_notify() {
 
 };
 
+function load_notifications(){
+    $.ajax({
+        method: 'POST',
+        url: "./scripts/fetch_notifications.php",
+        datatype: 'JSON',
+        success: function ( myData ) {
+            $.each( JSON.parse( myData ), function( index, value ) {
+                // Insert chat log into the #chatbox div
+                $( "div#notification.dropdown-menu.dropdown-menu-lg.dropdown-menu-right" ).html( value.notifmsg );
+                $('div.direct-chat-messages').scrollTop($('div.direct-chat-messages')[0].scrollHeight);
+            });
+        }
+    });
+};
+
 function activity_notify() {
 
     var activity_count = $("a.nav-link span.badge.badge-warning.navbar-badge").html();
 
-    $.post( "./scripts/get_msgscount.php", function( data ) {
+    $.post( "./scripts/get_actscount.php", function( data ) {
 
         if ( activity_count !== data ) {
             // Update messages count info
-            // $( "div.card-header div.card-tools span.badge.badge-warning" ).attr( "title", data + "&nbsp;New Messages" ).html( data );
             $( "a.nav-link span.badge.badge-warning.navbar-badge" ).html( data );
-            // if (msgs_count !== "null") $('#notify').trigger("play");
         }
 
     });
@@ -803,6 +760,7 @@ $("input#message").on("keypress",function(e) {
 setInterval( function () {
     load_chats();
     chat_notify();
+    load_notifications();
     activity_notify();
 }, 2500 );
 </script>

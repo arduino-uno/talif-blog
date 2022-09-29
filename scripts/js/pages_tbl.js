@@ -148,10 +148,13 @@
 									$('#success').trigger("play");
 									toastr.info('The page was published.');
 							} else {
-									$('#error').trigger("play");
-									toastr.error('Something went wrong.');
+									$('#success').trigger("play");
+									toastr.info('The page was unpublished.');
 							}
-				});
+				}).fail(function() {
+            $('#error').trigger("play");
+            toastr.error('Something went wrong.');
+        });
 
 				window.setTimeout(function(){
             table_pages.ajax.reload();

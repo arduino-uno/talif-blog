@@ -87,7 +87,7 @@ foreach( $rows as $row ) {
     $counter ++;
 };
 
-$sub_array["notifmsg"] .= '<a href="#" class="dropdown-item dropdown-footer">See All Messages</a>';
+$sub_array["notifmsg"] .= '<a href="./media.php?module=manage-activities" class="dropdown-item dropdown-footer">See All Messages</a>';
 $output[] = $sub_array;
 
 echo json_encode( $output, JSON_PRETTY_PRINT );

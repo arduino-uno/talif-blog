@@ -269,6 +269,77 @@ function get_new_users() {
     return $rowscnt;
 };
 
+function get_new_activities() {
+    global $conn;
+    // Get the last registration users for this current week
+    $query = "SELECT ip_address, icon, message, date_format(created, '%e %M %l.%i %p') as formatted_date
+              FROM activities
+              WHERE created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
+              ORDER BY act_id";
+
+    $result = $conn->run_query( $query );
+    $rows = json_decode( $result, true );
+    $rowscnt = count( $rows );
+    return $rowscnt;
+};
+
+function get_new_activities_by( $keyword="User Login" ) {
+    global $conn;
+    // Get the last registration users for this current week
+    $query = "SELECT ip_address, icon, message, date_format(created, '%e %M %l.%i %p') as formatted_date
+              FROM activities
+              WHERE message LIKE '%{$keyword}%' AND created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
+              ORDER BY act_id";
+
+    $result = $conn->run_query( $query );
+    $rows = json_decode( $result, true );
+    $rowscnt = count( $rows );
+    return $rowscnt;
+};
+
+/**
+* Usage:
+* $pubDate = "17-09-2020"; // e.g. this could be like 'Sun, 10 Nov 2013 14:26:00 GMT'
+* $diff = ago($pubDate);    // output: 23 hrs ago
+* echo $diff;
+
+* Return the value of time different in "xx times ago" format
+*/
+function ago($timestamp)
+{
+
+    $today = new DateTime(date('y-m-d h:i:s')); // [2]
+    //$thatDay = new DateTime('Sun, 10 Nov 2013 14:26:00 GMT');
+    $thatDay = new DateTime($timestamp);
+    $dt = $today->diff($thatDay);
+
+    if ($dt->y > 0){
+        $number = $dt->y;
+        $unit = "year";
+    } else if ($dt->m > 0) {
+        $number = $dt->m;
+        $unit = "month";
+    } else if ($dt->d > 0) {
+        $number = $dt->d;
+        $unit = "day";
+    } else if ($dt->h > 0) {
+        $number = $dt->h;
+        $unit = "hour";
+    } else if ($dt->i > 0) {
+        $number = $dt->i;
+        $unit = "minute";
+    } else if ($dt->s > 0) {
+        $number = $dt->s;
+        $unit = "second";
+    }
+
+    $unit .= $number  > 1 ? "s" : "";
+
+    $ret = $number." ".$unit." "."ago";
+    return $ret;
+};
+
+
 /**
 * Get human readable time difference between 2 dates
 *

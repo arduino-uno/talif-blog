@@ -70,7 +70,8 @@ If you want to host Talif yourself, you will need a server with:
 9. open any browser and type `http://localhost/talif-blog`.
    * first register and then login
    * admin login details : 
-     **`Username`**`: admin |`**`Password`**`: admin`
+     **`Username`**`: admin`<br>
+     **`Password`**`: admin`
 
 ## Contact
 

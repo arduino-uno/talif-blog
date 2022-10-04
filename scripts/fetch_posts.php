@@ -51,6 +51,7 @@ $rows = json_decode( $result, true );
       $sub_array["status"] = $row["status"];
   		$sub_array["published"] = date( "F j, Y", strtotime( $row["published"] ) );
 			$sub_array["tags"] = $txt_tags;
+			$sub_array["likes"] = $row["likes"];
 
   		$data[] = $sub_array;
 	};

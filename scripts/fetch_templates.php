@@ -3,24 +3,24 @@ error_reporting(0);
 require('../config/db_config.php');
 // Set Database Config
 require('../scripts/class_simple_php_crud.php');
-// Call functions library
-require("../scripts/functions_lib.php");
+// Calling functions library
+require('../scripts/functions_lib.php');
 // CRUD Methods: "GET", "PUT", "POST" & "DELETE"
 $conn = new Simple_PHP_CRUD_Class();
 
 $output = Array();
 $rows = Array();
 
-$query = "SELECT * FROM pages ";
+$query = "SELECT * FROM templates ";
 
 if ( isset( $_POST["search"]["value"] ) ) {
-	 $query .= 'WHERE title LIKE "%'.$_POST["search"]["value"].'%" ';
+	 $query .= 'WHERE title OR description LIKE "%'.$_POST["search"]["value"].'%" ';
 };
 
 if ( isset( $_POST["order"] ) ) {
 	 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
 } else {
-	 $query .= 'ORDER BY page_id ASC';
+	 $query .= 'ORDER BY temp_id ASC';
 };
 
 if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
@@ -31,33 +31,20 @@ $result = $conn->run_query( $query );
 $rows = json_decode( $result, true );
 
 	foreach( $rows as $row ) {
+			$short_text = shorten( $row["description"], 100 );
   		$sub_array = array();
-			// get user detail
-			$user = json_decode( get_user_by( "user_id", $row["author_id"] ), true );
-			$short_text = shorten( $row["body"], 100 );
-			$tags = explode( ',', $row["tags"] );
-			$txt_tags = "";
-			foreach ($tags as $tag) {
-					$txt_tags .= '<small class="badge badge-info">' . $tag . '</small>&nbsp;';
-			};
-			// fill data into array
-			$sub_array["page_id"] = $row["page_id"];
-			$sub_array["author_id"] = $user["user_id"];
-			$sub_array["author_name"] = $user["user_fullname"];
-			$sub_array["author_image"] = $user["user_image"];
+  		$sub_array["temp_id"] = $row["temp_id"];
 			$sub_array["title"] = $row["title"];
-			$sub_array["body"] = $short_text;
+			$sub_array["description"] = $short_text;
 			$sub_array["image"] = $row["image"];
 			$sub_array["status"] = $row["status"];
-			$sub_array["published"] = date( "F j, Y", strtotime( $row["published"] ) );
-			$sub_array["tags"] = $txt_tags;
-			$sub_array["likes"] = $row["likes"];
+			$sub_array["created"] = date( "M j, Y", strtotime( $row["created"] ) );
 
-			$data[] = $sub_array;
+  		$data[] = $sub_array;
 	};
 
   $filtered_rows = count( $rows );
-  $rows_cnt = $conn->get_total_all_records( "pages" );
+  $rows_cnt = $conn->get_total_all_records( "templates" );
 
 	$output = array(
   		"draw"						=>	( isset( $_POST["draw"] ) ? intval( $_POST["draw"] ) : 0 ),

@@ -1,10 +1,26 @@
 <?php
+/**
+*	Author nath4n <hashcat80@gmail.com>
+*	Functions Library ( 'functions_lib.php' )
+*
+* Distributed under 'The MIT License (MIT)'
+* In essense, you can do commercial use, modify, distribute and private use.
+*/
+
+/**
+* Check if the session is active or inactive
+*/
 $status = session_status();
 if($status == PHP_SESSION_NONE){
     //There is no active session
     session_start();
 };
 
+/**
+* To get current client / visitor IP Address
+*
+* @return string
+*/
 function get_client_ip() {
     $ipaddress = '';
     if (isset($_SERVER['HTTP_CLIENT_IP']))
@@ -24,6 +40,12 @@ function get_client_ip() {
     return $ipaddress;
 };
 
+/**
+* To insert / update visitors table
+*
+* @param string $user_ip, $page
+* @return string
+*/
 function hit_counter( $user_ip, $page ) {
     global $conn;
     $query = "SELECT * FROM visitors WHERE user_ip = '$user_ip' AND page = '$page'";
@@ -41,42 +63,11 @@ function hit_counter( $user_ip, $page ) {
     return $result;
 };
 
-function login_time() {
-    global $conn;
-    // Insert to activities table
-    $curr_user = $_SESSION['user_id'];  // make sure you hv login session
-    $user_ip = get_client_ip();
-    $curr_time = date('Y-m-d H:i:s');
-    // set array data
-    $arr_data = Array(
-        "user_id"			=> $curr_user,
-        "ip_address"	=> $user_ip,
-        "icon"        => "fa-sign-in-alt",
-        "message"     => "User Login Successfully",
-        "login_time" 	=> $curr_time
-    );
-    // Call insert data function
-    $result = $conn->insert_table( "activities", $arr_data );
-    return $result;
-};
-
-function logout_time() {
-    global $conn;
-    $arr_data = Array();
-    // Insert to activities table
-    $curr_user = $_SESSION['user_id'];  // make sure you hv login session
-    $user_ip = get_client_ip();
-    $curr_time = date('Y-m-d H:i:s');
-    // set array data
-    $arr_data = [ 'logout_time' => $curr_time ];
-    // get last insert id
-    $result = json_decode( get_last_id( "activities", "act_id" ), true );
-    $last_id =$result["act_id"];
-    // Call insert data function
-    $result = $conn->update_table( "activities", $arr_data, "act_id", $last_id );
-    return $result;
-};
-
+/**
+* To get the last ID or row from activities table
+*
+* @return array
+*/
 function get_last_id() {
     global $conn;
     $output = Array();
@@ -91,11 +82,21 @@ function get_last_id() {
     return json_encode( $output, JSON_PRETTY_PRINT );
 };
 
+/**
+* Check if the result is json array
+*
+* @return boolean
+*/
 function is_json($string) {
    json_decode($string);
    return json_last_error() === JSON_ERROR_NONE;
 };
 
+/**
+* To get current user role detail from cookie
+*
+* @return boolean
+*/
 function is_admin() {
     $role = $_SESSION['user_role'];
 
@@ -104,6 +105,11 @@ function is_admin() {
     return TRUE;
 };
 
+/**
+* To get current user detail from database results
+*
+* @return array
+*/
 function current_user() {
     global $conn;
     $curr_user_id = $_SESSION['user_id'];   // make sure you hv login session
@@ -127,6 +133,12 @@ function current_user() {
     return json_encode( $output, JSON_PRETTY_PRINT );
 };
 
+/**
+* To get current user detail from database results
+*
+* @param mixed $text, $len (string or integer)
+* @return array
+*/
 function shorten( $text, $len = 10 ) {
     if( strlen( $text ) >= $len ) {
         $str = explode( "\n", wordwrap( $text, $len ) );
@@ -137,6 +149,12 @@ function shorten( $text, $len = 10 ) {
     return $short_msg;
 };
 
+/**
+* To get users table from database results
+*
+* @param string $field, $value
+* @return array
+*/
 function get_user_by( $field, $value ) {
     global $conn;
     $query = "SELECT * FROM users WHERE $field = $value";
@@ -159,6 +177,12 @@ function get_user_by( $field, $value ) {
     return json_encode( $output, JSON_PRETTY_PRINT );
 };
 
+/**
+* To get categories table from database results
+*
+* @param string $field, $value
+* @return array
+*/
 function get_category_by( $field, $value ) {
     global $conn;
     $query = "SELECT * FROM categories WHERE $field = $value";
@@ -176,6 +200,12 @@ function get_category_by( $field, $value ) {
     return json_encode( $output, JSON_PRETTY_PRINT );
 };
 
+/**
+* To get posts table from database results
+*
+* @param string $field, $value
+* @return array
+*/
 function get_post_by( $field, $value ) {
     global $conn;
     $query = "SELECT * FROM posts WHERE $field = $value";
@@ -209,13 +239,21 @@ function get_post_by( $field, $value ) {
             "image"          => $row["image"],
             "published"      => date( "M j, Y", strtotime( $row["published"] ) ),
             "tags"           => $row["tags"],
-            "tagslabeled"   => $txt_tags
+            "tagslabeled"    => $txt_tags,
+            "views"          => $row["views"],
+            "likes"          => $row["likes"]
         );
     };
 
     return json_encode( $output, JSON_PRETTY_PRINT );
 };
 
+/**
+* To get comments table from database results
+*
+* @param string $field, $value
+* @return array
+*/
 function get_comment_by( $field, $value ) {
     global $conn;
     $query = "SELECT * FROM comments WHERE $field = $value";
@@ -243,13 +281,20 @@ function get_comment_by( $field, $value ) {
             "category"       => $post["category"],
             "image"          => $post["image"],
             "published"      => date( "M j, Y", strtotime( $post["published"] ) ),
-            "tags"           => $post["tags"]
+            "tags"           => $post["tags"],
+            "likes"          => $post["likes"]
         );
     };
 
     return json_encode( $output, JSON_PRETTY_PRINT );
 };
 
+/**
+* To get table rows count results
+*
+* @param string $tablename, $id_key, $id_val
+* @return integer
+*/
 function rows_count( $tablename, $id_key=NULL, $id_val=NULL ) {
     global $conn;
     $query = "SELECT * FROM $tablename" . ( $id_key ? " WHERE $id_key='$id_val'" : "" );
@@ -259,6 +304,11 @@ function rows_count( $tablename, $id_key=NULL, $id_val=NULL ) {
     return $rowscnt;
 };
 
+/**
+* To get the last users from database results (this week)
+*
+* @return integer
+*/
 function get_new_users() {
     global $conn;
     // Get the last registration users for this current week
@@ -269,10 +319,87 @@ function get_new_users() {
     return $rowscnt;
 };
 
+/**
+* To insert a new activity log
+*
+* @param string $table
+* @return string
+*/
+function insert_table_log($table = "posts") {
+    global $conn;
+    // Insert to activities table
+    $curr_user = $_SESSION['user_id'];  // make sure you hv login session
+    $user_ip = get_client_ip();
+    // set array data
+    $arr_data = Array(
+        "user_id"			=> $curr_user,
+        "ip_address"	=> $user_ip
+    );
+
+    switch ( $table ) {
+      case "posts":
+        // insert array data
+        $arr_data += [
+          "icon"        => "fas fa-plus",
+          "message"     => "Post Created Successfully"
+        ];
+      case "pages":
+        // insert array data
+        $arr_data += [
+          "icon"        => "far fa-plus",
+          "message"     => "Page Created Successfully"
+        ];
+    };
+    // Call insert data function
+    $result = $conn->insert_table( "activities", $arr_data );
+    return $result;
+};
+
+/**
+* To update an activity log
+*
+* @param string $table
+* @return string
+*/
+function update_table_log($table = "posts") {
+    global $conn;
+    // Insert to activities table
+    $curr_user = $_SESSION['user_id'];  // make sure you hv login session
+    $user_ip = get_client_ip();
+    // set array data
+    $arr_data = Array(
+        "user_id"			=> $curr_user,
+        "ip_address"	=> $user_ip
+    );
+
+    switch ( $table ) {
+      case "posts":
+        // insert array data
+        $arr_data += [
+          "icon"        => "fas fa-edit",
+          "message"     => "Post Update Successfully"
+        ];
+      case "pages":
+        // insert array data
+        $arr_data += [
+          "icon"        => "far fa-edit",
+          "message"     => "Page Update Successfully"
+        ];
+    };
+    // Call insert data function
+    $result = $conn->insert_table( "activities", $arr_data );
+    return $result;
+};
+
+/**
+* To get the last activities log from database results (this week)
+*
+* @return integer
+*/
 function get_new_activities() {
     global $conn;
     // Get the last registration users for this current week
-    $query = "SELECT ip_address, icon, message, date_format(created, '%e %M %l.%i %p') as formatted_date
+    $query = "SELECT ip_address, icon, message, created
               FROM activities
               WHERE created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
               ORDER BY act_id";
@@ -283,7 +410,14 @@ function get_new_activities() {
     return $rowscnt;
 };
 
-function get_new_activities_by( $keyword="User Login" ) {
+/**
+* To get the last activities log from database results (this week)
+* Search by keyword
+*
+* @param string $keyword
+* @return integer
+*/
+function get_new_activities_by( $keyword="Post Created" ) {
     global $conn;
     // Get the last registration users for this current week
     $query = "SELECT ip_address, icon, message, date_format(created, '%e %M %l.%i %p') as formatted_date
@@ -302,8 +436,10 @@ function get_new_activities_by( $keyword="User Login" ) {
 * $pubDate = "17-09-2020"; // e.g. this could be like 'Sun, 10 Nov 2013 14:26:00 GMT'
 * $diff = ago($pubDate);    // output: 23 hrs ago
 * echo $diff;
-
 * Return the value of time different in "xx times ago" format
+*
+* @param timestamp $timestamp
+* @return string
 */
 function ago($timestamp)
 {

@@ -38,10 +38,10 @@
           <!-- card body -->
           <div class="card-body">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-12">
                     <!-- left column -->
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-6">
                         <fieldset class="form-group">
                   			<label>Company Logo</label><br>
                   				<img style="margin:10px;" src="./images/tokopedia.png" width="300px" name="compLogo" id="compLogo" class="img-thumbnail centered">
@@ -51,7 +51,7 @@
                   				<input type="file" class="form-control-file" id="file" name="file" accept="image/x-png,image/gif,image/jpeg">
                   			</fieldset>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-6">
                   			<fieldset class="form-group">
                   				<label>Site Title</label>
                   				<input type="text" class="form-control" name="title" id="title" placeholder="Nama Perusahaan">
@@ -100,7 +100,7 @@
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-6">
                   <fieldset class="form-group">
                     <label><span class="fab fa-facebook"></span>&nbsp;Facebook</label>
                   </fieldset>
@@ -122,7 +122,7 @@
                     <input type="text" class="form-control" name="google" id="google" placeholder="Google Plus URL">
                   </fieldset>
                 </div>
-                <div class="col-md-6">
+                <div class="col-6">
                   <fieldset class="form-group col-xs-3">
                     <label><span class="fas fa-linkedin"></span>&nbsp;Linkedin</label>
                   </fieldset>
@@ -155,8 +155,8 @@
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-md-6">&nbsp;</div>
-                <div class="col-md-6 text-right">
+                <div class="col-6">&nbsp;</div>
+                <div class="col-6 text-right">
                     <input class="btn btn-primary" name="submit" id="btn_submit" type="submit" value="Save Changes"/>
                 </div>
               </div>

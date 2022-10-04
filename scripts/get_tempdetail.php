@@ -9,9 +9,9 @@ $conn = new Simple_PHP_CRUD_Class();
 // check request
 if ( isset( $_POST ) ) {
     // get values
-    $page_id = isset( $_POST['page_id'] ) ? filter_var( $_POST['page_id'], FILTER_SANITIZE_STRING ) : '';
-    // Get Pages Details
-    $result = $conn->select_table( "pages", "page_id", $page_id );
+    $temp_id = isset( $_POST['temp_id'] ) ? filter_var( $_POST['temp_id'], FILTER_SANITIZE_STRING ) : '';
+    // Get Templates Details
+    $result = $conn->select_table( "templates", "temp_id", $temp_id );
     echo $result;
 } else {
     $result = "Invalid Request!";

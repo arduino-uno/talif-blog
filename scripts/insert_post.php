@@ -14,12 +14,14 @@ if ( isset( $_POST ) ) {
     // get values
     $title = isset( $_POST['post_title'] ) ? filter_var( $_POST['post_title'], FILTER_SANITIZE_STRING ) : '';
     $body = isset( $_POST['post_body'] ) ? filter_var( $_POST['post_body'], FILTER_SANITIZE_STRING ) : '';
+    $category = isset( $_POST['post_category'] ) ? filter_var( $_POST['post_category'], FILTER_SANITIZE_STRING ) : '';
     $tags = isset( $_POST['post_tags'] ) ? filter_var( $_POST['post_tags'], FILTER_SANITIZE_STRING ) : '';
 
     $arr_data = Array(
         "author"			=> $user['user_id'],
         "title"				=> $title,
         "body"        => $body,
+        "cat_id"      => $category,
         "tags" 			  => $tags
     );
 
@@ -42,6 +44,8 @@ if ( !empty( $_FILES['upt_img_file']['name'] ) ) {
     };
 
 };
+// Call insert log function
+$insert_log = insert_table_log( "posts" );
 // Call insert data function
 $result = $conn->insert_table( "posts", $arr_data );
 echo $result;

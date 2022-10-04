@@ -9,12 +9,21 @@ var table_activities = $('#activity_data').DataTable({
     },
     "columnDefs": [
         {data: 'act_id', className: 'text-center', name: 'activity_id', targets:0, orderable: true, searchable: true},
-        {data: 'user_login', className: 'font-weight-bold', name: 'user_login', targets:1},
-        {data: 'ip_address', className: 'font-weight-bold', name: 'ip_address', targets:2},
+        {data: {user_id:'user_id', user_fullname:'user_fullname', user_role:'user_role', user_image:'user_image'}, className: 'font-weight-bold', name: 'user_login', targets:1,
+            render: function(data,type,full,meta) {
+                return '<div class="media">' +
+                    '<img class="d-flex m-2 rounded border border-light" src="./images/' + data.user_image + '" width="60" alt="Generic placeholder image">' +
+                    '<div class="media-body">' +
+                      '<span class="font-weight-bold"><a href="#" onclick="profileModal(' + data.user_id + ')">' + data.user_fullname + '</a></span>' +
+                      '<p class="font-weight-normal">' + data.user_role + '</p>' +
+                    '</div></div>';
+            }
+        },
+        {data: 'ip_address', className: 'font-weight-bold text-center', name: 'ip_address', targets:2},
         {data: {icon:'icon', message:'message'}, className: 'font-weight-normal', name: 'message', targets:3,
             render: function(data,type,full,meta) {
                 return '<div class="info-box" style="min-height:40px;">' +
-                    '<span class="info-box-icon bg-info elevation-1" style="height:40px;width:40px;"><i class="fas ' + data.icon + '"></i></span>' +
+                    '<span class="info-box-icon bg-info elevation-1" style="height:40px;width:40px;"><i class="' + data.icon + '"></i></span>' +
                     '<span class="info-box-text justify-content-center align-self-center m-2">' + data.message + '</span>' +
                     '</div>';
             }
@@ -23,7 +32,6 @@ var table_activities = $('#activity_data').DataTable({
         {data: 'act_id', className: 'text-center', name: 'action', targets:-1,
             render: function(data,type,full,meta) {
                 return "<div class='btn-group' role='group'>" +
-                          "<button type='button' class='btn btn-primary btn-sm' onclick='edit_activity(\"" + data + "\")' data-toggle='tooltip' data-placement='top' title='Update Data'><i class='fas fa-eye'></i>&nbsp;Detail</button>" +
                           "<button type='button' class='btn btn-warning btn-sm' onclick='delete_activity(\"" + data + "\")' data-toggle='tooltip' data-placement='top' title='Remove Data'><i class='fas fa-trash'></i>&nbsp;Delete</button>" +
                        "</div>";
             }
@@ -36,14 +44,6 @@ var table_activities = $('#activity_data').DataTable({
     order: [[ 1, 'asc' ]],
     dom: 'lBfrtip',
     buttons: [{
-        className: 'btn btn-primary btn-sm mr-2',
-        text: '<i class="fas fa-trash-alt text-warning"></i> Delete All',
-        titleAttr: 'Delete All',
-        action: function ( e, dt, node, config ) {
-            $('#form_newcat')[0].reset();
-            $('#modal_newcat').modal('show');
-        }
-    },{
         extend: 'copyHtml5',
         className: 'btn btn-primary btn-sm',
         text: '<i class="fas fa-copy"></i> Copy',

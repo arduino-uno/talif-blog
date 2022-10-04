@@ -12,7 +12,7 @@
                 render: function(data,type,full,meta) {
                     return '<span class="display-4 font-weight-bold">' + data + '</span>';
                 }},
-            {data: {title:'title', body:'body', image:'image', author_id:'author_id', author_name:'author_name', published:'published', tags:'tags'}, className: 'font-weight-normal', name: 'title', targets:1,
+            {data: {title:'title', body:'body', image:'image', author_id:'author_id', author_name:'author_name', published:'published', tags:'tags', likes:'likes'}, className: 'font-weight-normal', name: 'title', targets:1,
                 render: function(data,type,full,meta) {
                     return '<div class="media">' +
                         '<img class="d-flex m-2 rounded border border-light" src="./images/' + data.image + '" width="60" alt="Generic placeholder image">' +
@@ -23,7 +23,7 @@
                         '<p>' +
                           '<i class="fas fa-user"></i>&nbsp;by&nbsp;<a href="#" onclick="profileModal(' + data.author_id + ')">' + data.author_name + '</a>&nbsp;' +
                           '|&nbsp;<i class="fas fa-calendar-alt"></i>&nbsp;' + data.published + '&nbsp;' +
-                          '|&nbsp;<i class="fas fa-share"></i>&nbsp;39 Shares&nbsp;' +
+                          '|&nbsp;<i class="fas fa-heart"></i>&nbsp;' + data.likes + '&nbsp;Likes&nbsp;' +
                           '|&nbsp;<i class="fas fa-tags"></i>&nbsp;Tags&nbsp;:&nbsp;' + data.tags + '&nbsp;' +
                         '</p>';
                 }},

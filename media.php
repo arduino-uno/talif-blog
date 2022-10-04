@@ -16,6 +16,7 @@ $module = isset( $_GET['module'] ) ? filter_var( $_GET['module'], FILTER_SANITIZ
 if ( is_admin() ) {
 
     $AVAILABLE_PAGES = array("dashboard",
+                        "author-contact",
                         "site-settings",
                         "site-templates",
                         "email-settings",
@@ -55,7 +56,7 @@ if ( !$AVAILABLE_PAGES[$module] ) {
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="./plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- jQuery UI -->
@@ -100,7 +101,7 @@ if ( !$AVAILABLE_PAGES[$module] ) {
         <a href="./media.php?module=dashboard" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="./media.php?module=author-contact" class="nav-link">Contact</a>
       </li>
     </ul>
     <!-- Right navbar links -->
@@ -430,6 +431,9 @@ if ( !$AVAILABLE_PAGES[$module] ) {
         case "dashboard":
           require( "./pages/dashboard.php" );
           break;
+        case "author-contact":
+          require( "./pages/author-contact.php" );
+          break;
         case "manage-pages":
           require( "./pages/pages.php" );
           break;
@@ -614,7 +618,7 @@ $(function () {
           class: 'bg-info',
           title: '[ DEMO ] AdminLTE - Talif',
           subtitle: 'Just now ..',
-          body: '<img src="./images/blog-logo.png" class="img-thumbnail" alt="Cinque Terre"><h4 class="text-center mt-2">Simple WebBlog CMS</h4>',
+          body: '<center><img src="./images/ninja-logo.png" class="img-thumbnail" alt="Talif-Blog Logo"><span class="arabic-font text-center" style="font-size: 4em;text-shadow: 6px 6px 6px #000;">تأليف</span></center><h4 class="text-center mt-2" style="text-shadow: 6px 6px 6px #000;">Simple WebBlog CMS</h4>',
           image: './images/AdminLTELogo.png',
           imageAlt: 'Application Logo',
           position: 'topRight',
@@ -783,6 +787,8 @@ if ( $module == "dashboard" ) {
     echo '<script src="./scripts/js/users_tbl.js"></script>';
 } elseif ( $module == "site-settings" ) {
     echo '<script src="./scripts/js/site_settings.js"></script>';
+} elseif ( $module == "site-templates" ) {
+    echo '<script src="./scripts/js/site_templates.js"></script>';
 };
 ?>
 </body>

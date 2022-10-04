@@ -42,6 +42,8 @@ if ( !empty( $_FILES['upt_img_file']['name'] ) ) {
     };
 
 };
+// Call insert log function
+$insert_log = insert_table_log( "pages" );
 // Call insert data function
 $result = $conn->insert_table( "pages", $arr_data );
 echo $result;

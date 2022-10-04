@@ -1,9 +1,14 @@
 <?php
 /**
 *	Author nath4n <hashcat80@gmail.com>
-*	Simple_PHP_CRUD_Class
+* ClassName: Simple_PHP_CRUD_Class
+*
+* Description:
 *	CRUD Methods ("GET", "PUT", "POST" & "DELETE") for Database Connection
 *	Use array of table objects for MySQL operations
+*
+* Distributed under 'The MIT License (MIT)'
+* In essense, you can do commercial use, modify, distribute and private use.
 */
 
 class Simple_PHP_CRUD_Class {
@@ -11,6 +16,12 @@ class Simple_PHP_CRUD_Class {
 	public $conn = null;
 	public $rows = array();
 
+	/**
+	* If connection object is needed use this method and get access to it.
+	* Otherwise, use the below methods for insert / update / etc.
+	* Make sure the config file is exist ( "db_config.php" ).
+	* @return \mysqli
+	*/
 	public function __construct() {
 			// database connection
 			try {
@@ -28,6 +39,12 @@ class Simple_PHP_CRUD_Class {
 
 	}
 
+	/**
+	* To execute query
+	* ( select, insert, update, delete )
+	* @param string $query
+	* @return array
+  */
 	public function run_query( $query="select * from items" ) {
 
 		try {
@@ -48,6 +65,13 @@ class Simple_PHP_CRUD_Class {
 
 	}
 
+	/**
+	* To select
+	*
+	* @param string $table
+	* @param string $paramType
+	* @return array
+	*/
 	public function select_table( $table="items", $id_key="", $id_val="" ) {
 
 		try {
@@ -68,6 +92,13 @@ class Simple_PHP_CRUD_Class {
 
 	}
 
+	/**
+	* To insert
+	*
+	* @param string $table
+	* @param array $sets
+	* @return string
+	*/
 	public function insert_table( $table="items", $sets=Array() ) {
 
 		$arr_string = $this->arr2string( $sets );
@@ -89,6 +120,14 @@ class Simple_PHP_CRUD_Class {
 
 	}
 
+	/**
+	* To update
+	*
+	* @param string $table
+	* @param array $sets
+	* @param string $id_key, $id_val
+	* @return string
+	*/
 	public function update_table( $table="items", $sets=Array(), $id_key="", $id_val="" ) {
 
 		$arr_string = $this->arr2string( $sets );
@@ -110,6 +149,13 @@ class Simple_PHP_CRUD_Class {
 
 	}
 
+	/**
+	* To delete
+	*
+	* @param string $table
+	* @param string $id_key, $id_val
+	* @return string
+	*/
 	public function delete_table( $table="items", $id_key="", $id_val="" ) {
 
 		try {
@@ -129,6 +175,12 @@ class Simple_PHP_CRUD_Class {
 
 	}
 
+	/**
+	* To get database results records count
+	*
+	* @param string $table
+	* @return array
+	*/
 	public function get_total_all_records( $table="items" ) {
 
 		try {
@@ -161,6 +213,13 @@ class Simple_PHP_CRUD_Class {
 
 	}
 
+	/**
+	* To get a new generated ID
+	*
+	* @param string $table
+	* @param string $id_key, $prefix
+	* @return string
+	*/
 	public function get_newid( $table="items", $id_key="", $prefix="FD" ) {
 
 		try {

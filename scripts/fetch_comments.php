@@ -51,6 +51,7 @@ $rows = json_decode( $result, true );
 			$sub_array["message"] = $short_msg;
 			$sub_array["status"] = $row["status"];
 			$sub_array["created"] = date( "M j, Y", strtotime( $post["created"] ) );
+			$sub_array["likes"] = $row["likes"];
 
   		$data[] = $sub_array;
 	};

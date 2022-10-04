@@ -12,7 +12,7 @@ $conn = new Simple_PHP_CRUD_Class();
 if ( isset( $_POST ) ) {
     // get values
     $post_id = isset( $_POST['post_id'] ) ? filter_var( $_POST['post_id'], FILTER_SANITIZE_STRING ) : '';
-    // Get Setting Details
+    // Get Post Details
     $result = '[' . get_post_by( "post_id", $post_id ) . ']';  //  add brackets to Array
     echo $result;
 } else {

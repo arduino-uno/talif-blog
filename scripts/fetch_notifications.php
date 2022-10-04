@@ -12,21 +12,36 @@ $output = Array();
 $rows = Array();
 // Get activities_tbl Info
 $rowscnt = get_new_activities();
-$user_login_cnt = get_new_activities_by( "User Login" );
 $user_created_cnt = get_new_activities_by( "User Created" );
 $user_updated_cnt = get_new_activities_by( "User Updated" );
+$post_created_cnt = get_new_activities_by( "Post Created" );
+$post_updated_cnt = get_new_activities_by( "Post Updated" );
+$page_created_cnt = get_new_activities_by( "Page Created" );
+$page_updated_cnt = get_new_activities_by( "Page Updated" );
 
 $query = "SELECT COUNT(act_id) AS rowcount, icon, message, created
-          FROM activities
-          WHERE message LIKE '%User Login%' AND created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
-      UNION
-      SELECT COUNT(act_id) AS rowcount, icon, message, created
           FROM activities
           WHERE message LIKE '%User Created%' AND created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
       UNION
       SELECT COUNT(act_id) AS rowcount, icon, message, created
           FROM activities
           WHERE message LIKE '%User Updated%' AND created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
+      UNION
+      SELECT COUNT(act_id) AS rowcount, icon, message, created
+          FROM activities
+          WHERE message LIKE '%Post Created%' AND created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
+      UNION
+      SELECT COUNT(act_id) AS rowcount, icon, message, created
+          FROM activities
+          WHERE message LIKE '%Post Updated%' AND created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
+      UNION
+      SELECT COUNT(act_id) AS rowcount, icon, message, created
+          FROM activities
+          WHERE message LIKE '%Page Created%' AND created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
+      UNION
+      SELECT COUNT(act_id) AS rowcount, icon, message, created
+          FROM activities
+          WHERE message LIKE '%Page Updated%' AND created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
       GROUP BY icon DESC";
 
 $result = $conn->run_query( $query );
@@ -41,23 +56,44 @@ foreach( $rows as $row ) {
     $icon = $row["icon"];
     $diff_time = ago( $row["created"] );
     switch ( $icon ) {
-      case "fa-sign-in-alt":
+      case "fas fa-user-plus":
           $notify_text .= '<a href="#" class="dropdown-item">
-              <i class="fas ' . $icon . ' mr-2"></i>&nbsp;' . $user_login_cnt . '&nbsp;new user login
+              <i class="'. $icon . ' mr-2 border border-light rounded  p-1"></i>&nbsp;' . $user_created_cnt . '&nbsp;user creates
                 <span class="float-right text-muted text-sm">' . $diff_time . '</span>
               </a>
               <div class="dropdown-divider"></div>';
           break;
-      case "fa-user-plus":
+      case "fas fa-user-edit":
           $notify_text .= '<a href="#" class="dropdown-item">
-              <i class="fas ' . $icon . ' mr-2"></i>&nbsp;' . $user_created_cnt . '&nbsp;user created
+              <i class="' . $icon . ' mr-2 border border-light rounded  p-1"></i>&nbsp;' . $user_updated_cnt . '&nbsp;user updates
                 <span class="float-right text-muted text-sm">' . $diff_time . '</span>
               </a>
               <div class="dropdown-divider"></div>';
           break;
-      case "fa-user-edit":
+      case "fas fa-plus":
           $notify_text .= '<a href="#" class="dropdown-item">
-              <i class="fas ' . $icon . ' mr-2"></i>&nbsp;' . $user_updated_cnt . '&nbsp;user updated
+              <i class="' . $icon . ' mr-2 border border-light rounded  p-1"></i>&nbsp;' . $post_created_cnt . '&nbsp;post creates
+                <span class="float-right text-muted text-sm">' . $diff_time . '</span>
+              </a>
+              <div class="dropdown-divider"></div>';
+          break;
+      case "fas fa-edit":
+          $notify_text .= '<a href="#" class="dropdown-item">
+              <i class="' . $icon . ' mr-2 border border-light rounded  p-1"></i>&nbsp;' . $post_updated_cnt . '&nbsp;post updates
+                <span class="float-right text-muted text-sm">' . $diff_time . '</span>
+              </a>
+              <div class="dropdown-divider"></div>';
+          break;
+      case "far fa-plus":
+          $notify_text .= '<a href="#" class="dropdown-item">
+              <i class="' . $icon . ' mr-2 border border-light rounded  p-1"></i>&nbsp;' . $page_created_cnt . '&nbsp;page creates
+                <span class="float-right text-muted text-sm">' . $diff_time . '</span>
+              </a>
+              <div class="dropdown-divider"></div>';
+          break;
+      case "far fa-edit":
+          $notify_text .= '<a href="#" class="dropdown-item">
+              <i class="' . $icon . ' mr-2 border border-light rounded  p-1"></i>&nbsp;' . $page_updated_cnt . '&nbsp;page updates
                 <span class="float-right text-muted text-sm">' . $diff_time . '</span>
               </a>
               <div class="dropdown-divider"></div>';

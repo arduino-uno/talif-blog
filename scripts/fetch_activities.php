@@ -40,8 +40,10 @@ $rows = json_decode( $result, true );
 foreach( $rows as $row ) {
 		$sub_array = array();
 		$sub_array["act_id"] = $row["act_id"];
+		$sub_array["user_id"] = $row["user_id"];
 		$sub_array["user_login"] = $row["user_login"];
 		$sub_array["user_fullname"] = $row["user_fullname"];
+		$sub_array["user_image"] = $row["user_image"];
     $sub_array["ip_address"] = $row["ip_address"];
     $sub_array["user_role"] = $row["user_role"];
 		$sub_array["icon"] = $row["icon"];

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-09-29 13:05:56
+/* Smarty version 4.1.0, created on 2022-10-03 20:30:20
   from '/var/www/html/talif-blog/templates/wordify/blog-single.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_633535c473d3c0_87083571',
+  'unifunc' => 'content_633ae3eca77353_40825934',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_633535c473d3c0_87083571 (Smarty_Internal_Template $_smarty_tpl) {
+function content_633ae3eca77353_40825934 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -113,19 +113,18 @@ function content_633535c473d3c0_87083571 (Smarty_Internal_Template $_smarty_tpl)
       <div class="container">
         <div class="row blog-entries element-animate">
           <div class="col-md-12 col-lg-8 main-content">
-                        <img src="./images/blog-3.jpg" style="width:800px;height:55vh;object-fit: cover;" alt="Image" class="img-fluid mb-5">
+                        <img src="./images/blog-2.jpg" style="width:800px;height:55vh;object-fit: cover;" alt="Image" class="img-fluid mb-5">
              <div class="post-meta">
-                <span class="author mr-2"><img src="./images/blog-3.jpg" alt="Colorlib" class="mr-2"> Agah Nata</span>&bullet;
-                <span class="mr-2">09 11, 20228 </span> &bullet;
+                <span class="author mr-2"><img src="./images/blog-2.jpg" alt="Colorlib" class="mr-2"> Agah Nata</span>&bullet;
+                <span class="mr-2">10 03, 20228 </span> &bullet;
                 <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
              </div>
             <h1 class="mb-4">How to Find the Video Games of Your Youth</h1>
             <a class="category mb-5" href="#">CSS3</a>
-            <div class="post-content-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore&nbsp;..</div>
+            <div class="post-content-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut&nbsp;..</div>
             <div class="pt-5">
               <p>Categories:  <a href="./category.php?cid=2">CSS3</a>
-              Tags:                                 <a href="#">#tag1</a>,
-                                <a href="#">#tag2</a>,
+              Tags:                                 <a href="#">#tag1,tag2</a>,
                             </p>
             </div>
                         <div class="pt-5">

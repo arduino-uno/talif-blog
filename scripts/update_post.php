@@ -19,7 +19,7 @@ if ( isset( $_POST ) ) {
     $arr_data = Array(
         "title"				=> $title,
         "body"        => $body,
-        "category"    => $category,
+        "cat_id"    => $category,
         "tags" 			  => $tags
     );
 
@@ -42,6 +42,8 @@ if ( !empty( $_FILES['upt_img_file']['name'] ) ) {
     };
 
 };
+// Call update log function
+$update_log = update_table_log( "posts" );
 // Call update data function
 $result = $conn->update_table( "posts", $arr_data, "post_id", $post_id );
 echo $result;

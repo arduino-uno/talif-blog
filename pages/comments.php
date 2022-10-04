@@ -57,7 +57,7 @@
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-<!-- Add New Post Modal -->
+<!-- View Post Detail Modal -->
 <div class="modal fade" id="modal_viewpost" tabindex="-1" role="dialog" aria-labelledby="modal_viewpost">
   <div class="modal-dialog modal-lg">
 		<div class="modal-content bg-dark">
@@ -82,7 +82,7 @@
                   <p>
                     <i class="fas fa-user"></i>&nbsp;by&nbsp;<a href="#" id="post_link">&nbsp;</a>&nbsp;
                     |&nbsp;<i class="fas fa-calendar-alt"></i>&nbsp;<span id="post_published">&nbsp;</span>&nbsp;
-                    |&nbsp;<i class="fas fa-share"></i>&nbsp;39 Shares&nbsp;
+                    |&nbsp;<i class="fas fa-heart"></i>&nbsp;<span id="post_likes">&nbsp;</span>&nbsp;Likes&nbsp;
                     |&nbsp;<i class="fas fa-tags"></i>&nbsp;Tags&nbsp;:&nbsp;<span id="post_tags">&nbsp;</span>
                   </p>
               </div>

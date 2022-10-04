@@ -40,6 +40,8 @@ if ( !empty( $_FILES['upt_img_file']['name'] ) ) {
     };
 
 };
+// Call update log function
+$update_log = update_table_log( "pages" );
 // Call update data function
 $result = $conn->update_table( "pages", $arr_data, "page_id", $page_id );
 echo $result;

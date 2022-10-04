@@ -7,9 +7,8 @@ require('../scripts/class_simple_php_crud.php');
 $conn = new Simple_PHP_CRUD_Class();
 
 // check request
-if(isset($_POST)) {
+if ( isset($_POST) ) {
     // Get Setting Details
-    $rows = Array();
     $result = $conn->select_table( "siteinfo", "ID", 1 );
     echo $result;
 } else {

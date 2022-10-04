@@ -12,7 +12,7 @@ var table_comments = $('#comments_data').DataTable({
 						render: function(data,type,full,meta) {
 								return '<span class="display-4 font-weight-bold">' + data + '</span>';
 						}},
-				{data: {post_id:'post_id', title:'title', name:'name', email:'email', message:'message', created:'created'}, className: 'font-weight-normal', name: 'content', targets:1,
+				{data: {post_id:'post_id', title:'title', name:'name', email:'email', message:'message', created:'created', likes:'likes'}, className: 'font-weight-normal', name: 'content', targets:1,
 						render: function(data,type,full,meta) {
 
 								const getInitials = (string) => {
@@ -32,7 +32,7 @@ var table_comments = $('#comments_data').DataTable({
 										'<p>' +
 											'<i class="fas fa-user"></i>&nbsp;by&nbsp;<a href="mailto:' + data.email + '">' + data.name + '</a>&nbsp;' +
 											'|&nbsp;<i class="fas fa-calendar-alt"></i>&nbsp;' + data.created + '&nbsp;' +
-											'|&nbsp;<i class="fas fa-share"></i>&nbsp;39 Shares&nbsp;' +
+											'|&nbsp;<i class="fas fa-heart"></i>&nbsp;' + data.likes + '&nbsp;Likes&nbsp;' +
 											'|&nbsp;<i class="fas fa-file"></i>&nbsp;<a href="#" onclick="post_detail(' + data.post_id + ')">Post Detail&nbsp;&nbsp;' +
 										'</p>';
 
@@ -100,13 +100,13 @@ CKEDITOR.replace( 'upt_content' );
 
 function post_detail(post_id){
 		// alert("Update Post: " + post_id);
-
 		$.ajax({
 			 method: "POST",
 			 url: "./scripts/get_postdetail.php",
 			 data: { 'post_id': post_id },
 			 datatype: 'JSON',
 			 success: function ( myData ) {
+
 					$.each( JSON.parse( myData ), function( index, value ) {
 						 $("#post_image").attr("src", "./images/" + value.image);
 						 $("h4#post_title.media-heading").html(value.title);
@@ -115,7 +115,9 @@ function post_detail(post_id){
 						 $("a#post_link").html(value.author_name);
 						 $("span#post_published").html(value.published);
 						 $("span#post_tags").html(value.tagslabeled);
+						 $("span#post_likes").html(value.likes);
 					});
+
 			 }
 		});
 
@@ -251,10 +253,10 @@ $('#btn_delete').on('click', function (e) {
 
 });
 
-$('#modal_editcomment, #modal_delcomment').on('show.bs.modal', function () {
+$('#modal_viewpost, #modal_editcomment, #modal_delcomment').on('show.bs.modal', function () {
 		$('#dialog_disappear').trigger("play");
 });
 
-$('#modal_editcomment, #modal_delcomment').on('hidden.bs.modal', function () {
+$('#modal_viewpost, #modal_editcomment, #modal_delcomment').on('hidden.bs.modal', function () {
 		$('#dialog_disappear').trigger("play");
 });

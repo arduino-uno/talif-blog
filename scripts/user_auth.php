@@ -22,8 +22,6 @@ if ( !empty($username) && !empty($password) ) {
 			$_SESSION['user_fullname'] = $rows[0][user_fullname];
 			$_SESSION['user_role'] = $rows[0][user_role];
 			$_SESSION['user_image'] = $rows[0][user_image];
-			// insert user login log
-			$login_log = login_time();
 			// return
 			echo "TRUE";
 		} else {

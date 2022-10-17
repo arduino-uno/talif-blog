@@ -7,8 +7,8 @@
 *	CRUD Methods ("GET", "PUT", "POST" & "DELETE") for Database Connection
 *	Use array of table objects for MySQL operations
 *
-* Distributed under 'The MIT License (MIT)'
-* In essense, you can do commercial use, modify, distribute and private use.
+* Distributed under 'GNU General Public License, Version 3'
+* Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
 */
 
 class Simple_PHP_CRUD_Class {

@@ -11,10 +11,11 @@ $conn = new Simple_PHP_CRUD_Class();
 $output = Array();
 $rows = Array();
 
-$query = "SELECT * FROM comments ";
+$parent_id = isset( $_POST['parent_id'] ) ? filter_var( $_POST['parent_id'], FILTER_SANITIZE_STRING ) : '';
+$query = "SELECT * FROM comments WHERE parent_id = $parent_id ";
 
 if ( isset( $_POST["search"]["value"] ) ) {
-	 $query .= 'WHERE message LIKE "%'.$_POST["search"]["value"].'%" ';
+	 $query .= 'AND message LIKE "%'.$_POST["search"]["value"].'%" ';
 };
 
 if ( isset( $_POST["order"] ) ) {
@@ -45,7 +46,7 @@ $rows = json_decode( $result, true );
 			$sub_array["cat_id"] = $post["cat_id"];
 			$sub_array["category"] = $post["category"];
 			$sub_array["image"] = $post["image"];
-			$sub_array["name"] = $row["name"];
+			$sub_array["fullname"] = $row["fullname"];
 			$sub_array["email"] = $row["email"];
 			$sub_array["website"] = $row["website"];
 			$sub_array["message"] = $short_msg;

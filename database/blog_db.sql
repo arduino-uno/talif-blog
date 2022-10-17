@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 26, 2022 at 01:03 PM
--- Server version: 10.5.17-MariaDB-1:10.5.17+maria~ubu2004
--- PHP Version: 7.4.30
+-- Generation Time: Oct 17, 2022 at 11:16 AM
+-- Server version: 10.3.34-MariaDB-0ubuntu0.20.04.1
+-- PHP Version: 7.4.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,8 +33,6 @@ CREATE TABLE `activities` (
   `ip_address` varchar(20) NOT NULL,
   `icon` varchar(20) DEFAULT NULL,
   `message` tinytext DEFAULT 'Other User Activity',
-  `login_time` timestamp NULL DEFAULT NULL,
-  `logout_time` timestamp NULL DEFAULT NULL,
   `created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -42,18 +40,13 @@ CREATE TABLE `activities` (
 -- Dumping data for table `activities`
 --
 
-INSERT INTO `activities` (`act_id`, `user_id`, `ip_address`, `icon`, `message`, `login_time`, `logout_time`, `created`) VALUES
-(1, 1, '120.0.0.1', 'fa-user-plus', 'User Created Successfully', '2022-09-22 20:56:03', '2022-09-22 20:56:39', '2022-09-24 17:00:00'),
-(2, 1, '120.0.0.1', 'fa-user-edit', 'User Updated Successfully', '2022-09-22 20:56:03', '2022-09-22 20:56:39', '2022-09-25 10:09:12'),
-(8, 1, '127.0.0.1', 'fa-sign-in-alt', 'Other User Activity', '2022-09-23 02:15:03', '2022-09-23 02:15:03', '2022-09-24 01:12:58'),
-(32, 1, '127.0.0.1', 'fa-sign-in-alt', 'User Login Successfully', '2022-09-24 01:19:48', '2022-09-24 01:20:04', '2022-09-24 01:20:04'),
-(33, 1, '127.0.0.1', 'fa-sign-in-alt', 'User Login Successfully', '2022-09-24 01:20:57', '2022-09-24 06:52:03', '2022-09-24 06:52:03'),
-(38, 1, '127.0.0.1', 'fa-sign-in-alt', 'User Login Successfully', '2022-09-24 08:31:33', '2022-09-24 23:17:23', '2022-09-24 23:17:23'),
-(44, 1, '127.0.0.1', 'fa-sign-in-alt', 'User Login Successfully', '2022-09-25 01:53:57', '2022-09-25 01:59:59', '2022-09-25 01:59:59'),
-(49, 1, '==1', 'fa-sign-in-alt', 'User Login Successfully', '2022-09-25 14:19:10', NULL, '2022-09-25 14:19:10'),
-(50, 1, '127.0.0.1', 'fa-sign-in-alt', 'User Login Successfully', '2022-09-26 02:01:52', '2022-09-26 02:20:37', '2022-09-26 02:20:37'),
-(51, 1, '127.0.0.1', 'fa-sign-in-alt', 'User Login Successfully', '2022-09-26 03:02:58', NULL, '2022-09-26 03:02:58'),
-(52, 1, '127.0.0.1', 'fa-sign-in-alt', 'User Login Successfully', '2022-09-26 06:02:58', NULL, '2022-09-26 06:02:58');
+INSERT INTO `activities` (`act_id`, `user_id`, `ip_address`, `icon`, `message`, `created`) VALUES
+(1, 1, '120.0.0.1', 'fas fa-user-plus', 'User Created Successfully', '2022-10-04 10:21:28'),
+(2, 1, '120.0.0.1', 'fas fa-user-edit', 'User Updated Successfully', '2022-10-06 10:21:45'),
+(3, 1, '127.0.0.1', 'fas fa-plus', 'Post Created Succesfully', '2022-10-06 10:32:09'),
+(4, 1, '127.0.0.1', 'fas fa-edit', 'Post Updated Succesfully', '2022-10-06 13:16:05'),
+(5, 1, '127.0.0.1', 'far fa-plus', 'Page Created Succesfully', '2022-10-06 10:34:02'),
+(6, 1, '127.0.0.1', 'far fa-edit', 'Page Updated Succesfully', '2022-10-06 13:16:12');
 
 -- --------------------------------------------------------
 
@@ -109,11 +102,12 @@ INSERT INTO `chats` (`chat_id`, `user_id`, `message`, `chat_date`) VALUES
 CREATE TABLE `comments` (
   `comm_id` int(11) NOT NULL,
   `post_id` int(11) DEFAULT NULL,
-  `parent_id` int(11) NOT NULL DEFAULT -1,
-  `name` varchar(255) DEFAULT NULL,
+  `parent_id` int(11) NOT NULL DEFAULT 0,
+  `fullname` varchar(105) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `website` varchar(100) DEFAULT NULL,
   `message` text DEFAULT NULL,
+  `likes` int(11) DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 0,
   `created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -122,11 +116,13 @@ CREATE TABLE `comments` (
 -- Dumping data for table `comments`
 --
 
-INSERT INTO `comments` (`comm_id`, `post_id`, `parent_id`, `name`, `email`, `website`, `message`, `status`, `created`) VALUES
-(1, 1, -1, 'John Doe', 'jhon_doe@gmail.com', 'https://nicoyazoom.com', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 1, '2022-09-24 08:51:23'),
-(2, 2, 11, 'David Adams', 'adam_davis@gmail.com', 'https://nicoyazoom.com', 'It\'s good to hear that you enjoyed this article.', 1, '2022-09-24 08:45:40'),
-(3, 3, -1, 'Michael', 'michael_davis@gmail.com', 'https://nicoyazoom.com', 'I appreciate the time and effort you spent writing this article, good job!', 1, '2022-09-26 02:18:02'),
-(4, 4, -1, 'Agah Nata', 'hashcat80@gmail.com', 'https://nicoyazoom.com', 'Write a comment..', 1, '2022-09-24 08:49:22');
+INSERT INTO `comments` (`comm_id`, `post_id`, `parent_id`, `fullname`, `email`, `website`, `message`, `likes`, `status`, `created`) VALUES
+(1, 1, 0, 'John Doe', 'jhon_doe@gmail.com', 'https://nicoyazoom.com', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 1, 1, '2022-10-11 01:17:15'),
+(2, 1, 1, 'David Adams', 'adam_davis@gmail.com', 'https://nicoyazoom.com', 'It\'s good to hear that you enjoyed this article.', 2, 0, '2022-10-11 04:14:32'),
+(3, 3, 0, 'Michael', 'michael_davis@gmail.com', 'https://nicoyazoom.com', 'I appreciate the time and effort you spent writing this article, good job!', 0, 0, '2022-10-13 23:41:48'),
+(11, 3, 1, 'Demo User', 'demo@examples.com', '', 'Send New Mesages!', 2, 0, '2022-10-11 01:51:57'),
+(13, 3, 0, 'Agah Nata', 'hashcat80@gmail.com', 'talif-blog.com', 'event', NULL, 0, '2022-10-14 02:21:19'),
+(14, 3, 1, 'Demo User', 'demo@examples.com', 'talif-blog.com', 'Test.. ah!', NULL, 0, '2022-10-17 04:04:35');
 
 -- --------------------------------------------------------
 
@@ -203,11 +199,11 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `cat_id`, `author_id`, `title`, `body`, `status`, `image`, `published`, `tags`, `views`, `likes`) VALUES
-(1, 0, 1, 'How to Find the Video Games of Your Youth Post 1', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 0, 'blog-1.jpg', '2022-09-24 06:41:26', 'tag1, tag2', 0, NULL),
-(2, 1, 1, 'How to Find the Video Games of Your Youth', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 0, 'blog-2.jpg', '2022-09-24 08:35:25', 'tag1, tag2', 0, NULL),
-(3, 2, 1, 'How to Find the Video Games of Your Youth', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 0, 'blog-3.jpg', '2022-09-11 09:56:24', 'tag1, tag2', 0, NULL),
-(4, 3, 1, 'How to Find the Video Games of Your Youth', 'Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n', 0, 'blog-4.jpg', '2022-09-11 09:56:28', 'tag1, tag2, tag3', 0, 0),
-(5, 1, 1, 'How to Find the Video Games of Your Youth', 'Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n', 0, 'blog-5.jpg', '2022-09-24 06:39:56', 'tag1, tag2, tag3', 0, 0);
+(1, 0, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 0, 'img_1.jpg', '2022-10-15 05:54:29', 'tag1, tag2', 5, 2),
+(2, 1, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 0, 'img_2.jpg', '2022-10-15 05:55:12', 'tag1, tag2', 5, 2),
+(3, 2, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 0, 'img_3.jpg', '2022-10-15 05:56:18', 'tag1, tag2', 5, 2),
+(4, 3, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n', 0, 'img_4.jpg', '2022-10-15 05:56:24', 'tag1, tag2, tag3', 5, 2),
+(5, 1, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n', 0, 'img_5.jpg', '2022-10-15 05:56:31', 'tag1, tag2, tag3', 5, 2);
 
 -- --------------------------------------------------------
 
@@ -236,7 +232,33 @@ CREATE TABLE `siteinfo` (
 --
 
 INSERT INTO `siteinfo` (`ID`, `title`, `description`, `address`, `phone`, `fax`, `email`, `logo`, `facebook`, `twitter`, `google`, `linkedin`, `youtube`) VALUES
-(1, 'Talif  - A Simple WebBlog', 'A Software Developer designs and builds computer programs that power mobile devices, desktop computers, and even cars. They not only identify user needs but also create new applications for any given market while making improvements based on feedback from users.', 'Ujung Menteng Bussines Centre Blok C, No. 45\r\nJl Sri Sultan Hamengkubuwono Jakarta 13960', '+6221 4680 2245', '', 'info@galatiaexpessindo.co.id', 'blog-logo.png', '#', '#', '#', '#', '#');
+(1, 'Admin<strong>LTE</strong>', 'A Software Developer designs and builds computer programs that power mobile devices, desktop computers, and even cars. They not only identify user needs but also create new applications for any given market while making improvements based on feedback from users.', '123 Testing Ave, Testtown, 9876 NA', '+6221 4680 2245', '', 'info@galatiaexpessindo.co.id', 'ninja-logo.png', '#', '#', '#', '#', '#');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `templates`
+--
+
+CREATE TABLE `templates` (
+  `temp_id` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `author_name` varchar(100) NOT NULL,
+  `author_url` text NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `temp_dir` text NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 0,
+  `created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `templates`
+--
+
+INSERT INTO `templates` (`temp_id`, `title`, `description`, `author_name`, `author_url`, `image`, `temp_dir`, `status`, `created`) VALUES
+(1, 'Wordify – Free HTML5 personal blog website template', 'Hence the name, Wordify is an easy-to-use writer website template for bloggers, journalists, authors, editors and the like. You can easily alter Wordify to your needs due to its simplistic, clean and stunning web design. Wordify is a Bootstrap Framework tool that means adjusting to different devices happens in a snap. Moreover, it is also in tune with all web browsers, retina screens and ensures fantastic performance.', ' Aigars SIlkalns', 'https://colorlib.com/wp/template/wordify', 'wordify-1.jpg', 'wordify', 0, '2022-10-16 14:59:00'),
+(2, 'BizNews – Free News Website Template', 'It’s a lot easier for you to share news and articles online if you have a newspaper, news portal, or magazine website. You may know that there is a big challenge in creating a news or magazine website from scratch. If you are on a tight budget and time schedule, you should use our free news website template to make an incredible news portal or magazine website. Why starting from scratch if you have pre-built and free HTML templates?\r\n\r\nWe are here with a lightweight, easy-to-use, and fully responsive free magazine website template perfect for creating professional news, newspaper, news portal, news channel, news page, and online magazine websites. No matter if you haven’t built a single web page in your life yet, you will still succeed in making your online magazine website with this free magazine website template. The template is very easy to use and beginner-friendly for your convenience.\r\n\r\nBizNews – free news portal website template is built with Bootstrap CSS framework. It’s fully responsive and customizable. It comes with 4 pre-defined and ready-to-use HTML5 pages and many useful HTML5 & CSS3 design elements. With these pre-built HTML5 pages and design elements, you can create an impactful newspaper, news portal, or online magazine website easily without having extra coding knowledge.', 'HTML Codex', 'https://htmlcodex.com/free-news-website-template', 'biznews-1.jpg', 'biznews', 1, '2022-10-16 14:59:00');
 
 -- --------------------------------------------------------
 
@@ -314,23 +336,26 @@ INSERT INTO `visitors` (`visit_id`, `user_ip`, `page`, `views`, `likes`, `visite
 (216, '::1', 'id=3', 8, 0, '2022-09-12 07:43:48'),
 (217, '::1', 'id=0', 1, 0, '2022-09-12 07:34:45'),
 (218, '::1', 'id=2', 8, 0, '2022-09-12 07:54:31'),
-(219, '127.0.0.1', '', 3, 0, '2022-09-13 01:28:14'),
+(219, '127.0.0.1', '', 4, 0, '2022-10-09 10:39:36'),
 (220, '127.0.0.1', 'id=1', 1, 0, '2022-09-12 22:44:49'),
 (221, '127.0.0.1', 'cat_id=1', 3, 0, '2022-09-12 23:43:37'),
 (222, '127.0.0.1', 'id=0', 6, 0, '2022-09-12 22:55:25'),
 (223, '127.0.0.1', 'cat_id=0', 1, 0, '2022-09-12 22:45:48'),
-(224, '127.0.0.1', 'cid=0', 5, 0, '2022-09-12 23:09:12'),
+(224, '127.0.0.1', 'cid=0', 8, 0, '2022-10-15 07:13:33'),
 (225, '127.0.0.1', 'pid=0', 2, 0, '2022-09-12 23:06:42'),
-(226, '127.0.0.1', 'pid=1', 9, 0, '2022-09-13 01:28:16'),
+(226, '127.0.0.1', 'pid=1', 126, 0, '2022-10-15 05:57:14'),
 (227, '127.0.0.1', 'cid=', 1, 0, '2022-09-12 23:44:38'),
 (228, '127.0.0.1', 'cid=2', 4, 0, '2022-09-13 01:26:54'),
-(229, '127.0.0.1', 'cid=1', 6, 0, '2022-09-13 01:40:11'),
+(229, '127.0.0.1', 'cid=1', 10, 0, '2022-10-15 07:12:27'),
 (230, '127.0.0.1', 'site-templates', 11, 0, '2022-09-22 15:47:52'),
-(231, '127.0.0.1', 'pid=2', 6, 0, '2022-09-24 06:07:22'),
+(231, '127.0.0.1', 'pid=2', 17, 0, '2022-10-15 02:53:24'),
 (232, '127.0.0.1', 'manage-comments', 162, 0, '2022-09-22 16:16:08'),
 (233, '::1', 'manage-comments', 24, 0, '2022-09-21 10:43:56'),
 (234, '::1', 'cid=1', 2, 0, '2022-09-21 06:23:20'),
-(235, '::1', 'pid=1', 1, 0, '2022-09-24 09:58:22');
+(235, '::1', 'pid=1', 76, 0, '2022-10-13 15:39:02'),
+(236, '::1', 'pid=2', 14, 0, '2022-10-12 00:01:32'),
+(237, '127.0.0.1', 'pid=3', 43, 0, '2022-10-15 06:54:23'),
+(238, '127.0.0.1', 'pid=5', 3, 0, '2022-10-15 05:47:36');
 
 --
 -- Indexes for dumped tables
@@ -379,6 +404,12 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`post_id`);
 
 --
+-- Indexes for table `templates`
+--
+ALTER TABLE `templates`
+  ADD PRIMARY KEY (`temp_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -398,7 +429,7 @@ ALTER TABLE `visitors`
 -- AUTO_INCREMENT for table `activities`
 --
 ALTER TABLE `activities`
-  MODIFY `act_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `act_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -416,7 +447,7 @@ ALTER TABLE `chats`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comm_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `comm_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `contacts`
@@ -437,6 +468,12 @@ ALTER TABLE `posts`
   MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
 
 --
+-- AUTO_INCREMENT for table `templates`
+--
+ALTER TABLE `templates`
+  MODIFY `temp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
@@ -446,7 +483,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `visitors`
 --
 ALTER TABLE `visitors`
-  MODIFY `visit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
+  MODIFY `visit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=239;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,0 +1,45 @@
+Modal Log Detail:
+https://www.bootdey.com/snippets/view/timeline-events-area
+
+Task List:
+[x] Make get_detail_table.php all in one file.
+[+] Member Panel & Dashboard.
+[x] Show Likes field & value.
+[x] Comment reply ( level 2 ).
+[+] Author Contact Page.
+
+const event = new Date(data);
+const options = { dateStyle: "long" };
+const date = event.toLocaleString("id-ID", options);
+return date;
+
+UPDATE table
+SET value = <value>
+WHERE field = <specific value>
+
+UPDATE `templates`
+SET `status` = 0
+WHERE `status` = 1 AND `temp_id` != 1;
+
+function render_tags() {
+    global $conn, $smarty;
+    // Assign pages table
+    $query = "SELECT * FROM posts";
+    $result = $conn->run_query( $query );
+    $rows = json_decode( $result, true );
+
+    foreach( $rows as $row ) {
+      		$sub_array = array();
+      		$sub_array["page_id"] = $row["page_id"];
+          $sub_array["title"] = $row["title"];
+          $sub_array["body"] = $row["body"];
+          $sub_array["status"] = $row["status"];
+      		$sub_array["published"] = $row["published"];
+          $sub_array["tags"] = $row["tags"];
+
+      		$pages[] = $sub_array;
+    };
+
+    $smarty->assign('pages', $pages);
+    return true;
+};

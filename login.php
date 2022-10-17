@@ -43,11 +43,11 @@
             </div>
           </div>
         </div>
-        <div class="well">
-          <h5>Demo</h5>
+        <div class="well text-monospace mt-5">
+          <h5>Live Demo Credentials</h5>
           <hr>
-          <strong>Username</strong>: admin<br>
-          <strong>Password</strong>: admin<br>
+          <strong>Admin&nbsp;:&nbsp;</strong>admin&nbsp;&nbsp;|&nbsp;admin<br>
+          <strong>Member:&nbsp;</strong>member&nbsp;|&nbsp;password
         </div>
         <div class="row mt-4">
           <div class="col-8">

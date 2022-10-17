@@ -1,3 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{$title|capitalize} - AdminLTE Talif</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="./templates/wordify/css/bootstrap.css">
+    <link rel="stylesheet" href="./templates/wordify/css/animate.css">
+    <link rel="stylesheet" href="./templates/wordify/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="./templates/wordify/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="./templates/wordify/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./templates/wordify/fonts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./templates/wordify/css/style.css">
+  </head>
+  <body>
+    <div class="wrap">
       <header role="banner">
         <div class="top-bar">
           <div class="container">
@@ -47,10 +69,10 @@
 
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
+                  <a class="nav-link" href="about.php">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
+                  <a class="nav-link" href="contact.php">Contact</a>
                 </li>
               </ul>
 

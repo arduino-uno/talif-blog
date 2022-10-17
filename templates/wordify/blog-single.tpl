@@ -1,26 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>{$title|capitalize} - AdminLTE Talif</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
-
-    <link rel="stylesheet" href="./templates/wordify/css/bootstrap.css">
-    <link rel="stylesheet" href="./templates/wordify/css/animate.css">
-    <link rel="stylesheet" href="./templates/wordify/css/owl.carousel.min.css">
-
-    <link rel="stylesheet" href="./templates/wordify/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="./templates/wordify/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./templates/wordify/fonts/flaticon/font/flaticon.css">
-
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="./templates/wordify/css/style.css">
-  </head>
-  <body>
-    <div class="wrap">
-      {include file="header.tpl"}
+   {include file="header.tpl"}
     <section class="site-section py-lg">
       <div class="container">
         <div class="row blog-entries element-animate">
@@ -28,8 +6,8 @@
             {foreach $post_line as $post}
             <img src="./images/{$post.image}" style="width:800px;height:55vh;object-fit: cover;" alt="Image" class="img-fluid mb-5">
              <div class="post-meta">
-                <span class="author mr-2"><img src="./images/{$post.image}" alt="Colorlib" class="mr-2"> {$post.author_name}</span>&bullet;
-                <span class="mr-2">{$post.published|date_format:"%m %d, %Y"}8 </span> &bullet;
+                <span class="author mr-2"><img src="./images/{$post.image}" alt="Colorlib" class="mr-2">&nbsp;{$post.author_name}</span>&bullet;
+                <span class="mr-2">{$post.published|date_format:"%m %d, %Y"}&nbsp;</span> &bullet;
                 <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
              </div>
             <h1 class="mb-4">{$post.title}</h1>
@@ -45,113 +23,33 @@
             </div>
             {/foreach}
             <div class="pt-5">
-              <h3 class="mb-5">6 Comments</h3>
-              <ul class="comment-list">
-                <li class="comment">
-                  <div class="vcard">
-                    <img src="./templates/wordify/images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>Jean Doe</h3>
-                    <div class="meta">January 9, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply rounded">Reply</a></p>
-                  </div>
-                </li>
-
-                <li class="comment">
-                  <div class="vcard">
-                    <img src="./templates/wordify/images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>Jean Doe</h3>
-                    <div class="meta">January 9, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply rounded">Reply</a></p>
-                  </div>
-
-                  <ul class="children">
-                    <li class="comment">
-                      <div class="vcard">
-                        <img src="./templates/wordify/images/person_1.jpg" alt="Image placeholder">
-                      </div>
-                      <div class="comment-body">
-                        <h3>Jean Doe</h3>
-                        <div class="meta">January 9, 2018 at 2:21pm</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                        <p><a href="#" class="reply rounded">Reply</a></p>
-                      </div>
-
-
-                      <ul class="children">
-                        <li class="comment">
-                          <div class="vcard">
-                            <img src="./templates/wordify/images/person_1.jpg" alt="Image placeholder">
-                          </div>
-                          <div class="comment-body">
-                            <h3>Jean Doe</h3>
-                            <div class="meta">January 9, 2018 at 2:21pm</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                            <p><a href="#" class="reply rounded">Reply</a></p>
-                          </div>
-
-                            <ul class="children">
-                              <li class="comment">
-                                <div class="vcard">
-                                  <img src="./templates/wordify/images/person_1.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                  <h3>Jean Doe</h3>
-                                  <div class="meta">January 9, 2018 at 2:21pm</div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                  <p><a href="#" class="reply rounded">Reply</a></p>
-                                </div>
-                              </li>
-                            </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="comment">
-                  <div class="vcard">
-                    <img src="./templates/wordify/images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>Jean Doe</h3>
-                    <div class="meta">January 9, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply rounded">Reply</a></p>
-                  </div>
-                </li>
-              </ul>
-              <!-- END comment-list -->
-
+              <h3 id="comments_count" class="mb-5">6 Comments</h3>
+              <ul class="comment-list">&nbsp;</ul>
               <div class="comment-form-wrap pt-5">
                 <h3 class="mb-5">Leave a comment</h3>
-                <form action="#" class="p-5 bg-light">
+                <form id="comment_form" action="#" method="POST" class="p-5 bg-light">
                   <div class="form-group">
                     <label for="name">Name *</label>
-                    <input type="text" class="form-control" id="name">
+                    <input type="hidden" id="post_id" name="post_id" value="{$post_id}">
+                    <input type="text" name="fullname" id="fullname" pattern="^[A-Za-z \s*]+$" class="form-control" placeholder="Your fullname" required>
                   </div>
                   <div class="form-group">
                     <label for="email">Email *</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Your e-mail address" required>
                   </div>
                   <div class="form-group">
                     <label for="website">Website</label>
-                    <input type="url" class="form-control" id="website">
+                    <input type="website" name="website" id="website" class="form-control" placeholder="E.g: www.example.com">
                   </div>
 
                   <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Your message .." required></textarea>
                   </div>
                   <div class="form-group">
+                    <input type="hidden" name="parent_id" id="parent_id" value="0" />
                     <input type="submit" value="Post Comment" class="btn btn-primary">
                   </div>
-
                 </form>
               </div>
             </div>
@@ -228,15 +126,12 @@
               </div>
             </div>
             <!-- END sidebar-box -->
-
             <div class="sidebar-box">
               <h3 class="heading">Categories</h3>
               <ul class="categories">
-                <li><a href="#">Food <span>(12)</span></a></li>
-                <li><a href="#">Travel <span>(22)</span></a></li>
-                <li><a href="#">Lifestyle <span>(37)</span></a></li>
-                <li><a href="#">Business <span>(42)</span></a></li>
-                <li><a href="#">Adventure <span>(14)</span></a></li>
+                {foreach $categories as $category}
+                <li><a href="./category.php?cid={$category.cat_id}">{$category.name}&nbsp;<span>({$category.count})</span></a></li>
+                {/foreach}
               </ul>
             </div>
             <!-- END sidebar-box -->
@@ -313,118 +208,121 @@
       </div>
     </section>
     <!-- END section -->
+    {include file="footer.tpl"}
+    <script type="text/javascript" language="javascript">
+    // jQuery document ready
+    $(function () {
 
-    <footer class="site-footer">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="col-md-4">
-              <h3>About Us</h3>
-              <p class="mb-4">
-                <img src="./templates/wordify/images/img_1.jpg" alt="Image placeholder" class="img-fluid">
-              </p>
+        load_comment();
+        // load all post comments
+        function load_comment() {
 
-              <p>Lorem ipsum dolor sit amet sa ksal sk sa, consectetur adipisicing elit. Ipsa harum inventore reiciendis. <a href="#">Read More</a></p>
-            </div>
-            <div class="col-md-6 ml-auto">
-              <div class="row">
-                <div class="col-md-7">
-                  <h3>Latest Post</h3>
-                  <div class="post-entry-sidebar">
-                    <ul>
-                      <li>
-                        <a href="">
-                          <img src="./templates/wordify/images/img_6.jpg" alt="Image placeholder" class="mr-4">
-                          <div class="text">
-                            <h4>How to Find the Video Games of Your Youth</h4>
-                            <div class="post-meta">
-                              <span class="mr-2">March 15, 2018 </span> &bullet;
-                              <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <img src="./templates/wordify/images/img_3.jpg" alt="Image placeholder" class="mr-4">
-                          <div class="text">
-                            <h4>How to Find the Video Games of Your Youth</h4>
-                            <div class="post-meta">
-                              <span class="mr-2">March 15, 2018 </span> &bullet;
-                              <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <img src="./templates/wordify/images/img_4.jpg" alt="Image placeholder" class="mr-4">
-                          <div class="text">
-                            <h4>How to Find the Video Games of Your Youth</h4>
-                            <div class="post-meta">
-                              <span class="mr-2">March 15, 2018 </span> &bullet;
-                              <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-1"></div>
+            var post_id = $('input#post_id').val();
 
-                <div class="col-md-4">
+            $.post( "./scripts/get_commcount.php", { "post_id": post_id, "parent_id": 0 }, function( data ) {
+               $( "h3#comments_count" ).html( data + "&nbsp;Comments" );
+            });
 
-                  <div class="mb-5">
-                    <h3>Quick Links</h3>
-                    <ul class="list-unstyled">
-                      <li><a href="#">About Us</a></li>
-                      <li><a href="#">Travel</a></li>
-                      <li><a href="#">Adventure</a></li>
-                      <li><a href="#">Courses</a></li>
-                      <li><a href="#">Categories</a></li>
-                    </ul>
-                  </div>
+            $.ajax({
+               url:"./scripts/get_comments.php",
+               method:"POST",
+               data: { 'post_id': post_id },
+               datatype: 'JSON',
+               success:function(myData) {
 
-                  <div class="mb-5">
-                    <h3>Social</h3>
-                    <ul class="list-unstyled footer-social">
-                      <li><a href="#"><span class="fa fa-twitter"></span> Twitter</a></li>
-                      <li><a href="#"><span class="fa fa-facebook"></span> Facebook</a></li>
-                      <li><a href="#"><span class="fa fa-instagram"></span> Instagram</a></li>
-                      <li><a href="#"><span class="fa fa-vimeo"></span> Vimeo</a></li>
-                      <li><a href="#"><span class="fa fa-youtube-play"></span> Youtube</a></li>
-                      <li><a href="#"><span class="fa fa-snapchat"></span> Snapshot</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <p class="small">
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <!-- END footer -->
+                   $.each( JSON.parse( myData ), function( index, value ) {
 
-    </div>
+                       const getInitials = (string) => {
+                         const [firstname, lastname] = string.toUpperCase().split(' ');
+                         const initials = firstname.substring(0, 1);
+                         return lastname
+                           ? initials.concat(lastname.substring(0, 1))
+                           : initials.concat(firstname.substring(1, 2));
+                       };
 
-    <!-- loader -->
-    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+                       const getNewDate = (string) => {
+                         const event = new Date(string);
+                         const options = { dateStyle: "long" };
+                         const date = event.toLocaleString("id-ID", options);
+                         return date;
+                       };
 
-    <script src="./templates/wordify/js/jquery-3.2.1.min.js"></script>
-    <script src="./templates/wordify/js/jquery-migrate-3.0.0.js"></script>
-    <script src="./templates/wordify/js/popper.min.js"></script>
-    <script src="./templates/wordify/js/bootstrap.min.js"></script>
-    <script src="./templates/wordify/js/owl.carousel.min.js"></script>
-    <script src="./templates/wordify/js/jquery.waypoints.min.js"></script>
-    <script src="./templates/wordify/js/jquery.stellar.min.js"></script>
-    <script src="./templates/wordify/js/main.js"></script>
+                        if ( value.parent_id == '0' ) {
+
+                             $('ul.comment-list').append('<li class="comment">' +
+                               '<div class="vcard">' +
+                               '<button type="button" class="btn btn-default rounded-circle btn-lg">' + getInitials( value.fullname ) + '</button>' +
+                               '</div>' +
+                               '<div class="comment-body">' +
+                                 '<h3>' + value.fullname + '</h3>' +
+                                 '<div class="meta">' + getNewDate( value.created ) + '</div>' +
+                                 '<p>' + value.message + '</p>' +
+                                 '<p><a href="#" class="reply rounded">Reply</a></p>' +
+                               '</div>' +
+                             '</li>');
+
+                        } else {
+
+                              $('ul.comment-list').append('<ul class="children">' +
+                                '<li class="comment">' +
+                                '<div class="vcard">' +
+                                '<button type="button" class="btn btn-default rounded-circle btn-lg">' + getInitials( value.fullname ) + '</button>' +
+                                '</div>' +
+                                '<div class="comment-body">' +
+                                  '<h3>' + value.fullname + '</h3>' +
+                                  '<div class="meta">' + getNewDate( value.created ) + '</div>' +
+                                  '<p>' + value.message + '</p>' +
+                                  '<p><a href="#" class="reply rounded">Reply</a></p>' +
+                                '</div>' +
+                              '</li></ul>');
+
+                        }
+
+                   });
+
+               }
+
+            });
+
+        };
+
+        $('form#comment_form').on('submit', function(event) {
+            var form = $("form#comment_form");
+            var formData = new FormData(this);
+            event.preventDefault();
+
+             $.ajax({
+                   type: form.attr('method'),
+                   enctype: form.attr('enctype'),
+                   url: "./scripts/insert_comment.php",
+                   data: formData,
+                   processData: false,  // Important!
+                   contentType: false,
+                   cache: false,
+                   timeout: 600000,
+                   success: function ( response ) {
+
+                      if ( response.indexOf("Inserted") !== -1 ) {
+                          alert('The data was added successfully.');
+                      } else {
+                          alert('Something went wrong.');
+                      }
+
+                  }
+             });
+
+             window.setTimeout(function(){
+                 load_comment();
+             }, 3000);
+       });
+
+       $(document).on('click', 'a.reply', function() {
+           // var comment_id = $(this).attr("id");
+           $('input#parent_id').val(1);
+           $('input#fullname').focus();
+       });
+
+    });
+    </script>
   </body>
 </html>

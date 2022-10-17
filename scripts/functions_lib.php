@@ -3,8 +3,8 @@
 *	Author nath4n <hashcat80@gmail.com>
 *	Functions Library ( 'functions_lib.php' )
 *
-* Distributed under 'The MIT License (MIT)'
-* In essense, you can do commercial use, modify, distribute and private use.
+* Distributed under 'GNU General Public License, Version 3'
+* Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
 */
 
 /**
@@ -295,9 +295,9 @@ function get_comment_by( $field, $value ) {
 * @param string $tablename, $id_key, $id_val
 * @return integer
 */
-function rows_count( $tablename, $id_key=NULL, $id_val=NULL ) {
+function rows_count( $tablename, $id_keyA=NULL, $id_valA=NULL, $id_keyB=NULL, $id_valB=NULL ) {
     global $conn;
-    $query = "SELECT * FROM $tablename" . ( $id_key ? " WHERE $id_key='$id_val'" : "" );
+    $query = "SELECT * FROM $tablename" . ( $id_keyA ? " WHERE $id_keyA='$id_valA'" : "" ) . ( $id_keyB ? " AND $id_keyB='$id_valB'" : "" );
     $result = $conn->run_query( $query );
     $rows = json_decode( $result, true );
     $rowscnt = count( $rows );

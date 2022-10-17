@@ -16,17 +16,16 @@ $module = isset( $_GET['module'] ) ? filter_var( $_GET['module'], FILTER_SANITIZ
 if ( is_admin() ) {
 
     $AVAILABLE_PAGES = array("dashboard",
-                        "author-contact",
+                        "contact-us",
                         "site-settings",
                         "site-templates",
-                        "email-settings",
+                        "manage-activities",
+                        "messaging",
                         "manage-pages",
                         "manage-posts",
                         "manage-categories",
                         "manage-contacts",
-                        "manage-activities",
                         "manage-comments",
-                        "messaging",
                         "manage-users");
 
 } else {
@@ -101,7 +100,7 @@ if ( !$AVAILABLE_PAGES[$module] ) {
         <a href="./media.php?module=dashboard" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="./media.php?module=author-contact" class="nav-link">Contact</a>
+        <a href="./media.php?module=contact-us" class="nav-link">Contact</a>
       </li>
     </ul>
     <!-- Right navbar links -->
@@ -431,8 +430,8 @@ if ( !$AVAILABLE_PAGES[$module] ) {
         case "dashboard":
           require( "./pages/dashboard.php" );
           break;
-        case "author-contact":
-          require( "./pages/author-contact.php" );
+        case "contact-us":
+          require( "./pages/contact-us.php" );
           break;
         case "manage-pages":
           require( "./pages/pages.php" );
@@ -618,7 +617,7 @@ $(function () {
           class: 'bg-info',
           title: '[ DEMO ] AdminLTE - Talif',
           subtitle: 'Just now ..',
-          body: '<center><img src="./images/ninja-logo.png" class="img-thumbnail" alt="Talif-Blog Logo"><span class="arabic-font text-center" style="font-size: 4em;text-shadow: 6px 6px 6px #000;">تأليف</span></center><h4 class="text-center mt-2" style="text-shadow: 6px 6px 6px #000;">Simple WebBlog CMS</h4>',
+          body: '<center><img src="./images/ninja-logo.png" class="img-thumbnail" style="border:0;background:transparent;" alt="Talif-Blog Logo"><span class="arabic-font text-center" style="font-size: 4em;text-shadow: 6px 6px 6px #000;">تأليف</span></center><h4 class="text-center mt-2" style="text-shadow: 6px 6px 6px #000;">Simple WebBlog CMS</h4>',
           image: './images/AdminLTELogo.png',
           imageAlt: 'Application Logo',
           position: 'topRight',
@@ -760,7 +759,7 @@ $("input#message").on("keypress",function(e) {
     };
 });
 
-//Reload file every 2500 ms
+// Reload file every 2500 ms
 setInterval( function () {
     load_chats();
     chat_notify();
@@ -771,6 +770,14 @@ setInterval( function () {
 <?php
 if ( $module == "dashboard" ) {
     echo '<script src="./scripts/js/dashboard.js"></script>';
+} elseif ( $module == "contact-us" ) {
+    echo '<script src="./scripts/js/contact_us.js"></script>';
+} elseif ( $module == "site-settings" ) {
+    echo '<script src="./scripts/js/site_settings.js"></script>';
+} elseif ( $module == "site-templates" ) {
+    echo '<script src="./scripts/js/site_templates.js"></script>';
+} elseif ( $module == "manage-activities" ) {
+    echo '<script src="./scripts/js/activities_tbl.js"></script>';
 } elseif ( $module == "manage-pages" ) {
     echo '<script src="./scripts/js/pages_tbl.js"></script>';
 } elseif ( $module == "manage-posts" ) {
@@ -781,14 +788,8 @@ if ( $module == "dashboard" ) {
     echo '<script src="./scripts/js/contacts_tbl.js"></script>';
 } elseif ( $module == "manage-comments" ) {
     echo '<script src="./scripts/js/comments_tbl.js"></script>';
-} elseif ( $module == "manage-activities" ) {
-    echo '<script src="./scripts/js/activities_tbl.js"></script>';
 } elseif ( $module == "manage-users" ) {
     echo '<script src="./scripts/js/users_tbl.js"></script>';
-} elseif ( $module == "site-settings" ) {
-    echo '<script src="./scripts/js/site_settings.js"></script>';
-} elseif ( $module == "site-templates" ) {
-    echo '<script src="./scripts/js/site_templates.js"></script>';
 };
 ?>
 </body>

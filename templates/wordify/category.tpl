@@ -1,25 +1,3 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>{$title|capitalize} - AdminLTE Talif</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
-
-    <link rel="stylesheet" href="./templates/wordify/css/bootstrap.css">
-    <link rel="stylesheet" href="./templates/wordify/css/animate.css">
-    <link rel="stylesheet" href="./templates/wordify/css/owl.carousel.min.css">
-
-    <link rel="stylesheet" href="./templates/wordify/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="./templates/wordify/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./templates/wordify/fonts/flaticon/font/flaticon.css">
-
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="./templates/wordify/css/style.css">
-  </head>
-  <body>
-    <div class="wrap">
       {include file="header.tpl"}
       <section class="site-section pt-5">
         <div class="container">
@@ -137,15 +115,12 @@
                 </div>
               </div>
               <!-- END sidebar-box -->
-
               <div class="sidebar-box">
                 <h3 class="heading">Categories</h3>
                 <ul class="categories">
-                  <li><a href="#">Food <span>(12)</span></a></li>
-                  <li><a href="#">Travel <span>(22)</span></a></li>
-                  <li><a href="#">Lifestyle <span>(37)</span></a></li>
-                  <li><a href="#">Business <span>(42)</span></a></li>
-                  <li><a href="#">Adventure <span>(14)</span></a></li>
+                  {foreach $categories as $category}
+                  <li><a href="./category.php?cid={$category.cat_id}">{$category.name}&nbsp;<span>({$category.count})</span></a></li>
+                  {/foreach}
                 </ul>
               </div>
               <!-- END sidebar-box -->
@@ -173,16 +148,5 @@
         </div>
         </section>
         {include file="footer.tpl"}
-        </div>
-        <!-- loader -->
-        <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-        <script src="./templates/wordify/js/jquery-3.2.1.min.js"></script>
-        <script src="./templates/wordify/js/jquery-migrate-3.0.0.js"></script>
-        <script src="./templates/wordify/js/popper.min.js"></script>
-        <script src="./templates/wordify/js/bootstrap.min.js"></script>
-        <script src="./templates/wordify/js/owl.carousel.min.js"></script>
-        <script src="./templates/wordify/js/jquery.waypoints.min.js"></script>
-        <script src="./templates/wordify/js/jquery.stellar.min.js"></script>
-        <script src="./templates/wordify/js/main.js"></script>
-  </body>
-</html>
+      </body>
+    </html>

@@ -66,16 +66,21 @@ foreach( $rows as $row ) {
     </li>';
 
     if ( $counter < 3 ) {
-        $notify_text .= '<a href="#" onClick="profileModal(' . $row["user_id"] . ')" class="dropdown-item">
+
+        $star_icon = ( is_admin() ? '<span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>' : '<span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>' );
+
+        $notify_text .= '<span class="dropdown-item">
           <div class="media">
-            <img src="./images/' . $row["user_image"] . '" alt="' . $row["user_fullname"] . '" class="img-size-50 mr-3 img-circle">
+            <a href="#" onClick="profileModal(' . $row["user_id"] . ')"><img src="./images/' . $row["user_image"] . '" alt="' . $row["user_fullname"] . '" class="img-size-50 mr-3 img-circle"></a>
             <div class="media-body">
-              <h3 class="dropdown-item-title">' . $row["user_fullname"] . '<span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span></h3>
+              <a href="#" onClick="profileModal(' . $row["user_id"] . ')">
+                <h3 class="dropdown-item-title">' . $row["user_fullname"] . $star_icon . '</h3>
+              </a>
               <p class="text-sm">' . $short_msg . '</p>
               <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
             </div>
           </div>
-        </a>
+        </span>
         <div class="dropdown-divider"></div>';
     };
 

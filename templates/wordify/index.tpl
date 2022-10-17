@@ -1,25 +1,3 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>{$title|capitalize} - AdminLTE Talif</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
-
-    <link rel="stylesheet" href="./templates/wordify/css/bootstrap.css">
-    <link rel="stylesheet" href="./templates/wordify/css/animate.css">
-    <link rel="stylesheet" href="./templates/wordify/css/owl.carousel.min.css">
-
-    <link rel="stylesheet" href="./templates/wordify/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="./templates/wordify/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./templates/wordify/fonts/flaticon/font/flaticon.css">
-
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="./templates/wordify/css/style.css">
-  </head>
-  <body>
-    <div class="wrap">
       {include file="header.tpl"}
       <section class="site-section pt-5 pb-5">
         <div class="container">
@@ -27,54 +5,24 @@
             <div class="col-md-12">
 
               <div class="owl-carousel owl-theme home-slider">
+                {foreach $limit_posts as $post}
                 <div>
-                  <a href="blog-single.php" class="a-block d-flex align-items-center height-lg" style="background-image: url('./templates/wordify/images/img_1.jpg'); ">
+                  <a href="./blog-single.php?pid={$post.cat_id}" class="a-block d-flex align-items-center height-lg" style="background-image: url('./images/{$post.image}'); ">
                     <div class="text half-to-full">
-                      <span class="category mb-5">Food</span>
+                      <span class="category mb-5">{$post.category}</span>
                       <div class="post-meta">
 
-                        <span class="author mr-2"><img src="./templates/wordify/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                        <span class="mr-2">March 15, 2018 </span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                        <span class="author mr-2"><img src="./images/{$post.author_image}" alt="{$post.author_name}">&nbsp;{$post.author_name}</span>&bullet;
+                        <span class="mr-2">{$post.published|date_format:"%m %d, %Y"}</span>&nbsp;&bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span>&nbsp;{$post.count}</span>
 
                       </div>
-                      <h3>How to Find the Video Games of Your Youth</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!</p>
+                      <h3>{$post.title}</h3>
+                      <p>{$post.body}</p>
                     </div>
                   </a>
                 </div>
-                <div>
-                  <a href="blog-single.php" class="a-block d-flex align-items-center height-lg" style="background-image: url('./templates/wordify/images/img_2.jpg'); ">
-                    <div class="text half-to-full">
-                      <span class="category mb-5">Travel</span>
-                      <div class="post-meta">
-
-                        <span class="author mr-2"><img src="./templates/wordify/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                        <span class="mr-2">March 15, 2018 </span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-
-                      </div>
-                      <h3>How to Find the Video Games of Your Youth</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!</p>
-                    </div>
-                  </a>
-                </div>
-                <div>
-                  <a href="blog-single.php" class="a-block d-flex align-items-center height-lg" style="background-image: url('./templates/wordify/images/img_3.jpg'); ">
-                    <div class="text half-to-full">
-                      <span class="category mb-5">Sports</span>
-                      <div class="post-meta">
-
-                        <span class="author mr-2"><img src="./templates/wordify/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                        <span class="mr-2">March 15, 2018 </span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-
-                      </div>
-                      <h3>How to Find the Video Games of Your Youth</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!</p>
-                    </div>
-                  </a>
-                </div>
+                {/foreach}
               </div>
 
             </div>
@@ -102,8 +50,8 @@
                     <img src="./images/{$post.image}" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
                     <div class="blog-content-body">
                       <div class="post-meta">
-                        <span class="author mr-2"><img src="./images/{$post.author_image}" alt="{$post.author_name}"> {$post.author_name}</span>&bullet;
-                        <span class="mr-2">{$post.published} </span> &bullet;
+                        <span class="author mr-2"><img src="./images/{$post.author_image}" alt="{$post.author_name}">&nbsp;{$post.author_name}</span>&bullet;
+                        <span class="mr-2">{$post.published}&nbsp;</span>&nbsp;&bullet;
                         <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
                       </div>
                       <h2>{$post.title}</h2>
@@ -200,15 +148,12 @@
                 </div>
               </div>
               <!-- END sidebar-box -->
-
               <div class="sidebar-box">
                 <h3 class="heading">Categories</h3>
                 <ul class="categories">
-                  <li><a href="#">Food <span>(12)</span></a></li>
-                  <li><a href="#">Travel <span>(22)</span></a></li>
-                  <li><a href="#">Lifestyle <span>(37)</span></a></li>
-                  <li><a href="#">Business <span>(42)</span></a></li>
-                  <li><a href="#">Adventure <span>(14)</span></a></li>
+                  {foreach $categories as $category}
+                  <li><a href="./category.php?cid={$category.cat_id}">{$category.name}&nbsp;<span>({$category.count})</span></a></li>
+                  {/foreach}
                 </ul>
               </div>
               <!-- END sidebar-box -->
@@ -236,16 +181,5 @@
         </div>
       </section>
       {include file="footer.tpl"}
-    </div>
-    <!-- loader -->
-    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-    <script src="./templates/wordify/js/jquery-3.2.1.min.js"></script>
-    <script src="./templates/wordify/js/jquery-migrate-3.0.0.js"></script>
-    <script src="./templates/wordify/js/popper.min.js"></script>
-    <script src="./templates/wordify/js/bootstrap.min.js"></script>
-    <script src="./templates/wordify/js/owl.carousel.min.js"></script>
-    <script src="./templates/wordify/js/jquery.waypoints.min.js"></script>
-    <script src="./templates/wordify/js/jquery.stellar.min.js"></script>
-    <script src="./templates/wordify/js/main.js"></script>
-  </body>
-</html>
+    </body>
+  </html>

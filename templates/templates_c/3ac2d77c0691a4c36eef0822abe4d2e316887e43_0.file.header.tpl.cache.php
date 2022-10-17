@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-09-25 06:03:35
+/* Smarty version 4.1.0, created on 2022-10-15 13:29:06
   from '/var/www/html/talif-blog/templates/wordify/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_632f8cc7b6d5b2_83373073',
+  'unifunc' => 'content_634a53327c6525_44418573',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3ac2d77c0691a4c36eef0822abe4d2e316887e43' => 
     array (
       0 => '/var/www/html/talif-blog/templates/wordify/header.tpl',
-      1 => 1663026309,
+      1 => 1665815338,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_632f8cc7b6d5b2_83373073 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '472616916632f8cc7b55c92_60093507';
+function content_634a53327c6525_44418573 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
+$_smarty_tpl->compiled->nocache_hash = '1757784875634a5332781d15_64583825';
 ?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title><?php echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['title']->value);?>
+ - AdminLTE Talif</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="./templates/wordify/css/bootstrap.css">
+    <link rel="stylesheet" href="./templates/wordify/css/animate.css">
+    <link rel="stylesheet" href="./templates/wordify/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="./templates/wordify/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="./templates/wordify/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./templates/wordify/fonts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./templates/wordify/css/style.css">
+  </head>
+  <body>
+    <div class="wrap">
       <header role="banner">
         <div class="top-bar">
           <div class="container">
@@ -81,10 +105,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
+                  <a class="nav-link" href="about.php">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
+                  <a class="nav-link" href="contact.php">Contact</a>
                 </li>
               </ul>
 

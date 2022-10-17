@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-10-01 10:21:22
+/* Smarty version 4.1.0, created on 2022-10-15 15:33:08
   from '/var/www/html/talif-blog/templates/wordify/category.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6337b23234d451_03582243',
+  'unifunc' => 'content_634a7044bc4bd8_60216121',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '48ca4a620ea33797dd294514ed8104a7e29cbd88' => 
     array (
       0 => '/var/www/html/talif-blog/templates/wordify/category.tpl',
-      1 => 1663741239,
+      1 => 1665822761,
       2 => 'file',
     ),
   ),
@@ -22,33 +22,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6337b23234d451_03582243 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
-$_smarty_tpl->compiled->nocache_hash = '15253438006337b23213fef8_00067108';
+function content_634a7044bc4bd8_60216121 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '1441163301634a7044bb0789_45074483';
 ?>
-<!doctype html>
-<html lang="en">
-  <head>
-    <title><?php echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['title']->value);?>
- - AdminLTE Talif</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
-
-    <link rel="stylesheet" href="./templates/wordify/css/bootstrap.css">
-    <link rel="stylesheet" href="./templates/wordify/css/animate.css">
-    <link rel="stylesheet" href="./templates/wordify/css/owl.carousel.min.css">
-
-    <link rel="stylesheet" href="./templates/wordify/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="./templates/wordify/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./templates/wordify/fonts/flaticon/font/flaticon.css">
-
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="./templates/wordify/css/style.css">
-  </head>
-  <body>
-    <div class="wrap">
       <?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
       <section class="site-section pt-5">
@@ -189,15 +165,22 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
               </div>
               <!-- END sidebar-box -->
-
               <div class="sidebar-box">
                 <h3 class="heading">Categories</h3>
                 <ul class="categories">
-                  <li><a href="#">Food <span>(12)</span></a></li>
-                  <li><a href="#">Travel <span>(22)</span></a></li>
-                  <li><a href="#">Lifestyle <span>(37)</span></a></li>
-                  <li><a href="#">Business <span>(42)</span></a></li>
-                  <li><a href="#">Adventure <span>(14)</span></a></li>
+                  <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categories']->value, 'category');
+$_smarty_tpl->tpl_vars['category']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['category']->value) {
+$_smarty_tpl->tpl_vars['category']->do_else = false;
+?>
+                  <li><a href="./category.php?cid=<?php echo $_smarty_tpl->tpl_vars['category']->value['cat_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['category']->value['name'];?>
+&nbsp;<span>(<?php echo $_smarty_tpl->tpl_vars['category']->value['count'];?>
+)</span></a></li>
+                  <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </ul>
               </div>
               <!-- END sidebar-box -->
@@ -226,34 +209,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </section>
         <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-        </div>
-        <!-- loader -->
-        <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-        <?php echo '<script'; ?>
- src="./templates/wordify/js/jquery-3.2.1.min.js"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="./templates/wordify/js/jquery-migrate-3.0.0.js"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="./templates/wordify/js/popper.min.js"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="./templates/wordify/js/bootstrap.min.js"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="./templates/wordify/js/owl.carousel.min.js"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="./templates/wordify/js/jquery.waypoints.min.js"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="./templates/wordify/js/jquery.stellar.min.js"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="./templates/wordify/js/main.js"><?php echo '</script'; ?>
->
-  </body>
-</html>
+      </body>
+    </html>
 <?php }
 }

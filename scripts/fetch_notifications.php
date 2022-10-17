@@ -42,7 +42,7 @@ $query = "SELECT COUNT(act_id) AS rowcount, icon, message, created
       SELECT COUNT(act_id) AS rowcount, icon, message, created
           FROM activities
           WHERE message LIKE '%Page Updated%' AND created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
-      GROUP BY icon DESC";
+      GROUP BY icon DESC LIMIT 3";
 
 $result = $conn->run_query( $query );
 $rows = json_decode( $result, true );
@@ -84,7 +84,7 @@ foreach( $rows as $row ) {
               </a>
               <div class="dropdown-divider"></div>';
           break;
-      case "far fa-plus":
+      case "fas fa-plus":
           $notify_text .= '<a href="#" class="dropdown-item">
               <i class="' . $icon . ' mr-2 border border-light rounded  p-1"></i>&nbsp;' . $page_created_cnt . '&nbsp;page creates
                 <span class="float-right text-muted text-sm">' . $diff_time . '</span>

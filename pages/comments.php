@@ -9,7 +9,7 @@
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="./media.php?module=dashboard">Home</a></li>
             <li class="breadcrumb-item active">Comments</li>
           </ol>
         </div>
@@ -88,6 +88,57 @@
               </div>
             </div>
           </div>
+  			</div>
+  			<div class="modal-footer justify-content-end">
+    				<input type="button" name="close" id="close" class="btn btn-default" data-dismiss="modal" value="Close"/>
+  			</div>
+  		</div>
+    </div>
+  </div>
+</div>
+<!-- View Comment Replies Modal -->
+<div class="modal fade" id="modal_viewreply" tabindex="-1" role="dialog" aria-labelledby="modal_viewreply">
+  <div class="modal-dialog modal-lg">
+		<div class="modal-content bg-dark">
+  	  	<div class="modal-header">
+    				<h4 class="modal-title">Comments - DataTables</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  						<span aria-hidden="true">&times;</span>
+  					</button>
+  			</div>
+  			<div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Replies - DataTables</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <table id="replies_data" class="table table-active table-striped table-hover" width="100%">
+                    <thead>
+          						<tr>
+          							<th width="10%" style="text-align: center;">ID</th>
+          							<th width="70%">Comment Details</th>
+                        <th width="20%">Action</th>
+          						</tr>
+                    </thead>
+                    <tfoot>
+                      <tr>
+                        <th width="10%" style="text-align: center;">ID</th>
+          							<th width="70%">Comment Details</th>
+                        <th width="20%">Action</th>
+          						</tr>
+                    </tfoot>
+                  </table>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
   			</div>
   			<div class="modal-footer justify-content-end">
     				<input type="button" name="close" id="close" class="btn btn-default" data-dismiss="modal" value="Close"/>

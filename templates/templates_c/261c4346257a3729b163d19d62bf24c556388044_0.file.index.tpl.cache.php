@@ -1,55 +1,35 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-09-25 06:03:35
+/* Smarty version 4.1.0, created on 2022-10-16 21:58:55
   from '/var/www/html/talif-blog/templates/wordify/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_632f8cc7b4ad98_78758643',
+  'unifunc' => 'content_634c1c2f1953b8_48588891',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '261c4346257a3729b163d19d62bf24c556388044' => 
     array (
       0 => '/var/www/html/talif-blog/templates/wordify/index.tpl',
-      1 => 1663741207,
+      1 => 1665932212,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:header.tpl' => 1,
+    'file:slider.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_632f8cc7b4ad98_78758643 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
-$_smarty_tpl->compiled->nocache_hash = '1022954908632f8cc78fab00_52062238';
+function content_634c1c2f1953b8_48588891 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
+$_smarty_tpl->compiled->nocache_hash = '323418990634c1c2f172575_69610323';
 ?>
-<!doctype html>
-<html lang="en">
-  <head>
-    <title><?php echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['title']->value);?>
- - AdminLTE Talif</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
-
-    <link rel="stylesheet" href="./templates/wordify/css/bootstrap.css">
-    <link rel="stylesheet" href="./templates/wordify/css/animate.css">
-    <link rel="stylesheet" href="./templates/wordify/css/owl.carousel.min.css">
-
-    <link rel="stylesheet" href="./templates/wordify/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="./templates/wordify/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./templates/wordify/fonts/flaticon/font/flaticon.css">
-
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="./templates/wordify/css/style.css">
-  </head>
-  <body>
-    <div class="wrap">
       <?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+      <?php $_smarty_tpl->_subTemplateRender("file:slider.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
       <section class="site-section pt-5 pb-5">
         <div class="container">
@@ -57,54 +37,41 @@ $_smarty_tpl->compiled->nocache_hash = '1022954908632f8cc78fab00_52062238';
             <div class="col-md-12">
 
               <div class="owl-carousel owl-theme home-slider">
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['limit_posts']->value, 'post');
+$_smarty_tpl->tpl_vars['post']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
+$_smarty_tpl->tpl_vars['post']->do_else = false;
+?>
                 <div>
-                  <a href="blog-single.php" class="a-block d-flex align-items-center height-lg" style="background-image: url('./templates/wordify/images/img_1.jpg'); ">
+                  <a href="./blog-single.php?pid=<?php echo $_smarty_tpl->tpl_vars['post']->value['cat_id'];?>
+" class="a-block d-flex align-items-center height-lg" style="background-image: url('./images/<?php echo $_smarty_tpl->tpl_vars['post']->value['image'];?>
+'); ">
                     <div class="text half-to-full">
-                      <span class="category mb-5">Food</span>
+                      <span class="category mb-5"><?php echo $_smarty_tpl->tpl_vars['post']->value['category'];?>
+</span>
                       <div class="post-meta">
 
-                        <span class="author mr-2"><img src="./templates/wordify/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                        <span class="mr-2">March 15, 2018 </span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                        <span class="author mr-2"><img src="./images/<?php echo $_smarty_tpl->tpl_vars['post']->value['author_image'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['post']->value['author_name'];?>
+">&nbsp;<?php echo $_smarty_tpl->tpl_vars['post']->value['author_name'];?>
+</span>&bullet;
+                        <span class="mr-2"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['post']->value['published'],"%m %d, %Y");?>
+</span>&nbsp;&bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span>&nbsp;<?php echo $_smarty_tpl->tpl_vars['post']->value['count'];?>
+</span>
 
                       </div>
-                      <h3>How to Find the Video Games of Your Youth</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!</p>
+                      <h3><?php echo $_smarty_tpl->tpl_vars['post']->value['title'];?>
+</h3>
+                      <p><?php echo $_smarty_tpl->tpl_vars['post']->value['body'];?>
+</p>
                     </div>
                   </a>
                 </div>
-                <div>
-                  <a href="blog-single.php" class="a-block d-flex align-items-center height-lg" style="background-image: url('./templates/wordify/images/img_2.jpg'); ">
-                    <div class="text half-to-full">
-                      <span class="category mb-5">Travel</span>
-                      <div class="post-meta">
-
-                        <span class="author mr-2"><img src="./templates/wordify/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                        <span class="mr-2">March 15, 2018 </span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-
-                      </div>
-                      <h3>How to Find the Video Games of Your Youth</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!</p>
-                    </div>
-                  </a>
-                </div>
-                <div>
-                  <a href="blog-single.php" class="a-block d-flex align-items-center height-lg" style="background-image: url('./templates/wordify/images/img_3.jpg'); ">
-                    <div class="text half-to-full">
-                      <span class="category mb-5">Sports</span>
-                      <div class="post-meta">
-
-                        <span class="author mr-2"><img src="./templates/wordify/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                        <span class="mr-2">March 15, 2018 </span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-
-                      </div>
-                      <h3>How to Find the Video Games of Your Youth</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!</p>
-                    </div>
-                  </a>
-                </div>
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
               </div>
 
             </div>
@@ -141,10 +108,10 @@ $_smarty_tpl->tpl_vars['post']->do_else = false;
                       <div class="post-meta">
                         <span class="author mr-2"><img src="./images/<?php echo $_smarty_tpl->tpl_vars['post']->value['author_image'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['post']->value['author_name'];?>
-"> <?php echo $_smarty_tpl->tpl_vars['post']->value['author_name'];?>
+">&nbsp;<?php echo $_smarty_tpl->tpl_vars['post']->value['author_name'];?>
 </span>&bullet;
                         <span class="mr-2"><?php echo $_smarty_tpl->tpl_vars['post']->value['published'];?>
- </span> &bullet;
+&nbsp;</span>&nbsp;&bullet;
                         <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
                       </div>
                       <h2><?php echo $_smarty_tpl->tpl_vars['post']->value['title'];?>
@@ -244,15 +211,22 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
               </div>
               <!-- END sidebar-box -->
-
               <div class="sidebar-box">
                 <h3 class="heading">Categories</h3>
                 <ul class="categories">
-                  <li><a href="#">Food <span>(12)</span></a></li>
-                  <li><a href="#">Travel <span>(22)</span></a></li>
-                  <li><a href="#">Lifestyle <span>(37)</span></a></li>
-                  <li><a href="#">Business <span>(42)</span></a></li>
-                  <li><a href="#">Adventure <span>(14)</span></a></li>
+                  <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categories']->value, 'category');
+$_smarty_tpl->tpl_vars['category']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['category']->value) {
+$_smarty_tpl->tpl_vars['category']->do_else = false;
+?>
+                  <li><a href="./category.php?cid=<?php echo $_smarty_tpl->tpl_vars['category']->value['cat_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['category']->value['name'];?>
+&nbsp;<span>(<?php echo $_smarty_tpl->tpl_vars['category']->value['count'];?>
+)</span></a></li>
+                  <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </ul>
               </div>
               <!-- END sidebar-box -->
@@ -281,34 +255,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       </section>
       <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-    </div>
-    <!-- loader -->
-    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-    <?php echo '<script'; ?>
- src="./templates/wordify/js/jquery-3.2.1.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="./templates/wordify/js/jquery-migrate-3.0.0.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="./templates/wordify/js/popper.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="./templates/wordify/js/bootstrap.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="./templates/wordify/js/owl.carousel.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="./templates/wordify/js/jquery.waypoints.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="./templates/wordify/js/jquery.stellar.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="./templates/wordify/js/main.js"><?php echo '</script'; ?>
->
-  </body>
-</html>
+    </body>
+  </html>
 <?php }
 }

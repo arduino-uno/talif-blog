@@ -18,24 +18,7 @@ $conn = new Simple_PHP_CRUD_Class();
 // Set Database Config
 require("./smarty/Smarty.class.php");
 $smarty = new Smarty;
-// $smarty->force_compile = true;
-// $smarty->debugging = true;
-$smarty->template_dir = './templates/wordify/';  // clean-blog
-$smarty->compile_dir = './templates/templates_c/';
-$smarty->cache_dir = './templates/cache/';
-$smarty->configs_dir = './templates/configs/';
-$smarty->caching = true;
-$smarty->cache_lifetime = 120;
-// clear all assigned variables
-$smarty->clearAllAssign();
-// clear the entire cache
-$smarty->clearAllCache();
-// Get user ip address
-$user_ip = get_client_ip();
-// Get page name
-$page = $_SERVER['QUERY_STRING'];
 // Call Assigning function
-$assign_siteinfo = render_siteinfo();
-$assign_categories = render_categories();
-$assign_posts = render_posts();
+require("./scripts/smarty_render.php");
+// $assign_ echo getcwd();
 $smarty->display('index.tpl');

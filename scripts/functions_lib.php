@@ -274,6 +274,10 @@ function get_comment_by( $field, $value ) {
             "author_name"    => $user["user_fullname"],
             "author_image"   => $user["user_image"],
             "post_id"        => $row["post_id"],
+            "parent_id"      => $row["parent_id"],
+            "fullname"       => $row["fullname"],
+            "email"          => $row["email"],
+            "website"        => $row["website"],
             "title"          => $post["title"],
             "body"           => $short_text,
             "status"         => $post["status"],
@@ -396,13 +400,13 @@ function update_table_log($table = "posts") {
 *
 * @return integer
 */
-function get_new_activities() {
+function get_new_activities( $user_id=NULL ) {
     global $conn;
     // Get the last registration users for this current week
     $query = "SELECT ip_address, icon, message, created
               FROM activities
-              WHERE created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
-              ORDER BY act_id";
+              WHERE created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY)
+              AND CURRENT_DATE()" . ( $user_id ? " AND user_id='$user_id'" : "" ) . " ORDER BY act_id";
 
     $result = $conn->run_query( $query );
     $rows = json_decode( $result, true );
@@ -417,20 +421,19 @@ function get_new_activities() {
 * @param string $keyword
 * @return integer
 */
-function get_new_activities_by( $keyword="Post Created" ) {
+function get_new_activities_by( $keyword="Post Created",  $user_id=NULL ) {
     global $conn;
     // Get the last registration users for this current week
     $query = "SELECT ip_address, icon, message, date_format(created, '%e %M %l.%i %p') as formatted_date
               FROM activities
-              WHERE message LIKE '%{$keyword}%' AND created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY) AND CURRENT_DATE()
-              ORDER BY act_id";
+              WHERE message LIKE '%{$keyword}%' AND created BETWEEN SUBDATE(CURRENT_DATE(), INTERVAL WEEKDAY(CURRENT_DATE()) DAY)
+              AND CURRENT_DATE()" . ( $user_id ? " AND user_id='$user_id'" : "" ) . " ORDER BY act_id";
 
     $result = $conn->run_query( $query );
     $rows = json_decode( $result, true );
     $rowscnt = count( $rows );
     return $rowscnt;
 };
-
 /**
 * Usage:
 * $pubDate = "17-09-2020"; // e.g. this could be like 'Sun, 10 Nov 2013 14:26:00 GMT'

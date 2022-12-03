@@ -8,24 +8,52 @@ require('../scripts/functions_lib.php');
 // CRUD Methods: "GET", "PUT", "POST" & "DELETE"
 $conn = new Simple_PHP_CRUD_Class();
 
+$user = json_decode( current_user(), true );
+$user_id = $user["user_id"];
+
 $output = Array();
 $rows = Array();
 
-$parent_id = isset( $_POST['parent_id'] ) ? filter_var( $_POST['parent_id'], FILTER_SANITIZE_STRING ) : '';
-$query = "SELECT * FROM comments WHERE parent_id = $parent_id ";
+// $parent_id = isset( $_POST['parent_id'] ) ? filter_var( $_POST['parent_id'], FILTER_SANITIZE_STRING ) : '';
 
-if ( isset( $_POST["search"]["value"] ) ) {
-	 $query .= 'AND message LIKE "%'.$_POST["search"]["value"].'%" ';
-};
+if ( is_admin() ) {
 
-if ( isset( $_POST["order"] ) ) {
-	 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
+		$query = "SELECT * FROM comments ";
+
+		if ( isset( $_POST["search"]["value"] ) ) {
+			 $query .= 'AND message LIKE "%'.$_POST["search"]["value"].'%" ';
+		};
+
+		if ( isset( $_POST["order"] ) ) {
+			 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
+		} else {
+			 $query .= 'ORDER BY comm_id ASC';
+		};
+
+		if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
+			 $query .= ' LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
+		};
+
 } else {
-	 $query .= 'ORDER BY comm_id ASC';
-};
 
-if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
-	 $query .= ' LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
+		$query = "SELECT a.*, b.post_id, b.author_id
+							FROM comments a, posts b
+							WHERE a.post_id = b.post_id AND b.author_id = $user_id ";
+
+		if ( isset( $_POST["search"]["value"] ) ) {
+			 $query .= 'AND message LIKE "%'.$_POST["search"]["value"].'%" ';
+		};
+
+		if ( isset( $_POST["order"] ) ) {
+			 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
+		} else {
+			 $query .= 'ORDER BY comm_id ASC';
+		};
+
+		if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
+			 $query .= ' LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
+		};
+
 };
 
 $result = $conn->run_query( $query );
@@ -39,20 +67,26 @@ $rows = json_decode( $result, true );
 			$short_post = shorten( $post["body"], 150 );
 			$short_msg = shorten( $row["message"], 150 );
 			// fill data into array
+			$sub_array["comm_id"] = $row["comm_id"];
+			$sub_array["parent_id"] = $row["parent_id"];
 			$sub_array["post_id"] = $post["post_id"];
+			$sub_array["author_id"] = $user["user_id"];
+			$sub_array["author_name"] = $user["user_fullname"];
+			$sub_array["author_image"] = $user["user_image"];
 			$sub_array["title"] = $post["title"];
 			$sub_array["body"] = $short_post;
 			$sub_array["post_status"] = $post["status"];
 			$sub_array["cat_id"] = $post["cat_id"];
 			$sub_array["category"] = $post["category"];
 			$sub_array["image"] = $post["image"];
+			// fill comments data into array
 			$sub_array["fullname"] = $row["fullname"];
 			$sub_array["email"] = $row["email"];
 			$sub_array["website"] = $row["website"];
 			$sub_array["message"] = $short_msg;
+			$sub_array["likes"] = $row["likes"];
 			$sub_array["status"] = $row["status"];
 			$sub_array["created"] = date( "M j, Y", strtotime( $post["created"] ) );
-			$sub_array["likes"] = $row["likes"];
 
   		$data[] = $sub_array;
 	};

@@ -21,7 +21,7 @@
                           '<p class="info">' + data.body + '</p>' +
                         '</div></div>' +
                         '<p>' +
-                          '<i class="fas fa-user"></i>&nbsp;by&nbsp;<a href="#" onclick="profileModal(' + data.author_id + ')">' + data.author_name + '</a>&nbsp;' +
+                          '<i class="fas fa-user"></i>&nbsp;by&nbsp;<a href="./media.php?module=user-profile">' + data.author_name + '</a>&nbsp;' +
                           '|&nbsp;<i class="fas fa-calendar-alt"></i>&nbsp;' + data.published + '&nbsp;' +
                           '|&nbsp;<i class="fas fa-heart"></i>&nbsp;' + data.likes + '&nbsp;Likes&nbsp;' +
                           '|&nbsp;<i class="fas fa-tags"></i>&nbsp;Tags&nbsp;:&nbsp;' + data.tags + '&nbsp;' +

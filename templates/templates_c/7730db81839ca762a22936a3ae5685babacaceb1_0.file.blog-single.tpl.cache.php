@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-10-15 15:24:31
+/* Smarty version 4.1.0, created on 2022-10-23 10:07:09
   from '/var/www/html/talif-blog/templates/wordify/blog-single.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_634a6e3f053596_49241969',
+  'unifunc' => 'content_6354afdda8aff3_13155475',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7730db81839ca762a22936a3ae5685babacaceb1' => 
     array (
       0 => '/var/www/html/talif-blog/templates/wordify/blog-single.tpl',
-      1 => 1665817877,
+      1 => 1666493757,
       2 => 'file',
     ),
   ),
@@ -22,9 +22,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634a6e3f053596_49241969 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6354afdda8aff3_13155475 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
-$_smarty_tpl->compiled->nocache_hash = '484878038634a6e3ee06111_64908157';
+$_smarty_tpl->compiled->nocache_hash = '139335926354afdda3f6c9_79853785';
 ?>
    <?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -293,63 +293,63 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             });
 
             $.ajax({
-               url:"./scripts/get_comments.php",
-               method:"POST",
-               data: { 'post_id': post_id },
-               datatype: 'JSON',
-               success:function(myData) {
+                url:"./scripts/get_comments.php",
+                method:"POST",
+                data: { 'post_id': post_id },
+                datatype: 'JSON',
+                success:function(myData) {
 
-                   $.each( JSON.parse( myData ), function( index, value ) {
+                     $.each( JSON.parse( myData ), function( index, value ) {
 
-                       const getInitials = (string) => {
-                         const [firstname, lastname] = string.toUpperCase().split(' ');
-                         const initials = firstname.substring(0, 1);
-                         return lastname
-                           ? initials.concat(lastname.substring(0, 1))
-                           : initials.concat(firstname.substring(1, 2));
-                       };
+                         const getInitials = (string) => {
+                           const [firstname, lastname] = string.toUpperCase().split(' ');
+                           const initials = firstname.substring(0, 1);
+                           return lastname
+                             ? initials.concat(lastname.substring(0, 1))
+                             : initials.concat(firstname.substring(1, 2));
+                         };
 
-                       const getNewDate = (string) => {
-                         const event = new Date(string);
-                         const options = { dateStyle: "long" };
-                         const date = event.toLocaleString("id-ID", options);
-                         return date;
-                       };
+                         const getNewDate = (string) => {
+                           const event = new Date(string);
+                           const options = { dateStyle: "long" };
+                           const date = event.toLocaleString("id-ID", options);
+                           return date;
+                         };
 
-                        if ( value.parent_id == '0' ) {
+                          if ( value.parent_id == '0' ) {
 
-                             $('ul.comment-list').append('<li class="comment">' +
-                               '<div class="vcard">' +
-                               '<button type="button" class="btn btn-default rounded-circle btn-lg">' + getInitials( value.fullname ) + '</button>' +
-                               '</div>' +
-                               '<div class="comment-body">' +
-                                 '<h3>' + value.fullname + '</h3>' +
-                                 '<div class="meta">' + getNewDate( value.created ) + '</div>' +
-                                 '<p>' + value.message + '</p>' +
-                                 '<p><a href="#" class="reply rounded">Reply</a></p>' +
-                               '</div>' +
-                             '</li>');
+                               $('ul.comment-list').append('<li class="comment">' +
+                                 '<div class="vcard">' +
+                                 '<button type="button" class="btn btn-default rounded-circle btn-lg">' + getInitials( value.fullname ) + '</button>' +
+                                 '</div>' +
+                                 '<div class="comment-body">' +
+                                   '<h3>' + value.fullname + '</h3>' +
+                                   '<div class="meta">' + getNewDate( value.created ) + '</div>' +
+                                   '<p>' + value.message + '</p>' +
+                                   '<p><a href="#" class="reply rounded">Reply</a></p>' +
+                                 '</div>' +
+                               '</li>');
 
-                        } else {
+                          } else {
 
-                              $('ul.comment-list').append('<ul class="children">' +
-                                '<li class="comment">' +
-                                '<div class="vcard">' +
-                                '<button type="button" class="btn btn-default rounded-circle btn-lg">' + getInitials( value.fullname ) + '</button>' +
-                                '</div>' +
-                                '<div class="comment-body">' +
-                                  '<h3>' + value.fullname + '</h3>' +
-                                  '<div class="meta">' + getNewDate( value.created ) + '</div>' +
-                                  '<p>' + value.message + '</p>' +
-                                  '<p><a href="#" class="reply rounded">Reply</a></p>' +
-                                '</div>' +
-                              '</li></ul>');
+                                $('ul.comment-list').append('<ul class="children">' +
+                                  '<li class="comment">' +
+                                  '<div class="vcard">' +
+                                  '<button type="button" class="btn btn-default rounded-circle btn-lg">' + getInitials( value.fullname ) + '</button>' +
+                                  '</div>' +
+                                  '<div class="comment-body">' +
+                                    '<h3>' + value.fullname + '</h3>' +
+                                    '<div class="meta">' + getNewDate( value.created ) + '</div>' +
+                                    '<p>' + value.message + '</p>' +
+                                    '<p><a href="#" class="reply rounded">Reply</a></p>' +
+                                  '</div>' +
+                                '</li></ul>');
 
-                        }
+                          }
 
-                   });
+                     });
 
-               }
+                }
 
             });
 

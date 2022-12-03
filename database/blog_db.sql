@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 17, 2022 at 11:16 AM
+-- Generation Time: Oct 21, 2022 at 07:01 AM
 -- Server version: 10.3.34-MariaDB-0ubuntu0.20.04.1
 -- PHP Version: 7.4.32
 
@@ -41,12 +41,12 @@ CREATE TABLE `activities` (
 --
 
 INSERT INTO `activities` (`act_id`, `user_id`, `ip_address`, `icon`, `message`, `created`) VALUES
-(1, 1, '120.0.0.1', 'fas fa-user-plus', 'User Created Successfully', '2022-10-04 10:21:28'),
-(2, 1, '120.0.0.1', 'fas fa-user-edit', 'User Updated Successfully', '2022-10-06 10:21:45'),
-(3, 1, '127.0.0.1', 'fas fa-plus', 'Post Created Succesfully', '2022-10-06 10:32:09'),
-(4, 1, '127.0.0.1', 'fas fa-edit', 'Post Updated Succesfully', '2022-10-06 13:16:05'),
-(5, 1, '127.0.0.1', 'far fa-plus', 'Page Created Succesfully', '2022-10-06 10:34:02'),
-(6, 1, '127.0.0.1', 'far fa-edit', 'Page Updated Succesfully', '2022-10-06 13:16:12');
+(1, 2, '120.0.0.1', 'fas fa-user-plus', 'User Created Successfully', '2022-10-19 10:31:38'),
+(2, 2, '120.0.0.1', 'fas fa-user-edit', 'User Updated Successfully', '2022-10-19 10:31:44'),
+(3, 2, '127.0.0.1', 'fas fa-plus', 'Post Created Succesfully', '2022-10-19 10:31:50'),
+(4, 2, '127.0.0.1', 'fas fa-edit', 'Post Updated Succesfully', '2022-10-19 10:32:14'),
+(5, 2, '127.0.0.1', 'far fa-plus', 'Page Created Succesfully', '2022-10-19 10:32:17'),
+(6, 2, '127.0.0.1', 'far fa-edit', 'Page Updated Succesfully', '2022-10-19 10:32:21');
 
 -- --------------------------------------------------------
 
@@ -144,7 +144,8 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`ct_id`, `fullname`, `email`, `subject`, `message`, `created`) VALUES
-(1, 'Agah Nata', 'hashcat80@gmail.com', 'website down.', 'Your website is down for temporary.', '2022-08-25 09:56:46');
+(1, 'Agah Nata', 'hashcat80@gmail.com', 'website down.', 'Your website is down for temporary.', '2022-08-25 09:56:46'),
+(5, 'Agah Nata', 'admin@examples.com', 'Our FeedBack', 'FeedBack Here ..', '2022-10-19 04:10:22');
 
 -- --------------------------------------------------------
 
@@ -201,9 +202,9 @@ CREATE TABLE `posts` (
 INSERT INTO `posts` (`post_id`, `cat_id`, `author_id`, `title`, `body`, `status`, `image`, `published`, `tags`, `views`, `likes`) VALUES
 (1, 0, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 0, 'img_1.jpg', '2022-10-15 05:54:29', 'tag1, tag2', 5, 2),
 (2, 1, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 0, 'img_2.jpg', '2022-10-15 05:55:12', 'tag1, tag2', 5, 2),
-(3, 2, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 0, 'img_3.jpg', '2022-10-15 05:56:18', 'tag1, tag2', 5, 2),
-(4, 3, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n', 0, 'img_4.jpg', '2022-10-15 05:56:24', 'tag1, tag2, tag3', 5, 2),
-(5, 1, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n', 0, 'img_5.jpg', '2022-10-15 05:56:31', 'tag1, tag2, tag3', 5, 2);
+(3, 2, 2, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 0, 'img_3.jpg', '2022-10-20 23:33:38', 'tag1, tag2', 5, 2),
+(4, 3, 2, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n', 0, 'img_4.jpg', '2022-10-20 23:33:42', 'tag1, tag2, tag3', 5, 2),
+(5, 1, 2, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n', 0, 'img_5.jpg', '2022-10-20 23:33:46', 'tag1, tag2, tag3', 5, 2);
 
 -- --------------------------------------------------------
 
@@ -257,8 +258,8 @@ CREATE TABLE `templates` (
 --
 
 INSERT INTO `templates` (`temp_id`, `title`, `description`, `author_name`, `author_url`, `image`, `temp_dir`, `status`, `created`) VALUES
-(1, 'Wordify – Free HTML5 personal blog website template', 'Hence the name, Wordify is an easy-to-use writer website template for bloggers, journalists, authors, editors and the like. You can easily alter Wordify to your needs due to its simplistic, clean and stunning web design. Wordify is a Bootstrap Framework tool that means adjusting to different devices happens in a snap. Moreover, it is also in tune with all web browsers, retina screens and ensures fantastic performance.', ' Aigars SIlkalns', 'https://colorlib.com/wp/template/wordify', 'wordify-1.jpg', 'wordify', 0, '2022-10-16 14:59:00'),
-(2, 'BizNews – Free News Website Template', 'It’s a lot easier for you to share news and articles online if you have a newspaper, news portal, or magazine website. You may know that there is a big challenge in creating a news or magazine website from scratch. If you are on a tight budget and time schedule, you should use our free news website template to make an incredible news portal or magazine website. Why starting from scratch if you have pre-built and free HTML templates?\r\n\r\nWe are here with a lightweight, easy-to-use, and fully responsive free magazine website template perfect for creating professional news, newspaper, news portal, news channel, news page, and online magazine websites. No matter if you haven’t built a single web page in your life yet, you will still succeed in making your online magazine website with this free magazine website template. The template is very easy to use and beginner-friendly for your convenience.\r\n\r\nBizNews – free news portal website template is built with Bootstrap CSS framework. It’s fully responsive and customizable. It comes with 4 pre-defined and ready-to-use HTML5 pages and many useful HTML5 & CSS3 design elements. With these pre-built HTML5 pages and design elements, you can create an impactful newspaper, news portal, or online magazine website easily without having extra coding knowledge.', 'HTML Codex', 'https://htmlcodex.com/free-news-website-template', 'biznews-1.jpg', 'biznews', 1, '2022-10-16 14:59:00');
+(1, 'Wordify – Free HTML5 personal blog website template', 'Hence the name, Wordify is an easy-to-use writer website template for bloggers, journalists, authors, editors and the like. You can easily alter Wordify to your needs due to its simplistic, clean and stunning web design. Wordify is a Bootstrap Framework tool that means adjusting to different devices happens in a snap. Moreover, it is also in tune with all web browsers, retina screens and ensures fantastic performance.', ' Aigars SIlkalns', 'https://colorlib.com/wp/template/wordify', 'wordify-1.jpg', 'wordify', 1, '2022-10-18 14:45:15'),
+(2, 'BizNews – Free News Website Template', 'It’s a lot easier for you to share news and articles online if you have a newspaper, news portal, or magazine website. You may know that there is a big challenge in creating a news or magazine website from scratch. If you are on a tight budget and time schedule, you should use our free news website template to make an incredible news portal or magazine website. Why starting from scratch if you have pre-built and free HTML templates?\r\n\r\nWe are here with a lightweight, easy-to-use, and fully responsive free magazine website template perfect for creating professional news, newspaper, news portal, news channel, news page, and online magazine websites. No matter if you haven’t built a single web page in your life yet, you will still succeed in making your online magazine website with this free magazine website template. The template is very easy to use and beginner-friendly for your convenience.\r\n\r\nBizNews – free news portal website template is built with Bootstrap CSS framework. It’s fully responsive and customizable. It comes with 4 pre-defined and ready-to-use HTML5 pages and many useful HTML5 & CSS3 design elements. With these pre-built HTML5 pages and design elements, you can create an impactful newspaper, news portal, or online magazine website easily without having extra coding knowledge.', 'HTML Codex', 'https://htmlcodex.com/free-news-website-template', 'biznews-1.jpg', 'biznews', 0, '2022-10-18 14:45:15');
 
 -- --------------------------------------------------------
 
@@ -271,6 +272,10 @@ CREATE TABLE `users` (
   `user_login` varchar(50) DEFAULT NULL,
   `user_fullname` varchar(100) DEFAULT NULL,
   `user_email` varchar(100) DEFAULT NULL,
+  `user_phone` varchar(50) DEFAULT NULL,
+  `user_orgname` varchar(100) DEFAULT NULL,
+  `user_location` text DEFAULT NULL,
+  `user_birthday` timestamp NULL DEFAULT current_timestamp(),
   `user_pass` varchar(50) DEFAULT NULL,
   `user_role` varchar(20) NOT NULL DEFAULT 'member',
   `user_image` varchar(100) DEFAULT 'AdminLTELogo.png',
@@ -282,9 +287,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_login`, `user_fullname`, `user_email`, `user_pass`, `user_role`, `user_image`, `user_joined`, `user_status`) VALUES
-(1, 'admin', 'Agah Nata', 'admin@example.com', '21232f297a57a5a743894a0e4a801fc3', 'administrator', 'user1-128x128.jpg', '2022-09-08 13:48:39', 1),
-(2, 'member', 'Alexander Pierce', 'info@example.com', '5f4dcc3b5aa765d61d8327deb882cf99', 'member', 'user2-160x160.jpg', '2022-09-22 21:09:57', 1);
+INSERT INTO `users` (`user_id`, `user_login`, `user_fullname`, `user_email`, `user_phone`, `user_orgname`, `user_location`, `user_birthday`, `user_pass`, `user_role`, `user_image`, `user_joined`, `user_status`) VALUES
+(1, 'admin', 'Agah Nata', 'admin@example.com', '+62 813 8888', '', NULL, '2022-10-18 17:00:00', '21232f297a57a5a743894a0e4a801fc3', 'administrator', 'user1-128x128.jpg', '2022-10-19 01:42:20', 1),
+(2, 'member', 'Alexander Pierce', 'info@example.com', '+62 813 9999', '', NULL, '2022-10-19 01:43:17', '5f4dcc3b5aa765d61d8327deb882cf99', 'member', 'user2-160x160.jpg', '2022-10-19 01:43:37', 1);
 
 -- --------------------------------------------------------
 
@@ -300,62 +305,6 @@ CREATE TABLE `visitors` (
   `likes` int(11) NOT NULL DEFAULT 0,
   `visited` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `visitors`
---
-
-INSERT INTO `visitors` (`visit_id`, `user_ip`, `page`, `views`, `likes`, `visited`) VALUES
-(199, '::1', 'manage-categories', 6, 0, '2022-09-21 06:14:38'),
-(177, '127.0.0.1', 'manage-activities', 70, 0, '2022-09-22 15:48:20'),
-(204, '::1', 'manage-users', 2, 0, '2022-09-12 03:27:25'),
-(203, '127.0.0.1', 'site-settings', 18, 0, '2022-09-22 04:06:22'),
-(202, '::1', 'manage-activities', 5, 0, '2022-09-12 02:38:30'),
-(201, '::1', 'direct-chat', 8, 0, '2022-09-12 02:38:34'),
-(200, '::1', 'site-settings', 15, 0, '2022-09-21 06:22:54'),
-(193, '127.0.0.1', 'manage-contacts', 9, 0, '2022-09-20 10:05:29'),
-(192, '127.0.0.1', 'manage-users', 25, 0, '2022-09-22 03:26:41'),
-(191, '127.0.0.1', 'manage-posts', 170, 0, '2022-09-21 07:58:07'),
-(190, '127.0.0.1', 'manage-pages', 79, 0, '2022-09-22 03:39:23'),
-(198, '::1', 'dashboard', 50, 0, '2022-09-21 09:50:46'),
-(197, '::1', 'manage-posts', 236, 0, '2022-09-21 10:45:26'),
-(196, '127.0.0.1', 'manage-categories', 9, 0, '2022-09-20 03:43:10'),
-(195, '127.0.0.1', 'direct-chat', 14, 0, '2022-09-22 03:19:56'),
-(194, '127.0.0.1', 'dashboard', 101, 0, '2022-09-22 15:32:24'),
-(205, '::1', 'manage-pages', 33, 0, '2022-09-21 10:45:34'),
-(206, '::1', 'manage-contacts', 2, 0, '2022-09-21 06:14:34'),
-(207, '::1', 'cat_id=2', 29, 0, '2022-09-12 07:53:20'),
-(208, '::1', 'cat_id=1', 37, 0, '2022-09-12 07:43:40'),
-(209, '::1', '', 63, 0, '2022-09-12 07:53:23'),
-(210, '::1', 'cat_id=0', 2, 0, '2022-09-12 07:31:37'),
-(211, '::1', 'cat_id=3', 7, 0, '2022-09-12 07:31:11'),
-(212, '::1', 'post_id=1', 12, 0, '2022-09-12 07:43:52'),
-(213, '::1', 'site-templates', 27, 0, '2022-09-12 03:29:08'),
-(214, '::1', 'post_id=2', 4, 0, '2022-09-12 07:43:51'),
-(215, '::1', 'post_id=3', 4, 0, '2022-09-12 07:43:50'),
-(216, '::1', 'id=3', 8, 0, '2022-09-12 07:43:48'),
-(217, '::1', 'id=0', 1, 0, '2022-09-12 07:34:45'),
-(218, '::1', 'id=2', 8, 0, '2022-09-12 07:54:31'),
-(219, '127.0.0.1', '', 4, 0, '2022-10-09 10:39:36'),
-(220, '127.0.0.1', 'id=1', 1, 0, '2022-09-12 22:44:49'),
-(221, '127.0.0.1', 'cat_id=1', 3, 0, '2022-09-12 23:43:37'),
-(222, '127.0.0.1', 'id=0', 6, 0, '2022-09-12 22:55:25'),
-(223, '127.0.0.1', 'cat_id=0', 1, 0, '2022-09-12 22:45:48'),
-(224, '127.0.0.1', 'cid=0', 8, 0, '2022-10-15 07:13:33'),
-(225, '127.0.0.1', 'pid=0', 2, 0, '2022-09-12 23:06:42'),
-(226, '127.0.0.1', 'pid=1', 126, 0, '2022-10-15 05:57:14'),
-(227, '127.0.0.1', 'cid=', 1, 0, '2022-09-12 23:44:38'),
-(228, '127.0.0.1', 'cid=2', 4, 0, '2022-09-13 01:26:54'),
-(229, '127.0.0.1', 'cid=1', 10, 0, '2022-10-15 07:12:27'),
-(230, '127.0.0.1', 'site-templates', 11, 0, '2022-09-22 15:47:52'),
-(231, '127.0.0.1', 'pid=2', 17, 0, '2022-10-15 02:53:24'),
-(232, '127.0.0.1', 'manage-comments', 162, 0, '2022-09-22 16:16:08'),
-(233, '::1', 'manage-comments', 24, 0, '2022-09-21 10:43:56'),
-(234, '::1', 'cid=1', 2, 0, '2022-09-21 06:23:20'),
-(235, '::1', 'pid=1', 76, 0, '2022-10-13 15:39:02'),
-(236, '::1', 'pid=2', 14, 0, '2022-10-12 00:01:32'),
-(237, '127.0.0.1', 'pid=3', 43, 0, '2022-10-15 06:54:23'),
-(238, '127.0.0.1', 'pid=5', 3, 0, '2022-10-15 05:47:36');
 
 --
 -- Indexes for dumped tables
@@ -453,7 +402,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `ct_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ct_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pages`

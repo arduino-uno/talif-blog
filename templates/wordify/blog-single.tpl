@@ -224,63 +224,63 @@
             });
 
             $.ajax({
-               url:"./scripts/get_comments.php",
-               method:"POST",
-               data: { 'post_id': post_id },
-               datatype: 'JSON',
-               success:function(myData) {
+                url:"./scripts/get_comments.php",
+                method:"POST",
+                data: { 'post_id': post_id },
+                datatype: 'JSON',
+                success:function(myData) {
 
-                   $.each( JSON.parse( myData ), function( index, value ) {
+                     $.each( JSON.parse( myData ), function( index, value ) {
 
-                       const getInitials = (string) => {
-                         const [firstname, lastname] = string.toUpperCase().split(' ');
-                         const initials = firstname.substring(0, 1);
-                         return lastname
-                           ? initials.concat(lastname.substring(0, 1))
-                           : initials.concat(firstname.substring(1, 2));
-                       };
+                         const getInitials = (string) => {
+                           const [firstname, lastname] = string.toUpperCase().split(' ');
+                           const initials = firstname.substring(0, 1);
+                           return lastname
+                             ? initials.concat(lastname.substring(0, 1))
+                             : initials.concat(firstname.substring(1, 2));
+                         };
 
-                       const getNewDate = (string) => {
-                         const event = new Date(string);
-                         const options = { dateStyle: "long" };
-                         const date = event.toLocaleString("id-ID", options);
-                         return date;
-                       };
+                         const getNewDate = (string) => {
+                           const event = new Date(string);
+                           const options = { dateStyle: "long" };
+                           const date = event.toLocaleString("id-ID", options);
+                           return date;
+                         };
 
-                        if ( value.parent_id == '0' ) {
+                          if ( value.parent_id == '0' ) {
 
-                             $('ul.comment-list').append('<li class="comment">' +
-                               '<div class="vcard">' +
-                               '<button type="button" class="btn btn-default rounded-circle btn-lg">' + getInitials( value.fullname ) + '</button>' +
-                               '</div>' +
-                               '<div class="comment-body">' +
-                                 '<h3>' + value.fullname + '</h3>' +
-                                 '<div class="meta">' + getNewDate( value.created ) + '</div>' +
-                                 '<p>' + value.message + '</p>' +
-                                 '<p><a href="#" class="reply rounded">Reply</a></p>' +
-                               '</div>' +
-                             '</li>');
+                               $('ul.comment-list').append('<li class="comment">' +
+                                 '<div class="vcard">' +
+                                 '<button type="button" class="btn btn-default rounded-circle btn-lg">' + getInitials( value.fullname ) + '</button>' +
+                                 '</div>' +
+                                 '<div class="comment-body">' +
+                                   '<h3>' + value.fullname + '</h3>' +
+                                   '<div class="meta">' + getNewDate( value.created ) + '</div>' +
+                                   '<p>' + value.message + '</p>' +
+                                   '<p><a href="#" class="reply rounded">Reply</a></p>' +
+                                 '</div>' +
+                               '</li>');
 
-                        } else {
+                          } else {
 
-                              $('ul.comment-list').append('<ul class="children">' +
-                                '<li class="comment">' +
-                                '<div class="vcard">' +
-                                '<button type="button" class="btn btn-default rounded-circle btn-lg">' + getInitials( value.fullname ) + '</button>' +
-                                '</div>' +
-                                '<div class="comment-body">' +
-                                  '<h3>' + value.fullname + '</h3>' +
-                                  '<div class="meta">' + getNewDate( value.created ) + '</div>' +
-                                  '<p>' + value.message + '</p>' +
-                                  '<p><a href="#" class="reply rounded">Reply</a></p>' +
-                                '</div>' +
-                              '</li></ul>');
+                                $('ul.comment-list').append('<ul class="children">' +
+                                  '<li class="comment">' +
+                                  '<div class="vcard">' +
+                                  '<button type="button" class="btn btn-default rounded-circle btn-lg">' + getInitials( value.fullname ) + '</button>' +
+                                  '</div>' +
+                                  '<div class="comment-body">' +
+                                    '<h3>' + value.fullname + '</h3>' +
+                                    '<div class="meta">' + getNewDate( value.created ) + '</div>' +
+                                    '<p>' + value.message + '</p>' +
+                                    '<p><a href="#" class="reply rounded">Reply</a></p>' +
+                                  '</div>' +
+                                '</li></ul>');
 
-                        }
+                          }
 
-                   });
+                     });
 
-               }
+                }
 
             });
 

@@ -11,11 +11,18 @@ if ( isset( $_POST ) ) {
     // get values
     $user_id = isset( $_POST['hid_user_id'] ) ? filter_var( $_POST['hid_user_id'], FILTER_SANITIZE_STRING ) : '';
     $user_login = isset( $_POST['upt_username'] ) ? filter_var( $_POST['upt_username'], FILTER_SANITIZE_STRING ) : '';
-    $user_fullname = isset( $_POST['upt_fullname'] ) ? filter_var( $_POST['upt_fullname'], FILTER_SANITIZE_STRING ) : '';
+    $user_firstname = isset( $_POST['upt_firstname'] ) ? filter_var( $_POST['upt_firstname'], FILTER_SANITIZE_STRING ) : '';
+    $user_lastname = isset( $_POST['upt_lastname'] ) ? filter_var( $_POST['upt_lastname'], FILTER_SANITIZE_STRING ) : '';
     $user_email = isset( $_POST['upt_email'] ) ? filter_var( $_POST['upt_email'], FILTER_SANITIZE_STRING ) : '';
+    $user_phone = isset( $_POST['upt_phone'] ) ? filter_var( $_POST['upt_phone'], FILTER_SANITIZE_STRING ) : '';
+    $user_orgname = isset( $_POST['upt_orgname'] ) ? filter_var( $_POST['upt_orgname'], FILTER_SANITIZE_STRING ) : '';
+    $user_location = isset( $_POST['upt_location'] ) ? filter_var( $_POST['upt_location'], FILTER_SANITIZE_STRING ) : '';
+    $user_birthday = isset( $_POST['upt_birthday'] ) ? filter_var( $_POST['upt_birthday'], FILTER_SANITIZE_STRING ) : '';
     $user_pass = isset( $_POST['upt_password'] ) ? filter_var( $_POST['upt_password'], FILTER_SANITIZE_STRING ) : '';
     $user_role = isset( $_POST['upt_role'] ) ? filter_var( $_POST['upt_role'], FILTER_SANITIZE_STRING ) : '';
     $user_status = isset( $_POST['upt_status'] ) ? filter_var( $_POST['upt_status'], FILTER_SANITIZE_STRING ) : '';
+    // user_fullname
+    $user_fullname = $user_firstname . " " . $user_lastname;
     // user status Active or Inactive
     $status = ( $user_status ? 1 : 0 );
     // encrypt user password
@@ -25,6 +32,10 @@ if ( isset( $_POST ) ) {
         "user_login"		=> $user_login,
         "user_fullname" => $user_fullname,
         "user_email" 		=> $user_email,
+        "user_phone"    => $user_phone,
+        "user_orgname"  => $user_orgname,
+        "user_location" => $user_location,
+        "user_birthday" => $user_birthday,
         "user_role"     => $user_role,
         "user_status"   => $status
     );

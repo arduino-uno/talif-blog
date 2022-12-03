@@ -21,65 +21,113 @@
   <section class="content">
     <div class="container-fluid">
       <!-- Small boxes (Stat box) -->
-      <div class="row">
-        <div class="col-lg-3 col-6">
-          <!-- small box -->
-          <div class="small-box bg-info">
-            <div class="inner">
-              <h3><?php echo rows_count( "pages" );?></h3>
-              <p>All Site Pages</p>
+<?php
+$user = json_decode( current_user(), true );
+$user_id = $user["user_id"];
+// Call execute query function
+$result = $conn->run_query( "SELECT * FROM posts a, comments b WHERE a.post_id = b.post_id AND a.author_id = $user_id" );
+$comm_rowscnt = json_decode( $result );
+
+if ( is_admin() ) {
+
+  echo '<div class="row">
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>' . rows_count( "pages" ) . '</h3>
+                <p>All Site Pages</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="./media.php?module=manage-pages" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-            <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div>
-            <a href="./media.php?module=manage-pages" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-6">
-          <!-- small box -->
-          <div class="small-box bg-success">
-            <div class="inner">
-              <h3><?php echo rows_count( "posts" );?></h3>
-              <p>All Site Posts</p>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>' . rows_count( "posts" ) . '</h3>
+                <p>All Site Posts</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="./media.php?module=manage-posts" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="./media.php?module=manage-posts" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-6">
-          <!-- small box -->
-          <div class="small-box bg-warning">
-            <div class="inner">
-              <h3><?php echo rows_count( "users" );?></h3>
-              <p>User Registrations</p>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>' . rows_count( "users" ) . '</h3>
+                <p>User Registrations</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="./media.php?module=manage-users" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-            <a href="./media.php?module=manage-users" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-6">
-          <!-- small box -->
-          <div class="small-box bg-danger">
-            <div class="inner">
-              <h3><?php echo rows_count( "visitors" );?></h3>
-              <p>Unique Visitors</p>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3>' . rows_count( "visitors" ) . '</h3>
+                <p>Unique Visitors</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
-        </div>
-        <!-- ./col -->
-      </div>
-      <!-- /.row -->
+        </div>';
+
+} else {
+
+  echo '<div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">CPU Traffic</span>
+                <span class="info-box-number">
+                  10
+                  <small>%</small>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-edit"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Posts</span>
+                <span class="info-box-number">' . rows_count( "posts", "author_id", $user_id ) . '</span>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix hidden-md-up"></div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="far fa-comments"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Comments</span>
+                <span class="info-box-number">' . count( $comm_rowscnt ) . '</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-comments"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Messages</span>
+                <span class="info-box-number">' . rows_count( "chats", "user_id", $user_id ) . '</span>
+              </div>
+            </div>
+          </div>
+        </div>';
+
+};
+?>
 
       <div class="row">
         <div class="col-md-12">

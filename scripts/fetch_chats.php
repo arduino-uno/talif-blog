@@ -56,7 +56,7 @@ foreach( $rows as $row ) {
     $short_msg = shorten( $row["message"], 100 );
 
     $contact .= '<li>
-      <a href="#" onClick="profileModal(' . $row["user_id"] . ')">
+      <a href="./media.php?module=user-profile">
         <img class="contacts-list-img" src="./images/' . $row["user_image"] . '" alt="' . $row["user_fullname"] . '">
         <div class="contacts-list-info">
           <span class="contacts-list-name">' . $row["user_fullname"] . '<small class="contacts-list-date float-right">' . date('d-m-Y', strtotime( $row["chat_date"]) ) . '</small></span>
@@ -71,9 +71,9 @@ foreach( $rows as $row ) {
 
         $notify_text .= '<span class="dropdown-item">
           <div class="media">
-            <a href="#" onClick="profileModal(' . $row["user_id"] . ')"><img src="./images/' . $row["user_image"] . '" alt="' . $row["user_fullname"] . '" class="img-size-50 mr-3 img-circle"></a>
+            <a href="./media.php?module=user-profile"><img src="./images/' . $row["user_image"] . '" alt="' . $row["user_fullname"] . '" class="img-size-50 mr-3 img-circle"></a>
             <div class="media-body">
-              <a href="#" onClick="profileModal(' . $row["user_id"] . ')">
+              <a href="./media.php?module=user-profile">
                 <h3 class="dropdown-item-title">' . $row["user_fullname"] . $star_icon . '</h3>
               </a>
               <p class="text-sm">' . $short_msg . '</p>
@@ -92,7 +92,7 @@ foreach( $rows as $row ) {
     $counter ++;
 };
 
-$sub_array["notifmsg"] .= '<a href="./media.php?module=manage-activities" class="dropdown-item dropdown-footer">See All Messages</a>';
+$sub_array["notifmsg"] .= '<a href="./media.php?module=messaging" class="dropdown-item dropdown-footer">See All Messages</a>';
 $output[] = $sub_array;
 
 echo json_encode( $output, JSON_PRETTY_PRINT );

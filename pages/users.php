@@ -82,34 +82,61 @@
   					</button>
   			</div>
       	 <div class="modal-body">
-           <fieldset class="form-group">
-              <center><img src="./images/AdminLTELogo.png" class="img-circle elevation-3" name="user_image" id="user_image" width="140" height="140" border="0"></a></center>
-           </fieldset>
-           <fieldset class="form-group" border="1">
-              <label>Update Image:</label>
-              <input type="file" id="image_file" name="image_file" accept="image/x-png,image/gif,image/jpeg" />
-           </fieldset>
-        	 <fieldset class="form-group">
-        			 <label>Username</label>
-        			 <input type="text" class="form-control" name="username" id="username" placeholder="Type Username" required>
-        		</fieldset>
-        		<fieldset class="form-group">
-        			 <label>Fullname</label>
-        			 <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Type Fullname" required>
-        		</fieldset>
-        		<fieldset class="form-group">
-        			 <label>Email</label>
-        			 <input type="text" class="form-control" name="email" id="email" placeholder="Your Email Address" required>
-        		</fieldset>
+            <div class="row">
+                <div class="col-12">
+                    <fieldset class="form-group">
+                      <center><img src="./images/AdminLTELogo.png" class="img-circle elevation-3" name="user_image" id="user_image" width="140" height="140" border="0"></a></center>
+                    </fieldset>
+                    <fieldset class="form-group" border="1">
+                      <label>Update Image:</label>
+                      <input type="file" id="image_file" name="image_file" accept="image/x-png,image/gif,image/jpeg" />
+                    </fieldset>
+                    <div class="row">
+                        <div class="col-6">
+                          	<fieldset class="form-group">
+                          		 <label>Username</label>
+                          		 <input type="text" class="form-control" name="username" id="username" placeholder="Type Username" required>
+                          	</fieldset>
+                            <fieldset class="form-group">
+                                <label>firstname</label>
+                                <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Enter your first name" required>
+                            </fieldset>
+                            <!-- Form Group (organization name)-->
+                            <fieldset class="form-group">
+                                <label>Organization name</label>
+                                <input type="text" class="form-control" name="organization" id="organization" placeholder="Enter your organization name">
+                            </fieldset>
+                        </div>
+                        <div class="col-6">
+                            <fieldset class="form-group">
+                               <label>Email</label>
+                               <input type="email" class="form-control" name="email" id="email" placeholder="Your Email Address" required>
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label>Lastname</label>
+                                <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter your last name" required>
+                            </fieldset>
+                            <!-- Form Group (location)-->
+                            <fieldset class="form-group">
+                                <label>Location</label>
+                                <input type="text" class="form-control" name="location" id="location" placeholder="Enter your location">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label>Birthday</label>
+                                <input type="date" class="form-control" name="birthday" id="birthday" placeholder="MM/DD/YYYY" required>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
         		<fieldset class="form-group">
         			 <label>Password</label>
-        			 <input type="password" class="form-control" id="password" name="password" placeholder="Your Password" required>
+        			 <input type="password" class="form-control" name="password" id="password" placeholder="Your Password" required>
         		</fieldset>
         		<fieldset class="form-group">
         			 <label>Confirm Password</label>
-        			 <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+        			 <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
         		</fieldset>
-        </fieldset>
       	</div>
       	<div class="modal-footer">
             <input type="button" name="close" id="close" class="btn btn-default" data-dismiss="modal" value="Close"/>
@@ -131,26 +158,54 @@
   					</button>
   			</div>
       	 <div class="modal-body">
-           <fieldset class="form-group">
-              <center><img src="./images/AdminLTELogo.png" class="img-circle elevation-3" name="upt_user_image" id="upt_user_image" width="140" height="140" border="0"></a></center>
-           </fieldset>
-           <fieldset class="form-group" border="1">
-              <label>Update Image:</label>
-              <input type="file" id="upt_image_file" name="upt_image_file" accept="image/x-png,image/gif,image/jpeg" />
-           </fieldset>
-        	 <fieldset class="form-group">
-        			 <label>Username</label>
-            	 <input type="hidden" name="hid_user_id" id="hid_user_id">
-        			 <input type="text" class="form-control" name="upt_username" id="upt_username" placeholder="Type Username" required>
-        		</fieldset>
-        		<fieldset class="form-group">
-        			 <label>Fullname</label>
-        			 <input type="text" class="form-control" name="upt_fullname" id="upt_fullname" placeholder="Type Fullname" required>
-        		</fieldset>
-        		<fieldset class="form-group">
-        			 <label>Email</label>
-        			 <input type="text" class="form-control" name="upt_email" id="upt_email" placeholder="Your Email Address" required>
-        		</fieldset>
+           <div class="row">
+               <div class="col-12">
+                  <fieldset class="form-group">
+                      <center><img src="./images/AdminLTELogo.png" class="img-circle elevation-3" name="upt_user_image" id="upt_user_image" width="140" height="140" border="0"></a></center>
+                  </fieldset>
+                  <fieldset class="form-group" border="1">
+                    <label>Update Image:</label>
+                    <input type="file" id="upt_image_file" name="upt_image_file" accept="image/x-png,image/gif,image/jpeg" />
+                  </fieldset>
+                  <div class="row">
+                      <div class="col-6">
+                          <fieldset class="form-group">
+                              <label>Username</label>
+                              <input type="hidden" name="hid_user_id" id="hid_user_id">
+                              <input type="text" class="form-control" name="upt_username" id="upt_username" placeholder="Type Username" required>
+                          </fieldset>
+                          <fieldset class="form-group">
+                             <label>firstname</label>
+                             <input type="text" class="form-control" name="upt_firstname" id="upt_firstname" placeholder="Enter your first name" required>
+                          </fieldset>
+                          <!-- Form Group (organization name)-->
+                          <fieldset class="form-group">
+                             <label>Organization name</label>
+                             <input type="text" class="form-control" name="upt_organization" id="upt_organization" placeholder="Enter your organization name">
+                          </fieldset>
+                      </div>
+                      <div class="col-6">
+                          <fieldset class="form-group">
+                             <label>Email</label>
+                             <input type="email" class="form-control" name="upt_email" id="upt_email" placeholder="Your Email Address" required>
+                          </fieldset>
+                          <fieldset class="form-group">
+                             <label>Lastname</label>
+                             <input type="text" class="form-control" name="upt_lastname" id="upt_lastname" placeholder="Enter your last name" required>
+                          </fieldset>
+                          <!-- Form Group (location)-->
+                          <fieldset class="form-group">
+                             <label>Location</label>
+                             <input type="text" class="form-control" name="upt_location" id="upt_location" placeholder="Enter your location">
+                          </fieldset>
+                          <fieldset class="form-group">
+                              <label>Birthday</label>
+                              <input type="date" class="form-control" name="upt_birthday" id="upt_birthday" placeholder="MM/DD/YYYY" required>
+                          </fieldset>
+                      </div>
+                  </div>
+                </div>
+            </div>
         		<fieldset class="form-group">
         			 <label>Password</label>
         			 <input type="password" class="form-control" name="upt_password" id="upt_password" placeholder="Your Password">

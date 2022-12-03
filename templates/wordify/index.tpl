@@ -79,7 +79,6 @@
             </div>
 
             <!-- END main-content -->
-
             <div class="col-md-12 col-lg-4 sidebar">
               <div class="sidebar-box search-form-wrap">
                 <form action="#" class="search-form">

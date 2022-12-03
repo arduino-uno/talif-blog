@@ -14,7 +14,7 @@ var table_activities = $('#activity_data').DataTable({
                 return '<div class="media">' +
                     '<img class="d-flex m-2 rounded border border-light" src="./images/' + data.user_image + '" width="60" alt="Generic placeholder image">' +
                     '<div class="media-body">' +
-                      '<span class="font-weight-bold"><a href="#" onclick="profileModal(' + data.user_id + ')">' + data.user_fullname + '</a></span>' +
+                      '<span class="font-weight-bold"><a href="./media.php?module=user-profile"' + data.user_fullname + '</a></span>' +
                       '<p class="font-weight-normal">' + data.user_role + '</p>' +
                     '</div></div>';
             }

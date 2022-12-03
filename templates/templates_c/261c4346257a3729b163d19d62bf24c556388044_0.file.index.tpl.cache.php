@@ -1,35 +1,32 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-10-16 21:58:55
+/* Smarty version 4.1.0, created on 2022-10-23 10:07:05
   from '/var/www/html/talif-blog/templates/wordify/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_634c1c2f1953b8_48588891',
+  'unifunc' => 'content_6354afd9d1a076_99178372',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '261c4346257a3729b163d19d62bf24c556388044' => 
     array (
       0 => '/var/www/html/talif-blog/templates/wordify/index.tpl',
-      1 => 1665932212,
+      1 => 1666494365,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:header.tpl' => 1,
-    'file:slider.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634c1c2f1953b8_48588891 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6354afd9d1a076_99178372 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
-$_smarty_tpl->compiled->nocache_hash = '323418990634c1c2f172575_69610323';
+$_smarty_tpl->compiled->nocache_hash = '11973841516354afd9bea8d2_28955065';
 ?>
       <?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-      <?php $_smarty_tpl->_subTemplateRender("file:slider.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
       <section class="site-section pt-5 pb-5">
         <div class="container">
@@ -142,7 +139,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
 
             <!-- END main-content -->
-
             <div class="col-md-12 col-lg-4 sidebar">
               <div class="sidebar-box search-form-wrap">
                 <form action="#" class="search-form">

@@ -1,40 +1,40 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-09-24 22:48:24
-  from '/var/www/html/talif/templates/wordify/index.tpl' */
+/* Smarty version 4.1.0, created on 2022-11-28 20:31:55
+  from '/var/www/html/talif-blog/templates/wordify/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_632f26c8afe950_39018961',
+  'unifunc' => 'content_6384b84be46896_66786249',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '483bd81ea07b4d7f41e229d2d25e8598785aab4f' => 
+    '261c4346257a3729b163d19d62bf24c556388044' => 
     array (
-      0 => '/var/www/html/talif/templates/wordify/index.tpl',
-      1 => 1663741207,
+      0 => '/var/www/html/talif-blog/templates/wordify/index.tpl',
+      1 => 1666494365,
       2 => 'file',
     ),
-    '4a5cb40c38d0793724eef7b54c642da5887c69da' => 
+    '3ac2d77c0691a4c36eef0822abe4d2e316887e43' => 
     array (
-      0 => '/var/www/html/talif/templates/wordify/header.tpl',
-      1 => 1663026309,
+      0 => '/var/www/html/talif-blog/templates/wordify/header.tpl',
+      1 => 1665815338,
       2 => 'file',
     ),
-    '4663525792ddd9cfef71e5b10cf02d8d00d88be2' => 
+    'ce2fdb044a112ed6665832318ff159b023f8a3c0' => 
     array (
-      0 => '/var/www/html/talif/templates/wordify/footer.tpl',
-      1 => 1662865113,
+      0 => '/var/www/html/talif-blog/templates/wordify/footer.tpl',
+      1 => 1665805105,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_632f26c8afe950_39018961 (Smarty_Internal_Template $_smarty_tpl) {
-?><!doctype html>
+function content_6384b84be46896_66786249 (Smarty_Internal_Template $_smarty_tpl) {
+?>      <!doctype html>
 <html lang="en">
   <head>
-    <title>Talif  - A Simple WebBlog - AdminLTE Talif</title>
+    <title>AdminLTE - AdminLTE Talif</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -53,7 +53,7 @@ function content_632f26c8afe950_39018961 (Smarty_Internal_Template $_smarty_tpl)
   </head>
   <body>
     <div class="wrap">
-            <header role="banner">
+      <header role="banner">
         <div class="top-bar">
           <div class="container">
             <div class="row">
@@ -103,10 +103,10 @@ function content_632f26c8afe950_39018961 (Smarty_Internal_Template $_smarty_tpl)
 
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
+                  <a class="nav-link" href="about.php">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
+                  <a class="nav-link" href="contact.php">Contact</a>
                 </li>
               </ul>
 
@@ -121,55 +121,71 @@ function content_632f26c8afe950_39018961 (Smarty_Internal_Template $_smarty_tpl)
             <div class="col-md-12">
 
               <div class="owl-carousel owl-theme home-slider">
-                <div>
-                  <a href="blog-single.php" class="a-block d-flex align-items-center height-lg" style="background-image: url('./templates/wordify/images/img_1.jpg'); ">
+                                <div>
+                  <a href="./blog-single.php?pid=1" class="a-block d-flex align-items-center height-lg" style="background-image: url('./images/img_5.jpg'); ">
                     <div class="text half-to-full">
-                      <span class="category mb-5">Food</span>
+                      <span class="category mb-5">HTML5</span>
                       <div class="post-meta">
 
-                        <span class="author mr-2"><img src="./templates/wordify/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                        <span class="mr-2">March 15, 2018 </span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                        <span class="author mr-2"><img src="./images/user2-160x160.jpg" alt="Alexander Pierce">&nbsp;Alexander Pierce</span>&bullet;
+                        <span class="mr-2">10 21, 2022</span>&nbsp;&bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span>&nbsp;0</span>
 
                       </div>
-                      <h3>How to Find the Video Games of Your Youth</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!</p>
+                      <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
+                      <p>Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been&nbsp;..</p>
                     </div>
                   </a>
                 </div>
-                <div>
-                  <a href="blog-single.php" class="a-block d-flex align-items-center height-lg" style="background-image: url('./templates/wordify/images/img_2.jpg'); ">
+                                <div>
+                  <a href="./blog-single.php?pid=3" class="a-block d-flex align-items-center height-lg" style="background-image: url('./images/img_4.jpg'); ">
                     <div class="text half-to-full">
-                      <span class="category mb-5">Travel</span>
+                      <span class="category mb-5">Bootstrap</span>
                       <div class="post-meta">
 
-                        <span class="author mr-2"><img src="./templates/wordify/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                        <span class="mr-2">March 15, 2018 </span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                        <span class="author mr-2"><img src="./images/user2-160x160.jpg" alt="Alexander Pierce">&nbsp;Alexander Pierce</span>&bullet;
+                        <span class="mr-2">10 21, 2022</span>&nbsp;&bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span>&nbsp;0</span>
 
                       </div>
-                      <h3>How to Find the Video Games of Your Youth</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!</p>
+                      <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
+                      <p>Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been&nbsp;..</p>
                     </div>
                   </a>
                 </div>
-                <div>
-                  <a href="blog-single.php" class="a-block d-flex align-items-center height-lg" style="background-image: url('./templates/wordify/images/img_3.jpg'); ">
+                                <div>
+                  <a href="./blog-single.php?pid=2" class="a-block d-flex align-items-center height-lg" style="background-image: url('./images/img_3.jpg'); ">
                     <div class="text half-to-full">
-                      <span class="category mb-5">Sports</span>
+                      <span class="category mb-5">CSS3</span>
                       <div class="post-meta">
 
-                        <span class="author mr-2"><img src="./templates/wordify/images/person_1.jpg" alt="Colorlib"> Colorlib</span>&bullet;
-                        <span class="mr-2">March 15, 2018 </span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                        <span class="author mr-2"><img src="./images/user2-160x160.jpg" alt="Alexander Pierce">&nbsp;Alexander Pierce</span>&bullet;
+                        <span class="mr-2">10 21, 2022</span>&nbsp;&bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span>&nbsp;1</span>
 
                       </div>
-                      <h3>How to Find the Video Games of Your Youth</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!</p>
+                      <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore&nbsp;..</p>
                     </div>
                   </a>
                 </div>
-              </div>
+                                <div>
+                  <a href="./blog-single.php?pid=1" class="a-block d-flex align-items-center height-lg" style="background-image: url('./images/img_2.jpg'); ">
+                    <div class="text half-to-full">
+                      <span class="category mb-5">HTML5</span>
+                      <div class="post-meta">
+
+                        <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata">&nbsp;Agah Nata</span>&bullet;
+                        <span class="mr-2">10 15, 2022</span>&nbsp;&bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span>&nbsp;0</span>
+
+                      </div>
+                      <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore&nbsp;..</p>
+                    </div>
+                  </a>
+                </div>
+                              </div>
 
             </div>
           </div>
@@ -192,66 +208,66 @@ function content_632f26c8afe950_39018961 (Smarty_Internal_Template $_smarty_tpl)
               <div class="row">
                                 <div class="col-md-6">
                   <a href="./blog-single.php?pid=1" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                    <img src="./images/blog-2.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
+                    <img src="./images/img_5.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
                     <div class="blog-content-body">
                       <div class="post-meta">
-                        <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata"> Agah Nata</span>&bullet;
-                        <span class="mr-2">Sep 24, 2022 </span> &bullet;
+                        <span class="author mr-2"><img src="./images/user2-160x160.jpg" alt="Alexander Pierce">&nbsp;Alexander Pierce</span>&bullet;
+                        <span class="mr-2">Oct 21, 2022&nbsp;</span>&nbsp;&bullet;
                         <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
                       </div>
-                      <h2>How to Find the Video Games of Your Youth</h2>
-                    </div>
-                  </a>
-                </div>
-                                <div class="col-md-6">
-                  <a href="./blog-single.php?pid=0" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                    <img src="./images/blog-1.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
-                    <div class="blog-content-body">
-                      <div class="post-meta">
-                        <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata"> Agah Nata</span>&bullet;
-                        <span class="mr-2">Sep 24, 2022 </span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                      </div>
-                      <h2>How to Find the Video Games of Your Youth Post 1</h2>
-                    </div>
-                  </a>
-                </div>
-                                <div class="col-md-6">
-                  <a href="./blog-single.php?pid=1" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                    <img src="./images/blog-5.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
-                    <div class="blog-content-body">
-                      <div class="post-meta">
-                        <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata"> Agah Nata</span>&bullet;
-                        <span class="mr-2">Sep 24, 2022 </span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                      </div>
-                      <h2>How to Find the Video Games of Your Youth</h2>
+                      <h2>There’s a Cool New Way for Men to Wear Socks and Sandals</h2>
                     </div>
                   </a>
                 </div>
                                 <div class="col-md-6">
                   <a href="./blog-single.php?pid=3" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                    <img src="./images/blog-4.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
+                    <img src="./images/img_4.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
                     <div class="blog-content-body">
                       <div class="post-meta">
-                        <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata"> Agah Nata</span>&bullet;
-                        <span class="mr-2">Sep 11, 2022 </span> &bullet;
+                        <span class="author mr-2"><img src="./images/user2-160x160.jpg" alt="Alexander Pierce">&nbsp;Alexander Pierce</span>&bullet;
+                        <span class="mr-2">Oct 21, 2022&nbsp;</span>&nbsp;&bullet;
                         <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
                       </div>
-                      <h2>How to Find the Video Games of Your Youth</h2>
+                      <h2>There’s a Cool New Way for Men to Wear Socks and Sandals</h2>
                     </div>
                   </a>
                 </div>
                                 <div class="col-md-6">
                   <a href="./blog-single.php?pid=2" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                    <img src="./images/blog-3.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
+                    <img src="./images/img_3.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
                     <div class="blog-content-body">
                       <div class="post-meta">
-                        <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata"> Agah Nata</span>&bullet;
-                        <span class="mr-2">Sep 11, 2022 </span> &bullet;
+                        <span class="author mr-2"><img src="./images/user2-160x160.jpg" alt="Alexander Pierce">&nbsp;Alexander Pierce</span>&bullet;
+                        <span class="mr-2">Oct 21, 2022&nbsp;</span>&nbsp;&bullet;
                         <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
                       </div>
-                      <h2>How to Find the Video Games of Your Youth</h2>
+                      <h2>There’s a Cool New Way for Men to Wear Socks and Sandals</h2>
+                    </div>
+                  </a>
+                </div>
+                                <div class="col-md-6">
+                  <a href="./blog-single.php?pid=1" class="blog-entry element-animate" data-animate-effect="fadeIn">
+                    <img src="./images/img_2.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
+                    <div class="blog-content-body">
+                      <div class="post-meta">
+                        <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata">&nbsp;Agah Nata</span>&bullet;
+                        <span class="mr-2">Oct 15, 2022&nbsp;</span>&nbsp;&bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                      </div>
+                      <h2>There’s a Cool New Way for Men to Wear Socks and Sandals</h2>
+                    </div>
+                  </a>
+                </div>
+                                <div class="col-md-6">
+                  <a href="./blog-single.php?pid=0" class="blog-entry element-animate" data-animate-effect="fadeIn">
+                    <img src="./images/img_1.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
+                    <div class="blog-content-body">
+                      <div class="post-meta">
+                        <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata">&nbsp;Agah Nata</span>&bullet;
+                        <span class="mr-2">Oct 15, 2022&nbsp;</span>&nbsp;&bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                      </div>
+                      <h2>There’s a Cool New Way for Men to Wear Socks and Sandals</h2>
                     </div>
                   </a>
                 </div>
@@ -275,7 +291,6 @@ function content_632f26c8afe950_39018961 (Smarty_Internal_Template $_smarty_tpl)
             </div>
 
             <!-- END main-content -->
-
             <div class="col-md-12 col-lg-4 sidebar">
               <div class="sidebar-box search-form-wrap">
                 <form action="#" class="search-form">
@@ -344,16 +359,14 @@ function content_632f26c8afe950_39018961 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
               </div>
               <!-- END sidebar-box -->
-
               <div class="sidebar-box">
                 <h3 class="heading">Categories</h3>
                 <ul class="categories">
-                  <li><a href="#">Food <span>(12)</span></a></li>
-                  <li><a href="#">Travel <span>(22)</span></a></li>
-                  <li><a href="#">Lifestyle <span>(37)</span></a></li>
-                  <li><a href="#">Business <span>(42)</span></a></li>
-                  <li><a href="#">Adventure <span>(14)</span></a></li>
-                </ul>
+                                    <li><a href="./category.php?cid=0">Uncategorized&nbsp;<span>(1)</span></a></li>
+                                    <li><a href="./category.php?cid=1">HTML5&nbsp;<span>(2)</span></a></li>
+                                    <li><a href="./category.php?cid=2">CSS3&nbsp;<span>(1)</span></a></li>
+                                    <li><a href="./category.php?cid=3">Bootstrap&nbsp;<span>(1)</span></a></li>
+                                  </ul>
               </div>
               <!-- END sidebar-box -->
 
@@ -380,115 +393,115 @@ function content_632f26c8afe950_39018961 (Smarty_Internal_Template $_smarty_tpl)
         </div>
       </section>
       <footer class="site-footer">
-<div class="container">
-  <div class="row mb-5">
-    <div class="col-md-4">
-      <h3>About Us</h3>
-      <p class="mb-4">
-        <img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid">
-      </p>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-4">
+        <h3>About Us</h3>
+        <p class="mb-4">
+          <img src="./templates/wordify/images/img_1.jpg" alt="Image placeholder" class="img-fluid">
+        </p>
 
-      <p>Lorem ipsum dolor sit amet sa ksal sk sa, consectetur adipisicing elit. Ipsa harum inventore reiciendis. <a href="#">Read More</a></p>
-    </div>
-    <div class="col-md-6 ml-auto">
-      <div class="row">
-        <div class="col-md-7">
-          <h3>Latest Post</h3>
-          <div class="post-entry-sidebar">
-            <ul>
-              <li>
-                <a href="">
-                  <img src="images/img_6.jpg" alt="Image placeholder" class="mr-4">
-                  <div class="text">
-                    <h4>How to Find the Video Games of Your Youth</h4>
-                    <div class="post-meta">
-                      <span class="mr-2">March 15, 2018 </span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+        <p>Lorem ipsum dolor sit amet sa ksal sk sa, consectetur adipisicing elit. Ipsa harum inventore reiciendis. <a href="#">Read More</a></p>
+      </div>
+      <div class="col-md-6 ml-auto">
+        <div class="row">
+          <div class="col-md-7">
+            <h3>Latest Post</h3>
+            <div class="post-entry-sidebar">
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="./templates/wordify/images/img_6.jpg" alt="Image placeholder" class="mr-4">
+                    <div class="text">
+                      <h4>How to Find the Video Games of Your Youth</h4>
+                      <div class="post-meta">
+                        <span class="mr-2">March 15, 2018 </span> &bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="images/img_3.jpg" alt="Image placeholder" class="mr-4">
-                  <div class="text">
-                    <h4>How to Find the Video Games of Your Youth</h4>
-                    <div class="post-meta">
-                      <span class="mr-2">March 15, 2018 </span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./templates/wordify/images/img_3.jpg" alt="Image placeholder" class="mr-4">
+                    <div class="text">
+                      <h4>How to Find the Video Games of Your Youth</h4>
+                      <div class="post-meta">
+                        <span class="mr-2">March 15, 2018 </span> &bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="images/img_4.jpg" alt="Image placeholder" class="mr-4">
-                  <div class="text">
-                    <h4>How to Find the Video Games of Your Youth</h4>
-                    <div class="post-meta">
-                      <span class="mr-2">March 15, 2018 </span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./templates/wordify/images/img_4.jpg" alt="Image placeholder" class="mr-4">
+                    <div class="text">
+                      <h4>How to Find the Video Games of Your Youth</h4>
+                      <div class="post-meta">
+                        <span class="mr-2">March 15, 2018 </span> &bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
 
-        <div class="col-md-4">
+          <div class="col-md-4">
 
-          <div class="mb-5">
-            <h3>Quick Links</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Travel</a></li>
-              <li><a href="#">Adventure</a></li>
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">Categories</a></li>
-            </ul>
-          </div>
+            <div class="mb-5">
+              <h3>Quick Links</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Adventure</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Categories</a></li>
+              </ul>
+            </div>
 
-          <div class="mb-5">
-            <h3>Social</h3>
-            <ul class="list-unstyled footer-social">
-              <li><a href="#"><span class="fa fa-twitter"></span> Twitter</a></li>
-              <li><a href="#"><span class="fa fa-facebook"></span> Facebook</a></li>
-              <li><a href="#"><span class="fa fa-instagram"></span> Instagram</a></li>
-              <li><a href="#"><span class="fa fa-vimeo"></span> Vimeo</a></li>
-              <li><a href="#"><span class="fa fa-youtube-play"></span> Youtube</a></li>
-              <li><a href="#"><span class="fa fa-snapchat"></span> Snapshot</a></li>
-            </ul>
+            <div class="mb-5">
+              <h3>Social</h3>
+              <ul class="list-unstyled footer-social">
+                <li><a href="#"><span class="fa fa-twitter"></span> Twitter</a></li>
+                <li><a href="#"><span class="fa fa-facebook"></span> Facebook</a></li>
+                <li><a href="#"><span class="fa fa-instagram"></span> Instagram</a></li>
+                <li><a href="#"><span class="fa fa-vimeo"></span> Vimeo</a></li>
+                <li><a href="#"><span class="fa fa-youtube-play"></span> Youtube</a></li>
+                <li><a href="#"><span class="fa fa-snapchat"></span> Snapshot</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <p class="small">
-    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-    Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-    </p>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="small">
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      </p>
+      </div>
     </div>
   </div>
-</div>
 </footer>
 <!-- END footer -->
-    </div>
-    <!-- loader -->
-    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-    <script src="./templates/wordify/js/jquery-3.2.1.min.js"></script>
-    <script src="./templates/wordify/js/jquery-migrate-3.0.0.js"></script>
-    <script src="./templates/wordify/js/popper.min.js"></script>
-    <script src="./templates/wordify/js/bootstrap.min.js"></script>
-    <script src="./templates/wordify/js/owl.carousel.min.js"></script>
-    <script src="./templates/wordify/js/jquery.waypoints.min.js"></script>
-    <script src="./templates/wordify/js/jquery.stellar.min.js"></script>
-    <script src="./templates/wordify/js/main.js"></script>
-  </body>
-</html>
+</div>
+<!-- loader -->
+<div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+<script src="./templates/wordify/js/jquery-3.2.1.min.js"></script>
+<script src="./templates/wordify/js/jquery-migrate-3.0.0.js"></script>
+<script src="./templates/wordify/js/popper.min.js"></script>
+<script src="./templates/wordify/js/bootstrap.min.js"></script>
+<script src="./templates/wordify/js/owl.carousel.min.js"></script>
+<script src="./templates/wordify/js/jquery.waypoints.min.js"></script>
+<script src="./templates/wordify/js/jquery.stellar.min.js"></script>
+<script src="./templates/wordify/js/main.js"></script>
+    </body>
+  </html>
 <?php }
 }

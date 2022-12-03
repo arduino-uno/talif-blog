@@ -37,10 +37,10 @@ var table_templates = $('#templates_data').DataTable({
         '</div>');
 
       },
-      "preDrawCallback": function( settings ) {
+    "preDrawCallback": function( settings ) {
         // clear list before draw
         $("div.row#template_list").empty();
-  }
+    }
 });
 
 function template_detail(temp_id){

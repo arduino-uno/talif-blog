@@ -9,10 +9,6 @@ var table_comments = $('#comments_data').DataTable({
 				type:"POST"
 		},
 		"columnDefs":[
-				{data: 'comm_id', className: 'font-weight-bold text-center', name: 'comm_id', targets:0, orderable: true, searchable: true,
-						render: function(data,type,full,meta) {
-								return '<span class="display-4 font-weight-bold">' + data + '</span>';
-						}},
 				{data: {post_id:'post_id', title:'title', fullname:'fullname', email:'email', message:'message', created:'created', likes:'likes'}, className: 'font-weight-normal', name: 'content', targets:1,
 						render: function(data,type,full,meta) {
 
@@ -113,7 +109,7 @@ function post_detail(post_id){
 						 $("#post_image").attr("src", "./images/" + value.image);
 						 $("h4#post_title.media-heading").html(value.title);
 						 $("p#post_ibody").html(value.body);
-						 $("a#post_link").attr("onclick", "profileModal(" + value.author_id + ")");
+						 $("a#post_link").attr("href", "./media.php?module=user-profile");
 						 $("a#post_link").html(value.author_name);
 						 $("span#post_published").html(value.published);
 						 $("span#post_tags").html(value.tagslabeled);

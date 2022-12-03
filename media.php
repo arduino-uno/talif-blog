@@ -16,6 +16,7 @@ $module = isset( $_GET['module'] ) ? filter_var( $_GET['module'], FILTER_SANITIZ
 if ( is_admin() ) {
 
     $AVAILABLE_PAGES = array("dashboard",
+                        "user-profile",
                         "contact-us",
                         "site-settings",
                         "site-templates",
@@ -31,9 +32,11 @@ if ( is_admin() ) {
 } else {
 
     $AVAILABLE_PAGES = array("dashboard",
-                        "manage-pages",
+                        "user-profile",
+                        "contact-us",
+                        "messaging",
                         "manage-posts",
-                        "messaging");
+                        "manage-comments");
 
 };
 
@@ -207,7 +210,7 @@ if ( !$AVAILABLE_PAGES[$module] ) {
           <img src="./images/<?php echo $_SESSION['user_image']; ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block" onclick="profileModal(<?php echo $_SESSION['user_id']; ?>)"><?php echo $_SESSION['user_fullname']; ?></a>
+          <a href="./media.php?module=user-profile" class="d-block"><?php echo $_SESSION['user_fullname']; ?></a>
         </div>
       </div>
 
@@ -235,6 +238,12 @@ if ( !$AVAILABLE_PAGES[$module] ) {
               <a href="./media.php?module=dashboard" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>Dashboard</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./media.php?module=user-profile" class="nav-link ">
+                <i class="nav-icon fas fa-user"></i>
+                <p>Profile</p>
               </a>
             </li>
             <li class="nav-item">
@@ -355,6 +364,16 @@ if ( !$AVAILABLE_PAGES[$module] ) {
 
   } else {
 
+    $user = json_decode( current_user(), true );
+    $user_id = $user['user_id'];
+
+    $query = "SELECT a.*, b.post_id, b.author_id
+							FROM comments a, posts b
+							WHERE a.post_id = b.post_id AND b.author_id = $user_id";
+
+    $result = $conn->run_query( $query );
+    $rows = json_decode( $result, true );
+
     echo '<li class="nav-item">
             <a href="./media.php?module=dashboard" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -362,57 +381,45 @@ if ( !$AVAILABLE_PAGES[$module] ) {
             </a>
           </li>
           <li class="nav-item">
-            <a href="./media.php?module=manage-activities" class="nav-link ">
-              <i class="nav-icon fas fa-history"></i>
-              <p>Activity Logs
-                <span class="badge badge-primary right">' . rows_count("activities") . '</span>
-              </p>
+            <a href="./media.php?module=user-profile" class="nav-link ">
+              <i class="nav-icon fas fa-user"></i>
+              <p>Profile</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="./media.php?module=messaging" class="nav-link ">
               <i class="nav-icon fas fa-comments"></i>
               <p>Messaging
-                <span class="badge badge-danger right">' . rows_count("chats") . '</span>
+                <span class="badge badge-danger right">' . rows_count( "chats" ) . '</span>
               </p>
             </a>
           </li>
           <li class="nav-header">CONTENT MANAGER</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Web Contents
-                <i class="fas fa-angle-left right"></i>
+            <a href="./media.php?module=manage-posts" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Posts
+                <span class="badge badge-info right">' . rows_count( "posts", "author_id", $user_id ) . '</span>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./media.php?module=manage-pages" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Pages
-                    <span class="badge badge-info right">' . rows_count("pages") . '</span>
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./media.php?module=manage-posts" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Posts
-                    <span class="badge badge-info right">' . rows_count("posts") . '</span>
-                  </p>
-                </a>
-              </li>
-            </ul>
-            <li class="nav-header">LOGOUT</li>
-            <li class="nav-item">
-              <a href="#" onclick="logoutModal()" class="nav-link">
-                <i class="fas fa-arrow-circle-right nav-icon"></i>
-                <p>
-                  Log Out
+          </li>
+          <li class="nav-item">
+            <a href="./media.php?module=manage-comments" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Comments
+                <span class="badge badge-info right">' . count( $rows ) . '</span>
               </p>
-              </a>
-            </li>';
+            </a>
+          </li>
+          <li class="nav-header">LOGOUT</li>
+          <li class="nav-item">
+            <a href="#" onclick="logoutModal()" class="nav-link">
+              <i class="fas fa-arrow-circle-right nav-icon"></i>
+              <p>
+                Log Out
+              </p>
+            </a>
+          </li>';
 
   };
 
@@ -429,6 +436,9 @@ if ( !$AVAILABLE_PAGES[$module] ) {
       switch ( $module ) {
         case "dashboard":
           require( "./pages/dashboard.php" );
+          break;
+        case "user-profile":
+          require( "./pages/user-profile.php" );
           break;
         case "contact-us":
           require( "./pages/contact-us.php" );
@@ -627,33 +637,6 @@ $(function () {
 
 });
 
-function profileModal(user_id) {
-    $("#modal_userprofile").modal("show");
-
-    // $.post( "./scripts/get_userdetail.php", { user_id: user_id }, function( data ) {
-    $.ajax({
-          method: 'POST',
-          url: "./scripts/get_userdetail.php",
-          data: { user_id: user_id },
-          datatype: 'JSON',
-          success: function ( myData ) {
-              $.each( JSON.parse( myData ), function( index, obj ) {
-                  var user_image = $('div#modal_userprofile img[name="aboutme"]').attr( 'src', './images/' + obj.user_image );
-                  var user_login = $('div#modal_userprofile h3.media-heading').html( obj.user_fullname );
-                  var user_email = $('div#modal_userprofile a#email').attr('href', 'mailto:' + obj.user_email ).html( obj.user_email );
-              })
-          }
-    });
-
-    $('#modal_userprofile').on('show.bs.modal', function () {
-        $('#dialog_appear').trigger("play");
-    });
-
-    $('#modal_userprofile').on('hidden.bs.modal', function () {
-        $('#dialog_disappear').trigger("play");
-    });
-};
-
 function logoutModal() {
     $("#logout_modal").modal("show");
 
@@ -683,7 +666,7 @@ function load_chats(){
                 $( "div.direct-chat-messages" ).html( value.messages );
                 $( "ul.contacts-list" ).html( value.contacts );
                 $( "div#chatbox.dropdown-menu.dropdown-menu-lg.dropdown-menu-right" ).html( value.notifmsg );
-                $('div.direct-chat-messages').scrollTop($('div.direct-chat-messages')[0].scrollHeight);
+                $( "div.direct-chat-messages").scrollTop( $("div.direct-chat-messages")[0].scrollHeight );
             });
         }
     });
@@ -715,7 +698,7 @@ function load_notifications(){
             $.each( JSON.parse( myData ), function( index, value ) {
                 // Insert chat log into the #chatbox div
                 $( "div#notification.dropdown-menu.dropdown-menu-lg.dropdown-menu-right" ).html( value.notifmsg );
-                $('div.direct-chat-messages').scrollTop($('div.direct-chat-messages')[0].scrollHeight);
+                $('div.direct-chat-messages').scrollTop( $('div.direct-chat-messages')[0].scrollHeight );
             });
         }
     });
@@ -770,6 +753,8 @@ setInterval( function () {
 <?php
 if ( $module == "dashboard" ) {
     echo '<script src="./scripts/js/dashboard.js"></script>';
+} elseif ( $module == "user-profile" ) {
+    echo '<script src="./scripts/js/user-profile.js"></script>';
 } elseif ( $module == "contact-us" ) {
     echo '<script src="./scripts/js/contact_us.js"></script>';
 } elseif ( $module == "site-settings" ) {

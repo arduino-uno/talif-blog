@@ -134,7 +134,7 @@ class Simple_PHP_CRUD_Class {
 
 		try {
 			$sql = "UPDATE $table SET $arr_string WHERE $id_key='$id_val'";
-
+			
 			if ( mysqli_query( $this->conn, $sql ) ) {
 				return "Data Updated.";
 			} else {

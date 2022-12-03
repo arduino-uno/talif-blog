@@ -66,7 +66,7 @@
                   			</fieldset>
                   			<fieldset class="form-group">
                   				<label>Phone</label>
-                  				<input type="text" class="form-control" name="phone" id="phone" placeholder="No Telephone">
+                  				<input type="text" class="form-control" name="phone" id="phone" pattern="[0-9]{5}[-][0-9]{7}[-][0-9]{1}" placeholder="No Telephone">
                   			</fieldset>
                   			<fieldset class="form-group">
                   				<label>Fax</label>
@@ -74,7 +74,7 @@
                   			</fieldset>
                   			<fieldset class="form-group">
                   				<label>Email</label>
-                  				<input type="text" class="form-control" name="email" id="email" placeholder="Alamat Email Perusahaan">
+                  				<input type="text" class="form-control" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Alamat Email Perusahaan">
                   			</fieldset>
                       </div>
                     </div>

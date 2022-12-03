@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-10-16 21:48:13
+/* Smarty version 4.1.0, created on 2022-10-17 14:01:54
   from '/var/www/html/talif-blog/templates/biznews/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_634c19ad497c42_51327079',
+  'unifunc' => 'content_634cfde27ca4e5_48507792',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '27bafcd7a7988292239ccc3fb98a358985c34c42' => 
     array (
       0 => '/var/www/html/talif-blog/templates/biznews/index.tpl',
-      1 => 1665931361,
+      1 => 1665990107,
       2 => 'file',
     ),
   ),
@@ -22,9 +22,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634c19ad497c42_51327079 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634cfde27ca4e5_48507792 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
-$_smarty_tpl->compiled->nocache_hash = '546274862634c19ad473c71_78834711';
+$_smarty_tpl->compiled->nocache_hash = '1413570649634cfde268d3c4_94062508';
 ?>
     <?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -103,7 +103,7 @@ $_smarty_tpl->tpl_vars['post']->do_else = false;
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
-                                        <img class="rounded-circle mr-2" src="./images/<?php echo $_smarty_tpl->tpl_vars['post']->value['image'];?>
+                                        <img class="rounded-circle mr-2" src="./images/<?php echo $_smarty_tpl->tpl_vars['post']->value['author_image'];?>
 " width="25" height="25" alt="">
                                         <small><?php echo $_smarty_tpl->tpl_vars['post']->value['author_name'];?>
 </small>

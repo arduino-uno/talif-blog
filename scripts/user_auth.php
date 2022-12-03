@@ -14,7 +14,7 @@ $password = isset($_POST['password']) ? filter_var( $_POST['password'], FILTER_S
 if ( !empty($username) && !empty($password) ) {
 		$result = $conn->run_query( "SELECT * FROM users WHERE user_login = '$username' AND user_pass = md5('$password') AND user_status = 1" );
 		$rows = json_decode( $result, JSON_PRETTY_PRINT );
-
+		
 		if ( count($rows) > 0 ) {
 			session_start();
 			$_SESSION['user_id'] = $rows[0][user_id];

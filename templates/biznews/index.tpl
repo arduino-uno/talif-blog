@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
-                                        <img class="rounded-circle mr-2" src="./images/{$post.image}" width="25" height="25" alt="">
+                                        <img class="rounded-circle mr-2" src="./images/{$post.author_image}" width="25" height="25" alt="">
                                         <small>{$post.author_name}</small>
                                     </div>
                                     <div class="d-flex align-items-center">

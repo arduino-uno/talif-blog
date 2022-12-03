@@ -8,23 +8,48 @@ require("../scripts/functions_lib.php");
 // CRUD Methods: "GET", "PUT", "POST" & "DELETE"
 $conn = new Simple_PHP_CRUD_Class();
 
+$user = json_decode( current_user(), true );
+$user_id = $user["user_id"];
+
 $output = Array();
 $rows = Array();
 
-$query = "SELECT * FROM posts ";
+if ( is_admin() ) {
 
-if ( isset( $_POST["search"]["value"] ) ) {
-	 $query .= 'WHERE title LIKE "%'.$_POST["search"]["value"].'%" ';
-};
+		$query = "SELECT * FROM posts ";
 
-if ( isset( $_POST["order"] ) ) {
-	 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
+		if ( isset( $_POST["search"]["value"] ) ) {
+			 $query .= 'WHERE title LIKE "%'.$_POST["search"]["value"].'%" ';
+		};
+
+		if ( isset( $_POST["order"] ) ) {
+			 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
+		} else {
+			 $query .= 'ORDER BY post_id ASC';
+		};
+
+		if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
+			 $query .= ' LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
+		};
+
 } else {
-	 $query .= 'ORDER BY post_id ASC';
-};
 
-if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
-	 $query .= ' LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
+		$query = "SELECT * FROM posts WHERE author_id = $user_id ";
+
+		if ( isset( $_POST["search"]["value"] ) ) {
+			 $query .= 'AND title LIKE "%'.$_POST["search"]["value"].'%" ';
+		};
+
+		if ( isset( $_POST["order"] ) ) {
+			 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
+		} else {
+			 $query .= 'ORDER BY post_id ASC';
+		};
+
+		if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
+			 $query .= ' LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
+		};
+
 };
 
 $result = $conn->run_query( $query );

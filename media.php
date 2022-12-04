@@ -35,8 +35,7 @@ if ( is_admin() ) {
                         "user-profile",
                         "contact-us",
                         "messaging",
-                        "manage-posts",
-                        "manage-comments");
+                        "manage-posts");
 
 };
 
@@ -400,14 +399,6 @@ if ( !$AVAILABLE_PAGES[$module] ) {
               <i class="far fa-circle nav-icon"></i>
               <p>Posts
                 <span class="badge badge-info right">' . rows_count( "posts", "author_id", $user_id ) . '</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="./media.php?module=manage-comments" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Comments
-                <span class="badge badge-info right">' . count( $rows ) . '</span>
               </p>
             </a>
           </li>

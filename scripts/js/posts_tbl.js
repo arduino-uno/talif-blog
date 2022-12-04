@@ -8,10 +8,10 @@
 						type:"POST"
 				},
 				"columnDefs":[
-					{data: 'post_id', className: 'font-weight-bold text-center', name: 'post_id', targets:0, orderable: true, searchable: true,
+						{data: 'post_id', className: 'font-weight-bold text-center', name: 'post_id', targets:0, orderable: true, searchable: true,
 							render: function(data,type,full,meta) {
 									return '<span class="display-4 font-weight-bold">' + data + '</span>';
-							}},
+						}},
 						{data: {title:'title', body:'body', image:'image', author_id:'author_id', author_name:'author_name', published:'published', tags:'tags', likes:'likes'}, className: 'font-weight-normal', name: 'title', targets:1,
 								render: function(data,type,full,meta) {
 										return '<div class="media">' +

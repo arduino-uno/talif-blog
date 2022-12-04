@@ -14,42 +14,20 @@ $user_id = $user["user_id"];
 $output = Array();
 $rows = Array();
 
-if ( is_admin() ) {
+$query = "SELECT * FROM posts WHERE author_id = $user_id ";
 
-		$query = "SELECT a.*, b.* FROM posts a, comments b WHERE a.post_id = b.post_id GROUP BY a.post_id ";
+if ( isset( $_POST["search"]["value"] ) ) {
+	 $query .= 'AND title LIKE "%'.$_POST["search"]["value"].'%" ';
+};
 
-		if ( isset( $_POST["search"]["value"] ) ) {
-			 $query .= 'WHERE a.title LIKE "%'.$_POST["search"]["value"].'%" ';
-		};
-
-		if ( isset( $_POST["order"] ) ) {
-			 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
-		} else {
-			 $query .= 'ORDER BY a.post_id ASC';
-		};
-
-		if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
-			 $query .= ' LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
-		};
-
+if ( isset( $_POST["order"] ) ) {
+	 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
 } else {
+	 $query .= 'ORDER BY post_id ASC';
+};
 
-		$query = "SELECT a.*, b.* FROM posts a, comments b WHERE a.post_id = b.post_id AND a.author_id = $user_id GROUP BY a.post_id ";
-
-		if ( isset( $_POST["search"]["value"] ) ) {
-			 $query .= 'AND a.title LIKE "%'.$_POST["search"]["value"].'%" ';
-		};
-
-		if ( isset( $_POST["order"] ) ) {
-			 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
-		} else {
-			 $query .= 'ORDER BY a.post_id ASC';
-		};
-
-		if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
-			 $query .= ' LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
-		};
-
+if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
+	 $query .= ' LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
 };
 
 $result = $conn->run_query( $query );

@@ -9,6 +9,10 @@ var table_comments = $('#comments_data').DataTable({
 				type:"POST"
 		},
 		"columnDefs":[
+				{data: 'post_id', className: 'font-weight-bold text-center', name: 'post_id', targets:0, orderable: true, searchable: true,
+					render: function(data,type,full,meta) {
+							return '<span class="display-4 font-weight-bold">' + data + '</span>';
+				}},
 				{data: {post_id:'post_id', title:'title', fullname:'fullname', email:'email', message:'message', created:'created', likes:'likes'}, className: 'font-weight-normal', name: 'content', targets:1,
 						render: function(data,type,full,meta) {
 
@@ -249,12 +253,7 @@ function publish_comment( comm_id ) {
 };
 
 function edit_comment(comm_id){
-		// alert("Update Comment: " + comm_id);
-		// $('#form_editcomment')[0].reset();
 
-		alert("edit_comment codes here!");
-
-		/*
 		$.ajax({
 			 method: "POST",
 			 url: "./scripts/get_commentdetail.php",
@@ -283,7 +282,7 @@ function edit_comment(comm_id){
 
 		$('#hid_comment_id').val(comm_id);
 		$('#modal_editcomment').modal('show');
-		*/
+		
 };
 
 $("form#form_editcomment").submit( function(e) {

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 21, 2022 at 07:01 AM
--- Server version: 10.3.34-MariaDB-0ubuntu0.20.04.1
--- PHP Version: 7.4.32
+-- Generation Time: Dec 04, 2022 at 01:53 PM
+-- Server version: 10.3.37-MariaDB-0ubuntu0.20.04.1
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,7 @@ CREATE TABLE `activities` (
   `icon` varchar(20) DEFAULT NULL,
   `message` tinytext DEFAULT 'Other User Activity',
   `created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `activities`
@@ -58,7 +58,7 @@ CREATE TABLE `categories` (
   `cat_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `description` tinytext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `categories`
@@ -81,7 +81,7 @@ CREATE TABLE `chats` (
   `user_id` int(11) NOT NULL,
   `message` varchar(200) NOT NULL,
   `chat_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `chats`
@@ -110,7 +110,7 @@ CREATE TABLE `comments` (
   `likes` int(11) DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 0,
   `created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `comments`
@@ -119,8 +119,8 @@ CREATE TABLE `comments` (
 INSERT INTO `comments` (`comm_id`, `post_id`, `parent_id`, `fullname`, `email`, `website`, `message`, `likes`, `status`, `created`) VALUES
 (1, 1, 0, 'John Doe', 'jhon_doe@gmail.com', 'https://nicoyazoom.com', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 1, 1, '2022-10-11 01:17:15'),
 (2, 1, 1, 'David Adams', 'adam_davis@gmail.com', 'https://nicoyazoom.com', 'It\'s good to hear that you enjoyed this article.', 2, 0, '2022-10-11 04:14:32'),
-(3, 3, 0, 'Michael', 'michael_davis@gmail.com', 'https://nicoyazoom.com', 'I appreciate the time and effort you spent writing this article, good job!', 0, 0, '2022-10-13 23:41:48'),
-(11, 3, 1, 'Demo User', 'demo@examples.com', '', 'Send New Mesages!', 2, 0, '2022-10-11 01:51:57'),
+(3, 1, 0, 'Michael', 'michael_davis@gmail.com', 'https://nicoyazoom.com', 'I appreciate the time and effort you spent writing this article, good job!', 0, 0, '2022-11-19 15:09:41'),
+(11, 3, 0, 'Demo User', 'demo@examples.com', '', 'Send New Mesages!', 2, 0, '2022-12-04 03:50:40'),
 (13, 3, 0, 'Agah Nata', 'hashcat80@gmail.com', 'talif-blog.com', 'event', NULL, 0, '2022-10-14 02:21:19'),
 (14, 3, 1, 'Demo User', 'demo@examples.com', 'talif-blog.com', 'Test.. ah!', NULL, 0, '2022-10-17 04:04:35');
 
@@ -137,7 +137,7 @@ CREATE TABLE `contacts` (
   `subject` varchar(100) NOT NULL,
   `message` tinytext NOT NULL,
   `created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `contacts`
@@ -162,7 +162,7 @@ CREATE TABLE `pages` (
   `image` varchar(250) DEFAULT NULL,
   `published` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `tags` tinytext DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `pages`
@@ -193,16 +193,16 @@ CREATE TABLE `posts` (
   `tags` tinytext DEFAULT NULL,
   `views` int(11) NOT NULL DEFAULT 0,
   `likes` int(11) DEFAULT 0
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `posts`
 --
 
 INSERT INTO `posts` (`post_id`, `cat_id`, `author_id`, `title`, `body`, `status`, `image`, `published`, `tags`, `views`, `likes`) VALUES
-(1, 0, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 0, 'img_1.jpg', '2022-10-15 05:54:29', 'tag1, tag2', 5, 2),
+(1, 0, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 0, 'img_1.jpg', '2022-12-04 04:09:07', 'tag1, tag2', 5, 2),
 (2, 1, 1, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 0, 'img_2.jpg', '2022-10-15 05:55:12', 'tag1, tag2', 5, 2),
-(3, 2, 2, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 0, 'img_3.jpg', '2022-10-20 23:33:38', 'tag1, tag2', 5, 2),
+(3, 2, 2, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 0, 'img_3.jpg', '2022-12-04 04:09:16', 'tag1, tag2', 5, 2),
 (4, 3, 2, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n', 0, 'img_4.jpg', '2022-10-20 23:33:42', 'tag1, tag2, tag3', 5, 2),
 (5, 1, 2, 'There’s a Cool New Way for Men to Wear Socks and Sandals', 'Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n', 0, 'img_5.jpg', '2022-10-20 23:33:46', 'tag1, tag2, tag3', 5, 2);
 
@@ -226,7 +226,7 @@ CREATE TABLE `siteinfo` (
   `google` varchar(100) DEFAULT NULL,
   `linkedin` varchar(100) DEFAULT NULL,
   `youtube` varchar(100) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `siteinfo`
@@ -251,7 +251,7 @@ CREATE TABLE `templates` (
   `temp_dir` text NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 0,
   `created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `templates`
@@ -275,21 +275,21 @@ CREATE TABLE `users` (
   `user_phone` varchar(50) DEFAULT NULL,
   `user_orgname` varchar(100) DEFAULT NULL,
   `user_location` text DEFAULT NULL,
-  `user_birthday` timestamp NULL DEFAULT current_timestamp(),
+  `user_birthday` date DEFAULT current_timestamp(),
   `user_pass` varchar(50) DEFAULT NULL,
   `user_role` varchar(20) NOT NULL DEFAULT 'member',
   `user_image` varchar(100) DEFAULT 'AdminLTELogo.png',
   `user_joined` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `user_status` int(1) NOT NULL DEFAULT 0
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`user_id`, `user_login`, `user_fullname`, `user_email`, `user_phone`, `user_orgname`, `user_location`, `user_birthday`, `user_pass`, `user_role`, `user_image`, `user_joined`, `user_status`) VALUES
-(1, 'admin', 'Agah Nata', 'admin@example.com', '+62 813 8888', '', NULL, '2022-10-18 17:00:00', '21232f297a57a5a743894a0e4a801fc3', 'administrator', 'user1-128x128.jpg', '2022-10-19 01:42:20', 1),
-(2, 'member', 'Alexander Pierce', 'info@example.com', '+62 813 9999', '', NULL, '2022-10-19 01:43:17', '5f4dcc3b5aa765d61d8327deb882cf99', 'member', 'user2-160x160.jpg', '2022-10-19 01:43:37', 1);
+(1, 'admin', 'Agah Nata', 'admin@example.com', '+62 813 8888', 'Ubuntu DIstributed', 'Depok, Indonesia', '2022-10-19', '21232f297a57a5a743894a0e4a801fc3', 'administrator', 'user1-128x128.jpg', '2022-10-24 01:59:38', 1),
+(2, 'member', 'Alexander Pierce', 'info@example.com', '+62 813 9999', 'Ubuntu DIstributed', 'Depok, Indonesia', '2022-10-21', '5f4dcc3b5aa765d61d8327deb882cf99', 'member', 'user2-160x160.jpg', '2022-10-23 10:47:39', 1);
 
 -- --------------------------------------------------------
 
@@ -304,7 +304,7 @@ CREATE TABLE `visitors` (
   `views` int(11) NOT NULL DEFAULT 0,
   `likes` int(11) NOT NULL DEFAULT 0,
   `visited` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Indexes for dumped tables

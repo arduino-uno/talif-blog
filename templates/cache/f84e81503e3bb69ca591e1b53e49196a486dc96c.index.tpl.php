@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-11-28 20:31:55
+/* Smarty version 4.1.0, created on 2022-12-04 13:50:38
   from '/var/www/html/talif-blog/templates/wordify/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6384b84be46896_66786249',
+  'unifunc' => 'content_638c433ec4a325_79290944',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6384b84be46896_66786249 (Smarty_Internal_Template $_smarty_tpl) {
+function content_638c433ec4a325_79290944 (Smarty_Internal_Template $_smarty_tpl) {
 ?>      <!doctype html>
 <html lang="en">
   <head>
@@ -122,6 +122,38 @@ function content_6384b84be46896_66786249 (Smarty_Internal_Template $_smarty_tpl)
 
               <div class="owl-carousel owl-theme home-slider">
                                 <div>
+                  <a href="./blog-single.php?pid=2" class="a-block d-flex align-items-center height-lg" style="background-image: url('./images/img_3.jpg'); ">
+                    <div class="text half-to-full">
+                      <span class="category mb-5">CSS3</span>
+                      <div class="post-meta">
+
+                        <span class="author mr-2"><img src="./images/user2-160x160.jpg" alt="Alexander Pierce">&nbsp;Alexander Pierce</span>&bullet;
+                        <span class="mr-2">12 04, 2022</span>&nbsp;&bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span>&nbsp;2</span>
+
+                      </div>
+                      <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore&nbsp;..</p>
+                    </div>
+                  </a>
+                </div>
+                                <div>
+                  <a href="./blog-single.php?pid=0" class="a-block d-flex align-items-center height-lg" style="background-image: url('./images/img_1.jpg'); ">
+                    <div class="text half-to-full">
+                      <span class="category mb-5">Uncategorized</span>
+                      <div class="post-meta">
+
+                        <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata">&nbsp;Agah Nata</span>&bullet;
+                        <span class="mr-2">12 04, 2022</span>&nbsp;&bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span>&nbsp;2</span>
+
+                      </div>
+                      <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the&nbsp;..</p>
+                    </div>
+                  </a>
+                </div>
+                                <div>
                   <a href="./blog-single.php?pid=1" class="a-block d-flex align-items-center height-lg" style="background-image: url('./images/img_5.jpg'); ">
                     <div class="text half-to-full">
                       <span class="category mb-5">HTML5</span>
@@ -153,38 +185,6 @@ function content_6384b84be46896_66786249 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                   </a>
                 </div>
-                                <div>
-                  <a href="./blog-single.php?pid=2" class="a-block d-flex align-items-center height-lg" style="background-image: url('./images/img_3.jpg'); ">
-                    <div class="text half-to-full">
-                      <span class="category mb-5">CSS3</span>
-                      <div class="post-meta">
-
-                        <span class="author mr-2"><img src="./images/user2-160x160.jpg" alt="Alexander Pierce">&nbsp;Alexander Pierce</span>&bullet;
-                        <span class="mr-2">10 21, 2022</span>&nbsp;&bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span>&nbsp;1</span>
-
-                      </div>
-                      <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore&nbsp;..</p>
-                    </div>
-                  </a>
-                </div>
-                                <div>
-                  <a href="./blog-single.php?pid=1" class="a-block d-flex align-items-center height-lg" style="background-image: url('./images/img_2.jpg'); ">
-                    <div class="text half-to-full">
-                      <span class="category mb-5">HTML5</span>
-                      <div class="post-meta">
-
-                        <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata">&nbsp;Agah Nata</span>&bullet;
-                        <span class="mr-2">10 15, 2022</span>&nbsp;&bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span>&nbsp;0</span>
-
-                      </div>
-                      <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore&nbsp;..</p>
-                    </div>
-                  </a>
-                </div>
                               </div>
 
             </div>
@@ -206,6 +206,32 @@ function content_6384b84be46896_66786249 (Smarty_Internal_Template $_smarty_tpl)
           <div class="row blog-entries">
             <div class="col-md-12 col-lg-8 main-content">
               <div class="row">
+                                <div class="col-md-6">
+                  <a href="./blog-single.php?pid=2" class="blog-entry element-animate" data-animate-effect="fadeIn">
+                    <img src="./images/img_3.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
+                    <div class="blog-content-body">
+                      <div class="post-meta">
+                        <span class="author mr-2"><img src="./images/user2-160x160.jpg" alt="Alexander Pierce">&nbsp;Alexander Pierce</span>&bullet;
+                        <span class="mr-2">Dec 4, 2022&nbsp;</span>&nbsp;&bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                      </div>
+                      <h2>There’s a Cool New Way for Men to Wear Socks and Sandals</h2>
+                    </div>
+                  </a>
+                </div>
+                                <div class="col-md-6">
+                  <a href="./blog-single.php?pid=0" class="blog-entry element-animate" data-animate-effect="fadeIn">
+                    <img src="./images/img_1.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
+                    <div class="blog-content-body">
+                      <div class="post-meta">
+                        <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata">&nbsp;Agah Nata</span>&bullet;
+                        <span class="mr-2">Dec 4, 2022&nbsp;</span>&nbsp;&bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                      </div>
+                      <h2>There’s a Cool New Way for Men to Wear Socks and Sandals</h2>
+                    </div>
+                  </a>
+                </div>
                                 <div class="col-md-6">
                   <a href="./blog-single.php?pid=1" class="blog-entry element-animate" data-animate-effect="fadeIn">
                     <img src="./images/img_5.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
@@ -233,34 +259,8 @@ function content_6384b84be46896_66786249 (Smarty_Internal_Template $_smarty_tpl)
                   </a>
                 </div>
                                 <div class="col-md-6">
-                  <a href="./blog-single.php?pid=2" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                    <img src="./images/img_3.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
-                    <div class="blog-content-body">
-                      <div class="post-meta">
-                        <span class="author mr-2"><img src="./images/user2-160x160.jpg" alt="Alexander Pierce">&nbsp;Alexander Pierce</span>&bullet;
-                        <span class="mr-2">Oct 21, 2022&nbsp;</span>&nbsp;&bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                      </div>
-                      <h2>There’s a Cool New Way for Men to Wear Socks and Sandals</h2>
-                    </div>
-                  </a>
-                </div>
-                                <div class="col-md-6">
                   <a href="./blog-single.php?pid=1" class="blog-entry element-animate" data-animate-effect="fadeIn">
                     <img src="./images/img_2.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
-                    <div class="blog-content-body">
-                      <div class="post-meta">
-                        <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata">&nbsp;Agah Nata</span>&bullet;
-                        <span class="mr-2">Oct 15, 2022&nbsp;</span>&nbsp;&bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                      </div>
-                      <h2>There’s a Cool New Way for Men to Wear Socks and Sandals</h2>
-                    </div>
-                  </a>
-                </div>
-                                <div class="col-md-6">
-                  <a href="./blog-single.php?pid=0" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                    <img src="./images/img_1.jpg" style="width:510px;height:35vh;object-fit: cover;" alt="Image placeholder">
                     <div class="blog-content-body">
                       <div class="post-meta">
                         <span class="author mr-2"><img src="./images/user1-128x128.jpg" alt="Agah Nata">&nbsp;Agah Nata</span>&bullet;

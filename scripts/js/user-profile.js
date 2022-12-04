@@ -1,6 +1,6 @@
 // fetch data from MySQL
 var table_comments = $('#comments_data').DataTable({
-    "dom": 'rtip',
+    "dom": 'rt',
     "processing":true,
     "serverSide":false,
     "order":[],
@@ -32,7 +32,7 @@ var table_comments = $('#comments_data').DataTable({
             '</div>' +
             '<div class="d-flex flex-column-reverse flex-grow-0 align-items-center votings ml-1">' +
               '<a href="#" onclick="prev_page()"><i class="fa fa-sort-up fa-2x hit-voting"></i></a>' +
-              '<span>127</span>' +
+              '<span>' + ( table_comments.page.info().page + 1 ) + '</span>' +
               '<a href="#" onclick="next_page()"><i class="fa fa-sort-down fa-2x hit-voting"></i></a>' +
             '</div>' +
             '<div class="d-flex flex-column ml-3">' +
@@ -41,8 +41,8 @@ var table_comments = $('#comments_data').DataTable({
                 '<span class="ml-2">(' + data.author_name + ')</span>' +
               '</div>' +
               '<div class="d-flex flex-row align-items-center align-content-center post-title">' +
-                '<span class="bdge mr-1">video</span>' +
-                '<span class="mr-2 comments">13 comments&nbsp;</span>' +
+                '<span class="bdge mr-1">' + data.comments.length + '</span>' +
+                '<span class="mr-2 comments">&nbsp;comments&nbsp;</span>' +
                 '<span class="mr-2 dot"></span>' +
                 '<span>6 hours ago</span>' +
               '</div>' +
@@ -56,7 +56,7 @@ var table_comments = $('#comments_data').DataTable({
             '</div>' +
             '<div class="collapsable-comment">' +
               '<div class="d-flex flex-row justify-content-between align-items-center action-collapse p-2" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1">' +
-                '<span>Comments</span><i class="fa fa-chevron-down servicedrop"></i>' +
+                '<span>' + data.comments.length + '&nbsp;Comments</span><i class="fa fa-chevron-down servicedrop"></i>' +
               '</div>' +
               '<div id="collapse-1" class="collapse">';
 

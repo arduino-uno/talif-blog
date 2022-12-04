@@ -14,46 +14,21 @@ $user_id = $user["user_id"];
 $output = Array();
 $rows = Array();
 
-// $parent_id = isset( $_POST['parent_id'] ) ? filter_var( $_POST['parent_id'], FILTER_SANITIZE_STRING ) : '';
+$parent_id = isset( $_POST['parent_id'] ) ? filter_var( $_POST['parent_id'], FILTER_SANITIZE_STRING ) : '';
+$query = "SELECT * FROM comments WHERE parent_id = $parent_id ";
 
-if ( is_admin() ) {
+if ( isset( $_POST["search"]["value"] ) ) {
+	 $query .= 'AND message LIKE "%'.$_POST["search"]["value"].'%" ';
+};
 
-		$query = "SELECT * FROM comments ";
-
-		if ( isset( $_POST["search"]["value"] ) ) {
-			 $query .= 'AND message LIKE "%'.$_POST["search"]["value"].'%" ';
-		};
-
-		if ( isset( $_POST["order"] ) ) {
-			 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
-		} else {
-			 $query .= 'ORDER BY comm_id ASC';
-		};
-
-		if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
-			 $query .= ' LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
-		};
-
+if ( isset( $_POST["order"] ) ) {
+	 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
 } else {
+	 $query .= 'ORDER BY comm_id ASC';
+};
 
-		$query = "SELECT a.*, b.post_id, b.author_id
-							FROM comments a, posts b
-							WHERE a.post_id = b.post_id AND b.author_id = $user_id ";
-
-		if ( isset( $_POST["search"]["value"] ) ) {
-			 $query .= 'AND message LIKE "%'.$_POST["search"]["value"].'%" ';
-		};
-
-		if ( isset( $_POST["order"] ) ) {
-			 $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
-		} else {
-			 $query .= 'ORDER BY comm_id ASC';
-		};
-
-		if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
-			 $query .= ' LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
-		};
-
+if ( isset( $_POST["length"] ) && $_POST["length"] != -1 ) {
+	 $query .= ' LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
 };
 
 $result = $conn->run_query( $query );

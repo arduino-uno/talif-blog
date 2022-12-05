@@ -19,15 +19,15 @@ description: Project Documentation for user
 
 Simple PHP blogging system.
 
-* [Introduction](./#introduction)
-  * [Demo](./#demo)
-  * [Features](./#features)
-* [Get started](./#get-started)
-  * [Requirements](./#requirements)
-* [Screenshots](./#screenshots)
-* [Contact](./#contact)
-* [Thank you for your purchase](./#thank-you-open-source)
-* [License](./#license)
+* [Introduction](./##introduction)
+  * [Demo](./###demo)
+  * [Features](./###features)
+* [Get started](./##get-started)
+  * [Requirements](./###requirements)
+* [Screenshots](./##screenshots)
+* [Contact](./##contact)
+* [Thank you for your purchase](./##thank-you-open-source)
+* [License](./##license)
 
 ## Introduction
 

@@ -71,11 +71,23 @@ If you want to host Talif yourself, you will need a server with:
 9. open any browser and type `http://localhost/talif-blog`.
    * first register and then login
    * admin login details : **`Username`**`: admin |`**`Password`**`: admin`
-   
+
 ## Screenshots
 
-<b>Created:</b></br>
-<b>Created:</b></br>
+<b>Login Page</b></br>
+![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Log-in.png)
+<b>Dashboard v2</b></br>
+![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Dashboard-2.png)
+<b>User Profile - Comments</b></br>
+![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-User-Profile-1.png)
+<b>User Profile - Account</b></br>
+![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-User-Profile-2.png)
+<b>User Profile - Security</b></br>
+![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-User-Profile-3.png)
+<b>Activity Logs</b></br>
+![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Dashboard-3.png)
+<b>Messaging</b></br>
+![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Dashboard-4.png)
 
 ## Contact
 

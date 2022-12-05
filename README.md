@@ -19,15 +19,15 @@ description: Project Documentation for user
 
 Simple PHP blogging system.
 
-* [Introduction](./#introduction)
-  * [Demo](./#demo)
-  * [Features](./#features)
-* [Get started](./#get-started)
-  * [Requirements](./#requirements)
-* [Screenshots](./#screenshots)
-* [Contact](./#contact)
-* [Thank you for your purchase](./#thank-you-open-source)
-* [License](./#license)
+* [Introduction](./##introduction)
+  * [Demo](./###demo)
+  * [Features](./###features)
+* [Get started](./##get-started)
+  * [Requirements](./###requirements)
+* [Screenshots](./##screenshots)
+* [Contact](./##contact)
+* [Thank you for your purchase](./##thank-you-open-source)
+* [License](./##license)
 
 ## Introduction
 
@@ -74,22 +74,41 @@ If you want to host Talif yourself, you will need a server with:
 
 ## Screenshots
 
-<b>Login Page</b></br>
+#### Login Page</br>
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Log-in.png)
-<b>Dashboard v2</b></br>
+#### Dashboard v2</br>
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Dashboard-2.png)
-<b>User Profile - Comments</b></br>
+#### User Profile - Comments</br>
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-User-Profile-1.png)
-<b>User Profile - Account</b></br>
+#### User Profile - Account</br>
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-User-Profile-2.png)
-<b>User Profile - Security</b></br>
+#### User Profile - Security</br>
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-User-Profile-3.png)
-<b>Activity Logs</b></br>
+#### Activity Logs</br>
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Dashboard-3.png)
-<b>Messaging</b></br>
+#### Messaging</br>
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Dashboard-4.png)
-
-## Contact
+#### Web Contents</br>
+ - ##### Manage Pages</br>
+ ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Manage-Pages.png)
+ - ##### Manage Posts</br>
+ ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Manage-Posts.png)
+ - ##### Manage Categories</br>
+ ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Manage-Categories.png)
+ - ##### Manage Contacts</br>
+ ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Manage-Contacts.png)
+ - ##### Manage Comments</br>
+ ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Manage-Comments.png)
+#### Web Contents</br>
+ - ##### Manage Users</br>
+ ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Manage-Users.png)
+#### Site Manager</br>
+ - ##### Site Info</br>
+ ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-SiteInfo.png)
+ - ##### Site Templates</br>
+ ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-SiteTemplate.png)
+#### Contact Us</br>
+![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Contact-Us.png)
 
 <b>Created:</b> 27 Sep 2022</br>
 <b>By:</b> Agah Nata</br>

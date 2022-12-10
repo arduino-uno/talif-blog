@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-10-16 22:08:22
+/* Smarty version 4.1.0, created on 2022-12-09 17:32:52
   from '/var/www/html/talif-blog/templates/biznews/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_634c1e660a9a36_43181254',
+  'unifunc' => 'content_63930ed4c3dfd8_80934539',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '623f77521dea9e72717cc98b9855790555c910f5' => 
     array (
       0 => '/var/www/html/talif-blog/templates/biznews/header.tpl',
-      1 => 1665932749,
+      1 => 1670580207,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634c1e660a9a36_43181254 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63930ed4c3dfd8_80934539 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),1=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
-$_smarty_tpl->compiled->nocache_hash = '473954127634c1e66090fd0_74481491';
+$_smarty_tpl->compiled->nocache_hash = '95041316763930ed4c26b30_19041935';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +39,7 @@ $_smarty_tpl->compiled->nocache_hash = '473954127634c1e66090fd0_74481491';
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.css">
     <!-- Libraries Stylesheet -->
     <link href="./templates/biznews/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <!-- Customized Bootstrap Stylesheet -->
@@ -116,9 +116,9 @@ $_smarty_tpl->compiled->nocache_hash = '473954127634c1e66090fd0_74481491';
             </button>
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="index.tpl" class="nav-item nav-link active">Home</a>
-                    <a href="category.tpl" class="nav-item nav-link">Category</a>
-                    <a href="blog-single.tpl" class="nav-item nav-link">Single News</a>
+                    <a href="index.php" class="nav-item nav-link active">Home</a>
+                    <a href="category.php" class="nav-item nav-link">Category</a>
+                    <a href="blog-single.php" class="nav-item nav-link">Single News</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                         <div class="dropdown-menu rounded-0 m-0">
@@ -127,7 +127,7 @@ $_smarty_tpl->compiled->nocache_hash = '473954127634c1e66090fd0_74481491';
                             <a href="#" class="dropdown-item">Menu item 3</a>
                         </div>
                     </div>
-                    <a href="contact.tpl" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
                 <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
                     <input type="text" class="form-control border-0" placeholder="Keyword">

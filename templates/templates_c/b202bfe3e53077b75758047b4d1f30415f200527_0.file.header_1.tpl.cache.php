@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-10-16 22:25:50
+/* Smarty version 4.1.0, created on 2022-12-07 06:54:43
   from '/var/www/html/talif-blog/templates/biznews/header_1.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_634c227e121340_53089965',
+  'unifunc' => 'content_638fd6433de4a1_81604154',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b202bfe3e53077b75758047b4d1f30415f200527' => 
     array (
       0 => '/var/www/html/talif-blog/templates/biznews/header_1.tpl',
-      1 => 1665933948,
+      1 => 1670370840,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634c227e121340_53089965 (Smarty_Internal_Template $_smarty_tpl) {
+function content_638fd6433de4a1_81604154 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
-$_smarty_tpl->compiled->nocache_hash = '1899010974634c227e11ab58_45601430';
+$_smarty_tpl->compiled->nocache_hash = '233597950638fd6433d4437_38439879';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -127,7 +127,7 @@ $_smarty_tpl->compiled->nocache_hash = '1899010974634c227e11ab58_45601430';
                             <a href="#" class="dropdown-item">Menu item 3</a>
                         </div>
                     </div>
-                    <a href="contact.tpl" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
                 <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
                     <input type="text" class="form-control border-0" placeholder="Keyword">

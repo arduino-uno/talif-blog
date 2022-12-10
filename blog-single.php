@@ -24,5 +24,6 @@
 $post_id = isset( $_GET['pid'] ) ? filter_var( $_GET['pid'], FILTER_SANITIZE_STRING ) : '1';
 $smarty->assign( 'post_id', $post_id );
 $assign_post_id = render_posts_id( $post_id );
+$assign_popular_posts = render_popular_posts();
 // display page
 $smarty->display('blog-single.tpl');

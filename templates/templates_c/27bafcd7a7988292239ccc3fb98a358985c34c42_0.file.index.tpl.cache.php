@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-10-17 14:01:54
+/* Smarty version 4.1.0, created on 2022-12-09 20:14:23
   from '/var/www/html/talif-blog/templates/biznews/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_634cfde27ca4e5_48507792',
+  'unifunc' => 'content_639334afb96362_27498666',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '27bafcd7a7988292239ccc3fb98a358985c34c42' => 
     array (
       0 => '/var/www/html/talif-blog/templates/biznews/index.tpl',
-      1 => 1665990107,
+      1 => 1670591660,
       2 => 'file',
     ),
   ),
@@ -22,9 +22,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634cfde27ca4e5_48507792 (Smarty_Internal_Template $_smarty_tpl) {
+function content_639334afb96362_27498666 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
-$_smarty_tpl->compiled->nocache_hash = '1413570649634cfde268d3c4_94062508';
+$_smarty_tpl->compiled->nocache_hash = '354688792639334afb76609_37447993';
 ?>
     <?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -164,7 +164,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
                         </div>
                         <div class="bg-white text-center border border-top-0 p-3">
-                            <a href=""><img class="img-fluid" src="img/news-800x500-2.jpg" alt=""></a>
+                            <a href="https://adminlte.io" target="_blank"><img class="img-fluid rounded" alt="Sponsor Logo" src="./images/envato_logo.jpg" alt=""></a>
                         </div>
                     </div>
                     <!-- Ads End -->
@@ -175,23 +175,29 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <h4 class="m-0 text-uppercase font-weight-bold">Tranding News</h4>
                         </div>
                         <div class="bg-white border border-top-0 p-3">
-                          <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['latest_posts']->value, 'post');
+                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['popular_posts']->value, 'post');
 $_smarty_tpl->tpl_vars['post']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
 $_smarty_tpl->tpl_vars['post']->do_else = false;
 ?>
-                          <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                              <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">
-                              <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                  <div class="mb-2">
-                                      <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                                      <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                                  </div>
-                                  <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                              </div>
-                          </div>
-                          <?php
+                            <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                                <img class="img-fluid w-80 h-80" src="./images/<?php echo $_smarty_tpl->tpl_vars['post']->value['image'];?>
+" style="object-fit: cover;" height="110" width="110">
+                                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                    <div class="mb-2">
+                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="./category.php?cid=<?php echo $_smarty_tpl->tpl_vars['post']->value['cat_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['post']->value['category'];?>
+</a>
+                                        <a class="text-body" href="#"><small><?php echo $_smarty_tpl->tpl_vars['post']->value['published'];?>
+</small></a>
+                                    </div>
+                                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="./blog-single.php?pid=<?php echo $_smarty_tpl->tpl_vars['post']->value['post_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['post']->value['title'];?>
+</a>
+                                </div>
+                            </div>
+                            <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </div>
@@ -250,10 +256,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
     <!-- JavaScript Libraries -->
     <?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.4.1.min.js"><?php echo '</script'; ?>
+ src="./templates/biznews/js/jquery-3.2.1.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+ src="./plugins/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="./templates/biznews/lib/easing/easing.min.js"><?php echo '</script'; ?>

@@ -1,4 +1,31 @@
-{include file="header_1.tpl"}
+<?php
+/* Smarty version 4.1.0, created on 2022-12-08 17:39:47
+  from '/var/www/html/talif-blog/templates/biznews/contact.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.1.0',
+  'unifunc' => 'content_6391bef350fa40_71881781',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'f8f578bcea289b04859287af1ec5e19126930ac6' => 
+    array (
+      0 => '/var/www/html/talif-blog/templates/biznews/contact.tpl',
+      1 => 1670495976,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header_1.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+),false)) {
+function content_6391bef350fa40_71881781 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '4166475596391bef3509774_67226305';
+$_smarty_tpl->_subTemplateRender("file:header_1.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 <!-- Contact Start -->
 <div class="container-fluid mt-5 pt-3">
     <div class="container">
@@ -116,15 +143,27 @@
     </div>
 </div>
 <!-- Contact End -->
-{include file="footer.tpl"}
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 <!-- JavaScript Libraries -->
-<script src="./templates/biznews/js/jquery-3.2.1.min.js"></script>
-<script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="./templates/biznews/lib/easing/easing.min.js"></script>
-<script src="./templates/biznews/lib/owlcarousel/owl.carousel.min.js"></script>
+<?php echo '<script'; ?>
+ src="./templates/biznews/js/jquery-3.2.1.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="./plugins/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="./templates/biznews/lib/easing/easing.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="./templates/biznews/lib/owlcarousel/owl.carousel.min.js"><?php echo '</script'; ?>
+>
 <!-- Template Javascript -->
-<script src="./templates/biznews/js/main.js"></script>
-<script type="text/javascript" language="javascript">
+<?php echo '<script'; ?>
+ src="./templates/biznews/js/main.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript" language="javascript">
 // jQuery document ready
 $(function () {
 
@@ -155,6 +194,9 @@ $(function () {
     });
 
 });
-</script>
+<?php echo '</script'; ?>
+>
 </body>
 </html>
+<?php }
+}

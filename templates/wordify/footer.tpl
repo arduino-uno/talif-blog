@@ -107,3 +107,35 @@
 <script src="./templates/wordify/js/jquery.waypoints.min.js"></script>
 <script src="./templates/wordify/js/jquery.stellar.min.js"></script>
 <script src="./templates/wordify/js/main.js"></script>
+<script type="text/javascript" language="javascript">
+// jQuery document ready
+$(function () {
+
+    $("form#form_contactus").submit( function(e) {
+        var form = $("form#form_contactus");
+        e.preventDefault();
+        $.ajax({
+            type: form.attr('method'),
+            url: form.attr('action'),
+            data: new FormData( this ),
+            processData: false,  // Important!
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            success: function ( response ) {
+
+                if ( response.indexOf("Inserted") !== -1 ) {
+                    alert('The data was inserted successfully.');
+                } else {
+                    alert('Something went wrong.');
+                }
+
+            };
+
+            window.location.reload();
+
+        });
+    });
+
+});
+</script>

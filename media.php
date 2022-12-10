@@ -745,7 +745,7 @@ setInterval( function () {
 if ( $module == "dashboard" ) {
     echo '<script src="./scripts/js/dashboard.js"></script>';
 } elseif ( $module == "user-profile" ) {
-    echo '<script src="./scripts/js/user-profile.js"></script>';
+    echo '<script src="./scripts/js/user_profile.js"></script>';
 } elseif ( $module == "contact-us" ) {
     echo '<script src="./scripts/js/contact_us.js"></script>';
 } elseif ( $module == "site-settings" ) {

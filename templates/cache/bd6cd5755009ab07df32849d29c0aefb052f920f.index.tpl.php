@@ -1,36 +1,36 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-10-18 08:05:28
+/* Smarty version 4.1.0, created on 2022-12-09 20:17:50
   from '/var/www/html/talif-blog/templates/biznews/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_634dfbd8cdbfa0_42282146',
+  'unifunc' => 'content_6393357ec705f8_79111602',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '27bafcd7a7988292239ccc3fb98a358985c34c42' => 
     array (
       0 => '/var/www/html/talif-blog/templates/biznews/index.tpl',
-      1 => 1665990107,
+      1 => 1670591660,
       2 => 'file',
     ),
     '623f77521dea9e72717cc98b9855790555c910f5' => 
     array (
       0 => '/var/www/html/talif-blog/templates/biznews/header.tpl',
-      1 => 1665932749,
+      1 => 1670580207,
       2 => 'file',
     ),
     'c4c51786c7b1b2f17e53f576a28ff8e2a283434b' => 
     array (
       0 => '/var/www/html/talif-blog/templates/biznews/footer.tpl',
-      1 => 1665978495,
+      1 => 1670581649,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6393357ec705f8_79111602 (Smarty_Internal_Template $_smarty_tpl) {
 ?>    <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +45,7 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.css">
     <!-- Libraries Stylesheet -->
     <link href="./templates/biznews/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <!-- Customized Bootstrap Stylesheet -->
@@ -122,9 +122,9 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
             </button>
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="index.tpl" class="nav-item nav-link active">Home</a>
-                    <a href="category.tpl" class="nav-item nav-link">Category</a>
-                    <a href="blog-single.tpl" class="nav-item nav-link">Single News</a>
+                    <a href="index.php" class="nav-item nav-link active">Home</a>
+                    <a href="category.php" class="nav-item nav-link">Category</a>
+                    <a href="blog-single.php" class="nav-item nav-link">Single News</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                         <div class="dropdown-menu rounded-0 m-0">
@@ -133,7 +133,7 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                             <a href="#" class="dropdown-item">Menu item 3</a>
                         </div>
                     </div>
-                    <a href="contact.tpl" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
                 <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
                     <input type="text" class="form-control border-0" placeholder="Keyword">
@@ -155,19 +155,9 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="overlay">
                             <div class="mb-2">
                                 <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=1">HTML5</a>
-                                <a class="text-white" href="">10 15, 2022</a>
+                                <a class="text-white" href="">12 09, 2022</a>
                             </div>
                             <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="./blog-single.php?pid=5">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
-                        </div>
-                    </div>
-                                        <div class="position-relative overflow-hidden" style="height: 500px;">
-                        <img class="img-fluid h-100" src="./images/img_4.jpg" style="object-fit: cover;">
-                        <div class="overlay">
-                            <div class="mb-2">
-                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=3">Bootstrap</a>
-                                <a class="text-white" href="">10 15, 2022</a>
-                            </div>
-                            <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="./blog-single.php?pid=4">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                         </div>
                     </div>
                                         <div class="position-relative overflow-hidden" style="height: 500px;">
@@ -175,7 +165,7 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="overlay">
                             <div class="mb-2">
                                 <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=2">CSS3</a>
-                                <a class="text-white" href="">10 15, 2022</a>
+                                <a class="text-white" href="">12 09, 2022</a>
                             </div>
                             <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="./blog-single.php?pid=3">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                         </div>
@@ -185,9 +175,19 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="overlay">
                             <div class="mb-2">
                                 <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=1">HTML5</a>
-                                <a class="text-white" href="">10 15, 2022</a>
+                                <a class="text-white" href="">12 09, 2022</a>
                             </div>
                             <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="./blog-single.php?pid=2">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
+                        </div>
+                    </div>
+                                        <div class="position-relative overflow-hidden" style="height: 500px;">
+                        <img class="img-fluid h-100" src="./images/img_1.jpg" style="object-fit: cover;">
+                        <div class="overlay">
+                            <div class="mb-2">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=0">Uncategorized</a>
+                                <a class="text-white" href="">12 09, 2022</a>
+                            </div>
+                            <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="./blog-single.php?pid=1">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                         </div>
                     </div>
                                     </div>
@@ -200,21 +200,9 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                             <div class="overlay">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=1">HTML5</a>
-                                    <a class="text-white" href=""><small>10 15, 2022</small></a>
+                                    <a class="text-white" href=""><small>12 09, 2022</small></a>
                                 </div>
                                 <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=5">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
-                            </div>
-                        </div>
-                    </div>
-                                        <div class="col-md-6 px-0">
-                        <div class="position-relative overflow-hidden" style="height: 250px;">
-                            <img class="img-fluid w-100 h-100" src="./images/img_4.jpg" style="object-fit: cover;">
-                            <div class="overlay">
-                                <div class="mb-2">
-                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=3">Bootstrap</a>
-                                    <a class="text-white" href=""><small>10 15, 2022</small></a>
-                                </div>
-                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=4">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                             </div>
                         </div>
                     </div>
@@ -224,7 +212,7 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                             <div class="overlay">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=2">CSS3</a>
-                                    <a class="text-white" href=""><small>10 15, 2022</small></a>
+                                    <a class="text-white" href=""><small>12 09, 2022</small></a>
                                 </div>
                                 <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=3">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                             </div>
@@ -236,9 +224,21 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                             <div class="overlay">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=1">HTML5</a>
-                                    <a class="text-white" href=""><small>10 15, 2022</small></a>
+                                    <a class="text-white" href=""><small>12 09, 2022</small></a>
                                 </div>
                                 <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=2">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="col-md-6 px-0">
+                        <div class="position-relative overflow-hidden" style="height: 250px;">
+                            <img class="img-fluid w-100 h-100" src="./images/img_1.jpg" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=0">Uncategorized</a>
+                                    <a class="text-white" href=""><small>12 09, 2022</small></a>
+                                </div>
+                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=1">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                             </div>
                         </div>
                     </div>
@@ -256,9 +256,9 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="bg-primary text-dark text-center font-weight-medium py-2" style="width: 170px;">Breaking News</div>
                         <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center ml-3" style="width: calc(100% - 170px); padding-right: 90px;">
                                                         <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=5">There’s a Cool New Way for Men to Wear Socks and Sandals</a></div>
-                                                        <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=4">There’s a Cool New Way for Men to Wear Socks and Sandals</a></div>
                                                         <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=3">There’s a Cool New Way for Men to Wear Socks and Sandals</a></div>
                                                         <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=2">There’s a Cool New Way for Men to Wear Socks and Sandals</a></div>
+                                                        <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=1">There’s a Cool New Way for Men to Wear Socks and Sandals</a></div>
                                                     </div>
                     </div>
                 </div>
@@ -278,19 +278,9 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="overlay">
                         <div class="mb-2">
                             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=1">HTML5</a>
-                            <a class="text-white" href="#"><small>10 15, 2022</small></a>
+                            <a class="text-white" href="#"><small>12 09, 2022</small></a>
                         </div>
                         <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=5">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
-                    </div>
-                </div>
-                                <div class="position-relative overflow-hidden" style="height: 300px;">
-                    <img class="img-fluid h-100" src="./images/img_4.jpg" style="object-fit: cover;">
-                    <div class="overlay">
-                        <div class="mb-2">
-                            <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=3">Bootstrap</a>
-                            <a class="text-white" href="#"><small>10 15, 2022</small></a>
-                        </div>
-                        <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=4">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                     </div>
                 </div>
                                 <div class="position-relative overflow-hidden" style="height: 300px;">
@@ -298,7 +288,7 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="overlay">
                         <div class="mb-2">
                             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=2">CSS3</a>
-                            <a class="text-white" href="#"><small>10 15, 2022</small></a>
+                            <a class="text-white" href="#"><small>12 09, 2022</small></a>
                         </div>
                         <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=3">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                     </div>
@@ -308,7 +298,7 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="overlay">
                         <div class="mb-2">
                             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=1">HTML5</a>
-                            <a class="text-white" href="#"><small>10 15, 2022</small></a>
+                            <a class="text-white" href="#"><small>12 09, 2022</small></a>
                         </div>
                         <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=2">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                     </div>
@@ -318,9 +308,19 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="overlay">
                         <div class="mb-2">
                             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=0">Uncategorized</a>
-                            <a class="text-white" href="#"><small>10 15, 2022</small></a>
+                            <a class="text-white" href="#"><small>12 09, 2022</small></a>
                         </div>
                         <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=1">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
+                    </div>
+                </div>
+                                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid h-100" src="./images/img_4.jpg" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-2">
+                            <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="./blog-single.php?pid=3">Bootstrap</a>
+                            <a class="text-white" href="#"><small>10 21, 2022</small></a>
+                        </div>
+                        <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="./blog-single.php?pid=4">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                     </div>
                 </div>
                             </div>
@@ -347,42 +347,18 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">HTML5</a>
-                                        <a class="text-body" href=""><small>10 15, 2022</small></a>
+                                        <a class="text-body" href=""><small>12 09, 2022</small></a>
                                     </div>
                                     <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="./blog-single.php?pid=5">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                                     <p class="m-0">Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been&nbsp;..</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
-                                        <img class="rounded-circle mr-2" src="./images/user1-128x128.jpg" width="25" height="25" alt="">
-                                        <small>Agah Nata</small>
+                                        <img class="rounded-circle mr-2" src="./images/user2-160x160.jpg" width="25" height="25" alt="">
+                                        <small>Alexander Pierce</small>
                                     </div>
                                     <div class="d-flex align-items-center">
-                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>5</small>
-                                        <small class="ml-3"><i class="far fa-comment mr-2"></i>2</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                                                <div class="col-lg-6">
-                            <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="./images/img_4.jpg" style="object-fit: cover;">
-                                <div class="bg-white border border-top-0 p-4">
-                                    <div class="mb-2">
-                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                            href="">Bootstrap</a>
-                                        <a class="text-body" href=""><small>10 15, 2022</small></a>
-                                    </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="./blog-single.php?pid=4">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
-                                    <p class="m-0">Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been&nbsp;..</p>
-                                </div>
-                                <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
-                                    <div class="d-flex align-items-center">
-                                        <img class="rounded-circle mr-2" src="./images/user1-128x128.jpg" width="25" height="25" alt="">
-                                        <small>Agah Nata</small>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>5</small>
+                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>6</small>
                                         <small class="ml-3"><i class="far fa-comment mr-2"></i>2</small>
                                     </div>
                                 </div>
@@ -395,18 +371,18 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">CSS3</a>
-                                        <a class="text-body" href=""><small>10 15, 2022</small></a>
+                                        <a class="text-body" href=""><small>12 09, 2022</small></a>
                                     </div>
                                     <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="./blog-single.php?pid=3">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                                     <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore&nbsp;..</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
-                                        <img class="rounded-circle mr-2" src="./images/user1-128x128.jpg" width="25" height="25" alt="">
-                                        <small>Agah Nata</small>
+                                        <img class="rounded-circle mr-2" src="./images/user2-160x160.jpg" width="25" height="25" alt="">
+                                        <small>Alexander Pierce</small>
                                     </div>
                                     <div class="d-flex align-items-center">
-                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>5</small>
+                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>4</small>
                                         <small class="ml-3"><i class="far fa-comment mr-2"></i>2</small>
                                     </div>
                                 </div>
@@ -419,7 +395,7 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">HTML5</a>
-                                        <a class="text-body" href=""><small>10 15, 2022</small></a>
+                                        <a class="text-body" href=""><small>12 09, 2022</small></a>
                                     </div>
                                     <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="./blog-single.php?pid=2">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                                     <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore&nbsp;..</p>
@@ -430,7 +406,7 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                                         <small>Agah Nata</small>
                                     </div>
                                     <div class="d-flex align-items-center">
-                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>5</small>
+                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>3</small>
                                         <small class="ml-3"><i class="far fa-comment mr-2"></i>2</small>
                                     </div>
                                 </div>
@@ -443,7 +419,7 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">Uncategorized</a>
-                                        <a class="text-body" href=""><small>10 15, 2022</small></a>
+                                        <a class="text-body" href=""><small>12 09, 2022</small></a>
                                     </div>
                                     <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="./blog-single.php?pid=1">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
                                     <p class="m-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the&nbsp;..</p>
@@ -452,6 +428,30 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                                     <div class="d-flex align-items-center">
                                         <img class="rounded-circle mr-2" src="./images/user1-128x128.jpg" width="25" height="25" alt="">
                                         <small>Agah Nata</small>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>2</small>
+                                        <small class="ml-3"><i class="far fa-comment mr-2"></i>2</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-lg-6">
+                            <div class="position-relative mb-3">
+                                <img class="img-fluid w-100" src="./images/img_4.jpg" style="object-fit: cover;">
+                                <div class="bg-white border border-top-0 p-4">
+                                    <div class="mb-2">
+                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                            href="">Bootstrap</a>
+                                        <a class="text-body" href=""><small>10 21, 2022</small></a>
+                                    </div>
+                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="./blog-single.php?pid=4">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
+                                    <p class="m-0">Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been&nbsp;..</p>
+                                </div>
+                                <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle mr-2" src="./images/user2-160x160.jpg" width="25" height="25" alt="">
+                                        <small>Alexander Pierce</small>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <small class="ml-3"><i class="far fa-eye mr-2"></i>5</small>
@@ -504,7 +504,7 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                             <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
                         </div>
                         <div class="bg-white text-center border border-top-0 p-3">
-                            <a href=""><img class="img-fluid" src="img/news-800x500-2.jpg" alt=""></a>
+                            <a href="https://adminlte.io" target="_blank"><img class="img-fluid rounded" alt="Sponsor Logo" src="./images/envato_logo.jpg" alt=""></a>
                         </div>
                     </div>
                     <!-- Ads End -->
@@ -515,57 +515,37 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
                             <h4 class="m-0 text-uppercase font-weight-bold">Tranding News</h4>
                         </div>
                         <div class="bg-white border border-top-0 p-3">
-                                                    <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                              <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">
-                              <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                  <div class="mb-2">
-                                      <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                                      <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                                  </div>
-                                  <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                              </div>
-                          </div>
-                                                    <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                              <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">
-                              <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                  <div class="mb-2">
-                                      <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                                      <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                                  </div>
-                                  <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                              </div>
-                          </div>
-                                                    <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                              <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">
-                              <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                  <div class="mb-2">
-                                      <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                                      <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                                  </div>
-                                  <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                              </div>
-                          </div>
-                                                    <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                              <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">
-                              <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                  <div class="mb-2">
-                                      <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                                      <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                                  </div>
-                                  <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                              </div>
-                          </div>
-                                                    <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                              <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">
-                              <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                  <div class="mb-2">
-                                      <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                                      <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                                  </div>
-                                  <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                              </div>
-                          </div>
-                                                  </div>
+                                                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                                <img class="img-fluid w-80 h-80" src="./images/img_5.jpg" style="object-fit: cover;" height="110" width="110">
+                                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                    <div class="mb-2">
+                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="./category.php?cid=1">HTML5</a>
+                                        <a class="text-body" href="#"><small>Dec 9, 2022</small></a>
+                                    </div>
+                                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="./blog-single.php?pid=5">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
+                                </div>
+                            </div>
+                                                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                                <img class="img-fluid w-80 h-80" src="./images/img_4.jpg" style="object-fit: cover;" height="110" width="110">
+                                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                    <div class="mb-2">
+                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="./category.php?cid=3">Bootstrap</a>
+                                        <a class="text-body" href="#"><small>Oct 21, 2022</small></a>
+                                    </div>
+                                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="./blog-single.php?pid=4">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
+                                </div>
+                            </div>
+                                                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                                <img class="img-fluid w-80 h-80" src="./images/img_3.jpg" style="object-fit: cover;" height="110" width="110">
+                                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                    <div class="mb-2">
+                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="./category.php?cid=2">CSS3</a>
+                                        <a class="text-body" href="#"><small>Dec 9, 2022</small></a>
+                                    </div>
+                                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="./blog-single.php?pid=3">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
+                                </div>
+                            </div>
+                                                    </div>
                     </div>
                     <!-- Popular News End -->
 
@@ -633,28 +613,28 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
             <h5 class="mb-4 text-white text-uppercase font-weight-bold">Popular News</h5>
-            <div class="mb-3">
+                        <div class="mb-3">
                 <div class="mb-2">
-                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
+                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="./category.php?cid=1">HTML5</a>
+                    <a class="text-body" href="#"><small>Dec 9, 2022</small></a>
                 </div>
-                <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
+                <a class="small text-body text-uppercase font-weight-medium" href="">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
             </div>
-            <div class="mb-3">
+                        <div class="mb-3">
                 <div class="mb-2">
-                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
+                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="./category.php?cid=3">Bootstrap</a>
+                    <a class="text-body" href="#"><small>Oct 21, 2022</small></a>
                 </div>
-                <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
+                <a class="small text-body text-uppercase font-weight-medium" href="">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
             </div>
-            <div class="">
+                        <div class="mb-3">
                 <div class="mb-2">
-                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
+                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="./category.php?cid=2">CSS3</a>
+                    <a class="text-body" href="#"><small>Dec 9, 2022</small></a>
                 </div>
-                <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
+                <a class="small text-body text-uppercase font-weight-medium" href="">There’s a Cool New Way for Men to Wear Socks and Sandals</a>
             </div>
-        </div>
+                    </div>
         <div class="col-lg-3 col-md-6 mb-5">
             <h5 class="mb-4 text-white text-uppercase font-weight-bold">Categories</h5>
             <div class="m-n1">
@@ -668,29 +648,29 @@ function content_634dfbd8cdbfa0_42282146 (Smarty_Internal_Template $_smarty_tpl)
             <h5 class="mb-4 text-white text-uppercase font-weight-bold">Flickr Photos</h5>
             <div class="row">
                 <div class="col-4 mb-3">
-                    <a href=""><img class="w-100" src="img/news-110x110-1.jpg" alt=""></a>
+                    <a href=""><img class="w-100" src="./templates/biznews/img/news-110x110-1.jpg" alt=""></a>
                 </div>
                 <div class="col-4 mb-3">
-                    <a href=""><img class="w-100" src="img/news-110x110-2.jpg" alt=""></a>
+                    <a href=""><img class="w-100" src="./templates/biznews/img/news-110x110-2.jpg" alt=""></a>
                 </div>
                 <div class="col-4 mb-3">
-                    <a href=""><img class="w-100" src="img/news-110x110-3.jpg" alt=""></a>
+                    <a href=""><img class="w-100" src="./templates/biznews/img/news-110x110-3.jpg" alt=""></a>
                 </div>
                 <div class="col-4 mb-3">
-                    <a href=""><img class="w-100" src="img/news-110x110-4.jpg" alt=""></a>
+                    <a href=""><img class="w-100" src="./templates/biznews/img/news-110x110-4.jpg" alt=""></a>
                 </div>
                 <div class="col-4 mb-3">
-                    <a href=""><img class="w-100" src="img/news-110x110-5.jpg" alt=""></a>
+                    <a href=""><img class="w-100" src="./templates/biznews/img/news-110x110-5.jpg" alt=""></a>
                 </div>
                 <div class="col-4 mb-3">
-                    <a href=""><img class="w-100" src="img/news-110x110-1.jpg" alt=""></a>
+                    <a href=""><img class="w-100" src="./templates/biznews/img/news-110x110-1.jpg" alt=""></a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
-    <p class="m-0 text-center">&copy; <a href="#">Your Site Name</a>. All Rights Reserved.
+    <p class="m-0 text-center">&copy; <a href="#">AdminLTE</a>. All Rights Reserved.
 
 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
 Design by <a href="https://htmlcodex.com">HTML Codex</a><br>
@@ -702,8 +682,8 @@ Design by <a href="https://htmlcodex.com">HTML Codex</a><br>
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="./templates/biznews/js/jquery-3.2.1.min.js"></script>
+    <script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./templates/biznews/lib/easing/easing.min.js"></script>
     <script src="./templates/biznews/lib/owlcarousel/owl.carousel.min.js"></script>
     <!-- Template Javascript -->

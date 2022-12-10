@@ -109,6 +109,7 @@ function render_latest_posts($limit=NULL) {
       		$sub_array = array();
           // get user detail
     			$user = json_decode( get_user_by( "user_id", $row["author_id"] ), true );
+          $category = json_decode( get_category_by( "cat_id", $row["cat_id"] ), true );
     			$short_text = shorten( $row["body"], 100 );
     			// fill data into array
       		$sub_array["post_id"] = $row["post_id"];
@@ -119,7 +120,7 @@ function render_latest_posts($limit=NULL) {
           $sub_array["body"] = $short_text;
           $sub_array["status"] = $row["status"];
           $sub_array["cat_id"] = $row["cat_id"];
-          $sub_array["category"] = $row["name"];
+          $sub_array["category"] = $category["name"];
           $sub_array["image"] = $row["image"];
       		$sub_array["published"] = date( "M j, Y", strtotime( $row["published"] ) );
           $sub_array["tags"] = $row["tags"];
@@ -138,9 +139,7 @@ function render_latest_posts($limit=NULL) {
 function render_popular_posts() {
     global $conn, $smarty;
     // Assign posts table
-    $query = "SELECT a.*, b.* FROM posts a, categories b
-              WHERE a.cat_id = b.cat_id AND a.published
-              ORDER BY a.published (likes as unsigned)";
+    $query = "SELECT * FROM posts ORDER BY views DESC LIMIT 3";
 
     $result = $conn->run_query( $query );
     $rows = json_decode( $result, true );
@@ -149,6 +148,7 @@ function render_popular_posts() {
       		$sub_array = array();
           // get user detail
     			$user = json_decode( get_user_by( "user_id", $row["author_id"] ), true );
+          $category = json_decode( get_category_by( "cat_id", $row["cat_id"] ), true );
     			$short_text = shorten( $row["body"], 100 );
     			// fill data into array
       		$sub_array["post_id"] = $row["post_id"];
@@ -159,7 +159,7 @@ function render_popular_posts() {
           $sub_array["body"] = $short_text;
           $sub_array["status"] = $row["status"];
           $sub_array["cat_id"] = $row["cat_id"];
-          $sub_array["category"] = $row["name"];
+          $sub_array["category"] = $category["name"];
           $sub_array["image"] = $row["image"];
       		$sub_array["published"] = date( "M j, Y", strtotime( $row["published"] ) );
           $sub_array["tags"] = $row["tags"];
@@ -170,8 +170,8 @@ function render_popular_posts() {
       		$posts[] = $sub_array;
     };
 
-    // $smarty->assign('latest_posts', $posts);
-    $limit ? $smarty->assign('limit_posts', $posts) : $smarty->assign('latest_posts', $posts);
+    $smarty->assign('popular_posts', $posts);
+    // $limit ? $smarty->assign('limit_posts', $posts) : $smarty->assign('latest_posts', $posts);
     return true;
 };
 
@@ -187,6 +187,7 @@ function render_posts() {
       		$sub_array = array();
           // get user detail
     			$user = json_decode( get_user_by( "user_id", $row["author_id"] ), true );
+          $category = json_decode( get_category_by( "cat_id", $row["cat_id"] ), true );
     			$short_text = shorten( $row["body"], 100 );
     			// fill data into array
       		$sub_array["post_id"] = $row["post_id"];
@@ -197,7 +198,7 @@ function render_posts() {
           $sub_array["body"] = $short_text;
           $sub_array["status"] = $row["status"];
           $sub_array["cat_id"] = $row["cat_id"];
-          $sub_array["category"] = $row["name"];
+          $sub_array["category"] = $category["name"];
           $sub_array["image"] = $row["image"];
       		$sub_array["published"] = date( "M j, Y", strtotime( $row["published"] ) );
           $sub_array["tags"] = $row["tags"];
@@ -227,6 +228,7 @@ function render_posts_category( $cat_id ) {
       		$sub_array = array();
           // get user detail
     			$user = json_decode( get_user_by( "user_id", $row["author_id"] ), true );
+          $category = json_decode( get_category_by( "cat_id", $row["cat_id"] ), true );
     			$short_text = shorten( $row["body"], 100 );
     			// fill data into array
       		$sub_array["post_id"] = $row["post_id"];
@@ -237,7 +239,7 @@ function render_posts_category( $cat_id ) {
           $sub_array["body"] = $short_text;
           $sub_array["status"] = $row["status"];
           $sub_array["cat_id"] = $row["cat_id"];
-          $sub_array["category"] = $row["name"];
+          $sub_array["category"] = $category["name"];
           $sub_array["image"] = $row["image"];
       		$sub_array["published"] = date( "M j, Y", strtotime( $row["published"] ) );
           $sub_array["tags"] = $row["tags"];
@@ -267,6 +269,7 @@ function render_posts_id( $post_id ) {
       		$sub_array = array();
           // get user detail
     			$user = json_decode( get_user_by( "user_id", $row["author_id"] ), true );
+          $category = json_decode( get_category_by( "cat_id", $row["cat_id"] ), true );
     			$short_text = shorten( $row["body"], 100 );
     			// fill data into array
       		$sub_array["post_id"] = $row["post_id"];
@@ -277,7 +280,7 @@ function render_posts_id( $post_id ) {
           $sub_array["body"] = $short_text;
           $sub_array["status"] = $row["status"];
           $sub_array["cat_id"] = $row["cat_id"];
-          $sub_array["category"] = $row["name"];
+          $sub_array["category"] = $category["name"];
           $sub_array["image"] = $row["image"];
       		$sub_array["published"] = date( "M j, Y", strtotime( $row["published"] ) );
           $sub_array["tags"] = $row["tags"];

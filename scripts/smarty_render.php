@@ -31,3 +31,4 @@ $assign_categories = render_categories();
 $assign_posts = render_posts();
 $assign_latest_posts = render_latest_posts();
 $assign_limit_posts = render_latest_posts(4);
+$assign_popular_posts = render_popular_posts();

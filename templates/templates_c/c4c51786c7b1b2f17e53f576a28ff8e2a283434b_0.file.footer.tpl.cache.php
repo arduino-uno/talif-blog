@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-10-17 10:48:33
+/* Smarty version 4.1.0, created on 2022-12-09 17:27:32
   from '/var/www/html/talif-blog/templates/biznews/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_634cd091e9cce9_22076856',
+  'unifunc' => 'content_63930d940436b8_06835058',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4c51786c7b1b2f17e53f576a28ff8e2a283434b' => 
     array (
       0 => '/var/www/html/talif-blog/templates/biznews/footer.tpl',
-      1 => 1665978495,
+      1 => 1670581649,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634cd091e9cce9_22076856 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '731507106634cd091e98646_95022316';
+function content_63930d940436b8_06835058 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
+$_smarty_tpl->compiled->nocache_hash = '69203073063930d940364a5_63003811';
 ?>
 <!-- Footer Start -->
 <div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
@@ -42,27 +43,26 @@ $_smarty_tpl->compiled->nocache_hash = '731507106634cd091e98646_95022316';
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
             <h5 class="mb-4 text-white text-uppercase font-weight-bold">Popular News</h5>
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['popular_posts']->value, 'post');
+$_smarty_tpl->tpl_vars['post']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
+$_smarty_tpl->tpl_vars['post']->do_else = false;
+?>
             <div class="mb-3">
                 <div class="mb-2">
-                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
+                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="./category.php?cid=<?php echo $_smarty_tpl->tpl_vars['post']->value['cat_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['post']->value['category'];?>
+</a>
+                    <a class="text-body" href="#"><small><?php echo $_smarty_tpl->tpl_vars['post']->value['published'];?>
+</small></a>
                 </div>
-                <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
+                <a class="small text-body text-uppercase font-weight-medium" href=""><?php echo $_smarty_tpl->tpl_vars['post']->value['title'];?>
+</a>
             </div>
-            <div class="mb-3">
-                <div class="mb-2">
-                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                </div>
-                <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
-            </div>
-            <div class="">
-                <div class="mb-2">
-                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                </div>
-                <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
-            </div>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
             <h5 class="mb-4 text-white text-uppercase font-weight-bold">Categories</h5>
@@ -85,29 +85,30 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <h5 class="mb-4 text-white text-uppercase font-weight-bold">Flickr Photos</h5>
             <div class="row">
                 <div class="col-4 mb-3">
-                    <a href=""><img class="w-100" src="img/news-110x110-1.jpg" alt=""></a>
+                    <a href=""><img class="w-100" src="./templates/biznews/img/news-110x110-1.jpg" alt=""></a>
                 </div>
                 <div class="col-4 mb-3">
-                    <a href=""><img class="w-100" src="img/news-110x110-2.jpg" alt=""></a>
+                    <a href=""><img class="w-100" src="./templates/biznews/img/news-110x110-2.jpg" alt=""></a>
                 </div>
                 <div class="col-4 mb-3">
-                    <a href=""><img class="w-100" src="img/news-110x110-3.jpg" alt=""></a>
+                    <a href=""><img class="w-100" src="./templates/biznews/img/news-110x110-3.jpg" alt=""></a>
                 </div>
                 <div class="col-4 mb-3">
-                    <a href=""><img class="w-100" src="img/news-110x110-4.jpg" alt=""></a>
+                    <a href=""><img class="w-100" src="./templates/biznews/img/news-110x110-4.jpg" alt=""></a>
                 </div>
                 <div class="col-4 mb-3">
-                    <a href=""><img class="w-100" src="img/news-110x110-5.jpg" alt=""></a>
+                    <a href=""><img class="w-100" src="./templates/biznews/img/news-110x110-5.jpg" alt=""></a>
                 </div>
                 <div class="col-4 mb-3">
-                    <a href=""><img class="w-100" src="img/news-110x110-1.jpg" alt=""></a>
+                    <a href=""><img class="w-100" src="./templates/biznews/img/news-110x110-1.jpg" alt=""></a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
-    <p class="m-0 text-center">&copy; <a href="#">Your Site Name</a>. All Rights Reserved.
+    <p class="m-0 text-center">&copy; <a href="#"><?php echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['title']->value);?>
+</a>. All Rights Reserved.
 
 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
 Design by <a href="https://htmlcodex.com">HTML Codex</a><br>

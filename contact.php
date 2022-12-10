@@ -20,11 +20,5 @@
  $smarty = new Smarty;
  // Call Assigning function
  require("./scripts/smarty_render.php");
-// get values
-$cat_id = isset( $_GET['cid'] ) ? filter_var( $_GET['cid'], FILTER_SANITIZE_STRING ) : '0';
-$assign_category = render_category( $cat_id );
-$assign_post_category = render_posts_category( $cat_id );
-$assign_categories = render_categories();
-$assign_popular_posts = render_popular_posts();
 // display page
-$smarty->display('category.tpl');
+$smarty->display('contact.tpl');

@@ -30,7 +30,7 @@ $user_id = $user['user_id'];
           <div class="container-xl px-4 mt-4">
               <!-- Account page navigation-->
               <ul class="nav nav-pills">
-                  <li class="nav-item"><a class="nav-link" href="#activity" data-toggle="tab">Activity</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#activity" data-toggle="tab">Comments</a></li>
                   <li class="nav-item"><a class="nav-link active" href="#account" data-toggle="tab">Account</a></li>
                   <li class="nav-item"><a class="nav-link" href="#security" data-toggle="tab">Security</a></li>
               </ul>

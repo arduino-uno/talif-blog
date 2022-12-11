@@ -7,7 +7,8 @@ var table_comments = $('#comments_data').DataTable({
     "pageLength": 1,
     "ajax":{
         url:"./scripts/fetch_posts_comments.php",
-        type:"POST"
+        type:"POST",
+        cache: false
     },
     "columnDefs": [
         {data: {post_id:'post_id', title:'title', author_name:'author_name', author_image:'author_image', comments:'comments[]'}, className: 'text-center', name: 'post_id', targets:0, orderable: true, searchable: true}

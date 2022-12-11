@@ -27,6 +27,7 @@ $smarty->clearAllAssign();
 $smarty->clearAllCache();
 // Call Assigning function
 $assign_siteinfo = render_siteinfo();
+$assign_users = render_users();
 $assign_categories = render_categories();
 $assign_posts = render_posts();
 $assign_latest_posts = render_latest_posts();

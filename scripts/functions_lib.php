@@ -304,7 +304,7 @@ function rows_count( $tablename, $id_keyA=NULL, $id_valA=NULL, $id_keyB=NULL, $i
     $query = "SELECT * FROM $tablename" . ( $id_keyA ? " WHERE $id_keyA='$id_valA'" : "" ) . ( $id_keyB ? " AND $id_keyB='$id_valB'" : "" );
     $result = $conn->run_query( $query );
     $rows = json_decode( $result, true );
-    $rowscnt = count( $rows );
+    $rowscnt = !empty( $rows ) ? count( $rows ) : 0;
     return $rowscnt;
 };
 

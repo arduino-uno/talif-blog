@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-12-09 20:17:50
+/* Smarty version 4.1.0, created on 2022-12-11 13:29:28
   from '/var/www/html/talif-blog/templates/biznews/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6393357ec705f8_79111602',
+  'unifunc' => 'content_639578c8470c02_21861855',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6393357ec705f8_79111602 (Smarty_Internal_Template $_smarty_tpl) {
+function content_639578c8470c02_21861855 (Smarty_Internal_Template $_smarty_tpl) {
 ?>    <!DOCTYPE html>
 <html lang="en">
 <head>

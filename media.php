@@ -614,6 +614,8 @@ $(function () {
     		return found;
     };
 
+    /*
+    // For Demonstration Only
     $(document).Toasts('create', {
           class: 'bg-info',
           title: '[ DEMO ] AdminLTE - Talif',
@@ -625,7 +627,7 @@ $(function () {
           autohide: true,
           delay: 4000
     })
-
+    */
 });
 
 function logoutModal() {

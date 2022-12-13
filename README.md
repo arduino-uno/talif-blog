@@ -19,14 +19,33 @@ description: Project Documentation for user
 
 Simple PHP blogging system.
 
-* [Introduction](./#introduction)
-  * [Demo](./#demo)
-  * [Features](./#features)
-* [Get started](./#get-started)
-  * [Requirements](./#requirements)
-* [Contact](./#contact)
-* [Thank you for your purchase](./#thank-you-open-source)
-* [License](./#license)
+* [Introduction](./##introduction)
+  * [Demo](./###demo)
+  * [Features](./###features)
+* [Get started](./##get-started)
+  * [Requirements](./###requirements)
+* [Contact](./##contact)
+* [Screenshot](./##Screenshot)
+  * [Login Page](./###login-page)
+  * [Dashboard v2](./###dashboard-v2)
+  * [User Profile - Comments](./###user-profile-comments)
+  * [User Profile - Account](./###user-profile-account)
+  * [User Profile - Security](./###user-profile-security)
+  * [Activity Logs](./###activity-logs)
+  * [Messaging](./###messaging)
+  * [Web Contents](./###web-contents)
+    * [Manage Pages](./####manage-pages)
+    * [Manage Posts](./####manage-posts)
+    * [Manage Categories](./####manage-categories)
+    * [Manage Contacts](./####manage-contacts)
+    * [Manage Comments](./####manage-comments)
+    * [Manage Users](./####manage-users)
+  * [Site Manager](./###site-manager)
+    * [Site Info](./####site-info)
+    * [Site Templates](./####site-templates)
+* [Contact Us](./###site-us)
+* [Thank you for your purchase](./##thank-you-for-your-purchase)
+* [License](./##license)
 
 ## Introduction
 
@@ -70,6 +89,54 @@ If you want to host Talif yourself, you will need a server with:
 9. open any browser and type `http://localhost/talif-blog`.
    * first register and then login
    * admin login details : **`Username`**`: admin |`**`Password`**`: admin`
+
+## Screenshots
+* ### Login Page
+  ![login-page](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Log-in.png)
+
+* ### Dashboard v2
+  ![dashboard-v2](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Log-in.png)
+  
+* ### User Profile - Comments
+  ![user-profile](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-User-Profile-1.png)
+
+* ### User Profile - Account
+  ![user-profile-account](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-User-Profile-2.png)
+  
+* ### User Profile - Security
+  ![user-profile-security](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-User-Profile-3.png)
+  
+* ### Activity Logs
+  ![activity-logs](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Dashboard-3.png)
+  
+* ### Messaging
+  ![messaging](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Dashboard-4.png)
+  
+* ### Web Contents
+  * #### Manage Pages
+    ![manage-pages](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Manage-Pages.png)
+    
+  * #### Manage Posts
+    ![manage-posts](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Manage-Posts.png)
+    
+  * #### Manage Categories
+    ![manage-categories](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Manage-Categories.png)
+    
+  * #### Manage Contacts
+    ![manage-contacts](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Manage-Contacts.png)
+    
+  * #### Manage Comments
+    ![manage-comments](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Manage-Comments.png)
+    
+  * #### Manage Users
+    ![manage-users](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Manage-Users.png)
+    
+* ### Site Manager
+  * #### Site Info
+    ![site-info](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-SiteInfo.png)
+    
+  * #### Site Templates
+    ![site-templates](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-SiteTemplate.png)
 
 ## Contact
 

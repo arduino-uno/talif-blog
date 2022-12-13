@@ -92,51 +92,51 @@ If you want to host Talif yourself, you will need a server with:
 
 ## Screenshots
 * ### Login Page
-  ![login-page](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Log-in.png)
+  ![login-page](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Log-in.png)
 
 * ### Dashboard v2
-  ![dashboard-v2](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Log-in.png)
+  ![dashboard-v2](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Log-in.png)
   
 * ### User Profile - Comments
-  ![user-profile](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-User-Profile-1.png)
+  ![user-profile](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-User-Profile-1.png)
 
 * ### User Profile - Account
-  ![user-profile-account](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-User-Profile-2.png)
+  ![user-profile-account](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-User-Profile-2.png)
   
 * ### User Profile - Security
-  ![user-profile-security](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-User-Profile-3.png)
+  ![user-profile-security](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-User-Profile-3.png)
   
 * ### Activity Logs
-  ![activity-logs](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Dashboard-3.png)
+  ![activity-logs](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Dashboard-3.png)
   
 * ### Messaging
-  ![messaging](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Dashboard-4.png)
+  ![messaging](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Dashboard-4.png)
   
 * ### Web Contents
   * #### Manage Pages
-    ![manage-pages](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Manage-Pages.png)
+    ![manage-pages](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Manage-Pages.png)
     
   * #### Manage Posts
-    ![manage-posts](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Manage-Posts.png)
+    ![manage-posts](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Manage-Posts.png)
     
   * #### Manage Categories
-    ![manage-categories](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Manage-Categories.png)
+    ![manage-categories](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Manage-Categories.png)
     
   * #### Manage Contacts
-    ![manage-contacts](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Manage-Contacts.png)
+    ![manage-contacts](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Manage-Contacts.png)
     
   * #### Manage Comments
-    ![manage-comments](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Manage-Comments.png)
+    ![manage-comments](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Manage-Comments.png)
     
   * #### Manage Users
-    ![manage-users](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-Manage-Users.png)
+    ![manage-users](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Manage-Users.png)
     
 * ### Site Manager
   * #### Site Info
-    ![site-info](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-SiteInfo.png)
+    ![site-info](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-SiteInfo.png)
     
   * #### Site Templates
-    ![site-templates](https://raw.githubusercontent.com/arduino-uno/talif-blog/screenshots/AdminLTE-3-SiteTemplate.png)
+    ![site-templates](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-SiteTemplate.png)
 
 ## Contact
 

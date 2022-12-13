@@ -16,7 +16,7 @@ if ( isset( $_POST ) ) {
     $arr_data = Array(
         "ID"				  => $cat_id,
         "name"        => $name,
-        "description" => $description
+        "description" => htmlentities( $description )
     );
 
     // Call update data function

@@ -33,8 +33,8 @@ if ( isset( $_POST ) ) {
         "user_fullname" => $user_fullname,
         "user_email" 		=> $user_email,
         "user_phone"    => $user_phone,
-        "user_orgname"  => $user_orgname,
-        "user_location" => $user_location,
+        "user_orgname"  => htmlentities( $user_orgname ),
+        "user_location" => htmlentities( $user_location ),
         "user_birthday" => $user_birthday,
         "user_role"     => $user_role,
         "user_status"   => $status

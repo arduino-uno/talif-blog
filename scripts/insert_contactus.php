@@ -17,8 +17,8 @@ if ( isset( $_POST ) ) {
     $arr_data = Array(
         "fullname"		=> $fullname,
         "email"       => $email,
-        "subject"     => $subject,
-        "message"     => $message
+        "subject"     => htmlentities( $subject ),
+        "message"     => htmlentities( $message )
     );
     // Call insert data function
     $result = $conn->insert_table( "contacts", $arr_data );

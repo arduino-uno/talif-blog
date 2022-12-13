@@ -16,8 +16,8 @@ if ( isset( $_POST ) ) {
     $tags = isset( $_POST['upt_page_tags'] ) ? filter_var( $_POST['upt_page_tags'], FILTER_SANITIZE_STRING ) : '';
 
     $arr_data = Array(
-        "title"				=> $title,
-        "body"        => $body,
+        "title"				=> htmlentities( $title ),
+        "body"        => htmlentities( $body ),
         "tags" 			  => $tags
     );
 

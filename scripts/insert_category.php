@@ -16,7 +16,7 @@ if ( isset( $_POST ) ) {
     // set Array new Data
     $arr_data = Array(
         "name"				=> $name,
-        "description" => $description
+        "description" => htmlentities( $description )
     );
 
     // Call insert data function

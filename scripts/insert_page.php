@@ -18,8 +18,8 @@ if ( isset( $_POST ) ) {
 
     $arr_data = Array(
         "author"			=> $user['user_id'],
-        "title"				=> $title,
-        "body"        => $body,
+        "title"				=> htmlentities( $title ),
+        "body"        => htmlentities( $body ),
         "tags" 			  => $tags
     );
 

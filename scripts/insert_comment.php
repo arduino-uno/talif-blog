@@ -24,7 +24,7 @@ if ( isset( $_POST ) ) {
         "fullname"		=> $fullname,
         "email"       => $email,
         "website"     => $website,
-        "message"     => $message
+        "message"     => htmlentities( $message )
     );
     // Call insert data function
     $result = $conn->insert_table( "comments", $arr_data );

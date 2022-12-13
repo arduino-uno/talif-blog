@@ -31,10 +31,10 @@ if ( isset( $_POST ) ) {
 
 				// set Array new Data
 				$arr_data = Array(
-						"title"				=> $title,
-						"description" => $description,
-						"address" 		=> $address,
-						"phone" 			=> $phone,
+						"title"				=> htmlentities( $title ),
+						"description" => htmlentities( $description ),
+						"address" 		=> htmlentities( $address ),
+						"phone" 			=> htmlentities( $phone ),
 						"fax" 				=> $fax,
 						"email" 			=> $email,
 						"logo" 				=> $temp_name,

@@ -95,7 +95,7 @@ If you want to host Talif yourself, you will need a server with:
   ![login-page](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Log-in.png)
 
 * ### Dashboard v2
-  ![dashboard-v2](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Log-in.png)
+  ![dashboard-v2](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-Dashboard-2.png)
   
 * ### User Profile - Comments
   ![user-profile](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/screenshots/AdminLTE-3-User-Profile-1.png)

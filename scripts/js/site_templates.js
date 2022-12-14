@@ -20,21 +20,21 @@ var table_templates = $('#templates_data').DataTable({
 
         // on each row callback
         var div_row = $("div.row#template_list");
-        div_row.append('<div class="col-md-4">' +
-            '<div class="card mb-4 shadow-sm">' +
-            '<img src="./images/' + data.image + '" class="bd-placeholder-img card-img-top" width="100%" height="225"/>' +
-            '<div class="card-body">' +
-            '<h4><a href="#" onclick="template_detail(' + data.temp_id + ')"' + data.title + '>' + data.title + '</a></h4>' +
-            '<p class="card-text">' + data.description + '</p>' +
-            '<div class="d-flex justify-content-between align-items-center">' +
-            '<div class="btn-group">' +
-            '<button type="button" class="btn btn-sm btn-outline-secondary" onclick="template_detail(' + data.temp_id + ')">View</button>' + txt_btn +
-            '</div>' +
-            '<small class="text-muted">' + data.created + '</small>' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
-        '</div>');
+        div_row.append("<div class='col-md-4'>" +
+            "<div class='card mb-4 shadow-sm'>" +
+            "<img src='./images/" + data.image + "' class='bd-placeholder-img card-img-top' width='100%' height='225'/>" +
+            "<div class='card-body'>" +
+            "<h4><a href='#' onclick='template_detail(" + data.temp_id + ")'" + data.title + ">" + data.title + "</a></h4>" +
+            "<p class='card-text'>" + data.description + "</p>" +
+            "<div class='d-flex justify-content-between align-items-center'>" +
+            "<div class='btn-group'>" +
+            "<button type='button' class='btn btn-sm btn-outline-secondary' onclick='template_detail(" + data.temp_id + ")'>View</button>" + txt_btn +
+            "</div>" +
+            "<small class='text-muted'>" + data.created + "</small>" +
+            "</div>" +
+            "</div>" +
+            "</div>" +
+        "</div>");
 
       },
     "preDrawCallback": function( settings ) {

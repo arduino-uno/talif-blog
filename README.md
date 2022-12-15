@@ -2,11 +2,11 @@
 description: Project Documentation for user
 ---
 
-# Talif Documentation
+# Documentation
 
-<p align="center"><img src="images/ninja-logo.png" alt="ninja-logo"Talif Web-Blog</p>
+<p align="center"><img src="images/ninja-logo.png" alt="ninja-logo"AdminLTE - Web BLog Web-Blog</p>
 
-<h1 align="center">AdminLTE - Talif Web-Blog</h1>
+<h1 align="center">AdminLTE - Web-Blog</h1>
 <div align="center">
 
 [![bootstrap](https://img.shields.io/badge/Bootstrap-4.6-informational.svg?logo=bootstrap&logoColor=white)](https://getbootstrap.com)
@@ -49,7 +49,7 @@ Simple PHP blogging system.
 
 ## Introduction
 
-Talif is a simple CMS for easy blogging. It uses AdminLTE for Admin Panel & Dashboard. Talif is Easy to Install. You can login to the dashboard to do everything form creating a blog post or page to setting site preferences or even change your Blog Template. This is what it currently looks like:
+This PHP project is a simple CMS for easy blogging. It uses AdminLTE for Admin Panel & Dashboard. AdminLTE - Web BLog is Easy to Install. You can login to the dashboard to do everything form creating a blog post or page to setting site preferences or even change your Blog Template. This is what it currently looks like:
 
 ![screen-shot](https://raw.githubusercontent.com/arduino-uno/talif-blog/main/images/screenshot.png)
 
@@ -68,7 +68,7 @@ This is an example of how you may give instructions on setting up your project l
 
 ### Requirements
 
-If you want to host Talif yourself, you will need a server with:
+If you want to host AdminLTE - Web BLogyourself, you will need a server with:
 
 ```
 [+] Minimum PHP v5.6

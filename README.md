@@ -6,7 +6,7 @@ description: Project Documentation for user
 
 <p align="center"><img src="images/item-logo.png" alt="ninja-logo" height="300px" alt="AdminLTE - Web BLog"></p>
 
-<h1 align="center">AdminLTE - Web-Blog</h1>
+<h2 align="center">AdminLTE - Web-Blog</h1>
 <div align="center">
 
 [![bootstrap](https://img.shields.io/badge/Bootstrap-4.6-informational.svg?logo=bootstrap&logoColor=white)](https://getbootstrap.com)

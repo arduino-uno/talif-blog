@@ -20,7 +20,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="./index.php"><b>Admin</b>LTE</a>&nbsp;-&nbsp;<span class="arabic-font" style="font-size: 1.5em;font-weight: 600;"><a href="./index.html">تأليف</a></span>
+    <a href="./index.php"><b>Admin</b>LTE</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -110,7 +110,7 @@ $(function () {
         });
 
     });
-    
+
 });
 </script>
 </body>

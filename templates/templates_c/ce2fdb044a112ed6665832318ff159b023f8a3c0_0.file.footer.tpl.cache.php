@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-10-15 10:38:30
+/* Smarty version 4.1.0, created on 2022-12-14 09:19:49
   from '/var/www/html/talif-blog/templates/wordify/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_634a2b362700f7_86488632',
+  'unifunc' => 'content_639932c58a2e36_67474695',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ce2fdb044a112ed6665832318ff159b023f8a3c0' => 
     array (
       0 => '/var/www/html/talif-blog/templates/wordify/footer.tpl',
-      1 => 1665805105,
+      1 => 1670495984,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634a2b362700f7_86488632 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '1759445476634a2b3626da34_07202497';
+function content_639932c58a2e36_67474695 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '112728332639932c57cbeb7_97047923';
 ?>
 <footer class="site-footer">
   <div class="container">
@@ -151,6 +151,40 @@ $_smarty_tpl->compiled->nocache_hash = '1759445476634a2b3626da34_07202497';
 >
 <?php echo '<script'; ?>
  src="./templates/wordify/js/main.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript" language="javascript">
+// jQuery document ready
+$(function () {
+
+    $("form#form_contactus").submit( function(e) {
+        var form = $("form#form_contactus");
+        e.preventDefault();
+        $.ajax({
+            type: form.attr('method'),
+            url: form.attr('action'),
+            data: new FormData( this ),
+            processData: false,  // Important!
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            success: function ( response ) {
+
+                if ( response.indexOf("Inserted") !== -1 ) {
+                    alert('The data was inserted successfully.');
+                } else {
+                    alert('Something went wrong.');
+                }
+
+            };
+
+            window.location.reload();
+
+        });
+    });
+
+});
+<?php echo '</script'; ?>
 >
 <?php }
 }

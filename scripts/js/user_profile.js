@@ -26,88 +26,88 @@ var table_comments = $('#comments_data').DataTable({
         // on each row callback
         var div_row = $("div.row#comments_list");
 
-        var html_text = '<div class="d-flex flex-column col-md-12">' +
-            '<div class="d-flex flex-row align-items-center text-left comment-top p-2 border-bottom px-4">' +
-            '<div class="profile-image">' +
-              '<img class="rounded-circle" src="./images/' + data.author_image + '" width="70">' +
-            '</div>' +
-            '<div class="d-flex flex-column-reverse flex-grow-0 align-items-center votings ml-1">' +
-              '<a href="#" onclick="prev_page()"><i class="fa fa-sort-up fa-2x hit-voting"></i></a>' +
-              '<span>' + ( table_comments.page.info().page + 1 ) + '</span>' +
-              '<a href="#" onclick="next_page()"><i class="fa fa-sort-down fa-2x hit-voting"></i></a>' +
-            '</div>' +
-            '<div class="d-flex flex-column ml-3">' +
-              '<div class="d-flex flex-row post-title">' +
-                '<h5>' + data.title + '</h5>' +
-                '<span class="ml-2">(' + data.author_name + ')</span>' +
-              '</div>' +
-              '<div class="d-flex flex-row align-items-center align-content-center post-title">' +
-                '<span class="bdge mr-1">' + data.comments.length + '</span>' +
-                '<span class="mr-2 comments">&nbsp;comments&nbsp;</span>' +
-                '<span class="mr-2 dot"></span>' +
-                '<span>6 hours ago</span>' +
-              '</div>' +
-            '</div>' +
-          '</div>' +
-          '<div class="d-flex flex-column p-2 px-4">' +
-            '<div class="d-flex flex-row add-comment-section mt-4 mb-4">' +
-              '<img class="img-fluid img-responsive rounded-circle mr-2" src="./images/' + data.author_image + '" width="38">' +
-              '<input type="text" class="form-control mr-3" placeholder="Add comment">' +
-              '<button class="btn btn-primary" type="button">Comment</button>' +
-            '</div>' +
-            '<div class="collapsable-comment">' +
-              '<div class="d-flex flex-row justify-content-between align-items-center action-collapse p-2" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1">' +
-                '<span>' + data.comments.length + '&nbsp;Comments</span><i class="fa fa-chevron-down servicedrop"></i>' +
-              '</div>' +
-              '<div id="collapse-1" class="collapse">';
+        var html_text = "<div class='d-flex flex-column col-md-12'>" +
+            "<div class='d-flex flex-row align-items-center text-left comment-top p-2 border-bottom px-4'>" +
+            "<div class='profile-image'>" +
+              "<img class='rounded-circle' src='./images/" + data.author_image + "' width='70'>" +
+            "</div>" +
+            "<div class='d-flex flex-column-reverse flex-grow-0 align-items-center votings ml-1'>" +
+              "<a href='#' onclick='prev_page()'><i class='fa fa-sort-up fa-2x hit-voting'></i></a>" +
+              "<span>" + ( table_comments.page.info().page + 1 ) + "</span>" +
+              "<a href='#' onclick='next_page()'><i class='fa fa-sort-down fa-2x hit-voting'></i></a>" +
+            "</div>" +
+            "<div class='d-flex flex-column ml-3'>" +
+              "<div class='d-flex flex-row post-title'>" +
+                "<h5>" + data.title + "</h5>" +
+                "<span class='ml-2'>(" + data.author_name + ")</span>" +
+              "</div>" +
+              "<div class='d-flex flex-row align-items-center align-content-center post-title'>" +
+                "<span class='bdge mr-1'>" + data.comments.length + "</span>" +
+                "<span class='mr-2 comments'>&nbsp;comments&nbsp;</span>" +
+                "<span class='mr-2 dot'></span>" +
+                "<span>6 hours ago</span>" +
+              "</div>" +
+            "</div>" +
+          "</div>" +
+          "<div class='d-flex flex-column p-2 px-4'>" +
+            "<div class='d-flex flex-row add-comment-section mt-4 mb-4'>" +
+              "<img class='img-fluid img-responsive rounded-circle mr-2' src='./images/" + data.author_image + "' width='38'>" +
+              "<input type='text' class='form-control mr-3' placeholder='Add comment'>" +
+              "<button class='btn btn-primary' type='button'>Comment</button>" +
+            "</div>" +
+            "<div class='collapsable-comment'>" +
+              "<div class='d-flex flex-row justify-content-between align-items-center action-collapse p-2' data-toggle='collapse' aria-expanded='false' aria-controls='collapse-1' href='#collapse-1'>" +
+                "<span>" + data.comments.length + "&nbsp;Comments</span><i class='fa fa-chevron-down servicedrop'></i>" +
+              "</div>" +
+              "<div id='collapse-1' class='collapse'>";
 
         for(var i=0;i<data.comments.length;i++) {
 
             if ( data.comments[i].parent_id == 0 ) {
 
-                html_text += '<div class="commented-section mt-2">' +
-                  '<div class="d-flex flex-row align-items-center commented-user">' +
-                    '<button type="button" class="btn btn-default rounded-circle btn-lg m-1 mr-2">' + getInitials( data.comments[i].fullname ) + '</button>' +
-                    '<h5 class="mr-2">' + data.comments[i].fullname + '</h5>' +
-                    '<span class="dot mb-1"></span>' +
-                    '<span class="mb-1 ml-2">4 hours ago</span>' +
-                  '</div>' +
-                  '<div class="comment-text-sm">' +
-                    '<span>' + data.comments[i].message +
-                  '</div>' +
-                  '<div class="reply-section">' +
-                    '<div class="d-flex flex-row align-items-center voting-icons">' +
-                      '<i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i>' +
-                      '<i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i>' +
-                      '<span class="ml-2">10</span>' +
-                      '<span class="dot ml-2"></span>' +
-                      '<h6 class="ml-2 mt-1">Reply</h6>' +
-                    '</div>' +
-                  '</div>' +
-                '</div>';
+                html_text += "<div class='commented-section mt-2'>" +
+                  "<div class='d-flex flex-row align-items-center commented-user'>" +
+                    "<button type='button' class='btn btn-default rounded-circle btn-lg m-1 mr-2'>" + getInitials( data.comments[i].fullname ) + "</button>" +
+                    "<h5 class='mr-2'>" + data.comments[i].fullname + "</h5>" +
+                    "<span class='dot mb-1'></span>" +
+                    "<span class='mb-1 ml-2'>4 hours ago</span>" +
+                  "</div>" +
+                  "<div class='comment-text-sm'>" +
+                    "<span>" + data.comments[i].message +
+                  "</div>" +
+                  "<div class='reply-section'>" +
+                    "<div class='d-flex flex-row align-items-center voting-icons'>" +
+                      "<i class='fa fa-sort-up fa-2x mt-3 hit-voting'></i>" +
+                      "<i class='fa fa-sort-down fa-2x mb-3 hit-voting'></i>" +
+                      "<span class='ml-2'>10</span>" +
+                      "<span class='dot ml-2'></span>" +
+                      "<h6 class='ml-2 mt-1'>Reply</h6>" +
+                    "</div>" +
+                  "</div>" +
+                "</div>";
 
             } else {
 
-                html_text += '<div class="commented-section mt-2 ml-5">' +
-                  '<div class="d-flex flex-row align-items-center commented-user">' +
-                    '<button type="button" class="btn btn-default rounded-circle btn-lg m-1 mr-2">' + getInitials( data.comments[i].fullname ) + '</button>' +
-                    '<h5 class="mr-2">' + data.comments[i].fullname + '</h5>' +
-                    '<span class="dot mb-1"></span>' +
-                    '<span class="mb-1 ml-2">4 hours ago</span>' +
-                  '</div>' +
-                  '<div class="comment-text-sm">' +
-                    '<span>' + data.comments[i].message +
-                  '</div>' +
-                  '<div class="reply-section">' +
-                    '<div class="d-flex flex-row align-items-center voting-icons">' +
-                      '<i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i>' +
-                      '<i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i>' +
-                      '<span class="ml-2">10</span>' +
-                      '<span class="dot ml-2"></span>' +
-                      '<h6 class="ml-2 mt-1">Reply</h6>' +
-                    '</div>' +
-                  '</div>' +
-                '</div>';
+                html_text += "<div class='commented-section mt-2 ml-5'>" +
+                  "<div class='d-flex flex-row align-items-center commented-user'>" +
+                    "<button type='button' class='btn btn-default rounded-circle btn-lg m-1 mr-2'>" + getInitials( data.comments[i].fullname ) + "</button>" +
+                    "<h5 class='mr-2'>" + data.comments[i].fullname + "</h5>" +
+                    "<span class='dot mb-1'></span>" +
+                    "<span class='mb-1 ml-2'>4 hours ago</span>" +
+                  "</div>" +
+                  "<div class='comment-text-sm'>" +
+                    "<span>" + data.comments[i].message +
+                  "</div>" +
+                  "<div class='reply-section'>" +
+                    "<div class='d-flex flex-row align-items-center voting-icons'>" +
+                      "<i class='fa fa-sort-up fa-2x mt-3 hit-voting'></i>" +
+                      "<i class='fa fa-sort-down fa-2x mb-3 hit-voting'></i>" +
+                      "<span class='ml-2'>10</span>" +
+                      "<span class='dot ml-2'></span>" +
+                      "<h6 class='ml-2 mt-1'>Reply</h6>" +
+                    "</div>" +
+                  "</div>" +
+                "</div>";
 
             }
 

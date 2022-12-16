@@ -142,7 +142,7 @@
                             <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
                         </div>
                         <div class="bg-white text-center border border-top-0 p-3">
-                            <a href="https://adminlte.io" target="_blank"><img class="img-fluid rounded" alt="Sponsor Logo" src="./images/envato_logo.jpg" alt=""></a>
+                            <a href="https://www.envato.com" target="_blank"><img class="img-fluid rounded" alt="Sponsor Logo" src="./images/no_image.png" alt=""></a>
                         </div>
                     </div>
                     <!-- Ads End -->

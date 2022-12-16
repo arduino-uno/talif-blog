@@ -15,5 +15,16 @@ An example of section looped foreach:
     <br>
 </fieldset></p>
 {/foreach}
+<p>&nbsp;</p>
+
+An example of posts looped foreach:
+{foreach $posts as $post}
+<p><fieldset>
+Title:{$post.title}<br>
+Body:{$post.body}<br>
+Image:<img src="./images/{$post.image}" alt="{$post.image}" height="300px"><br><span align="center">{$post.image}</span><br>
+Published:{$post.published}
+</fieldset></p>
+{/foreach}
 
 {include file="footer.tpl"}

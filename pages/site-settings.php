@@ -44,7 +44,7 @@
                       <div class="col-6">
                         <fieldset class="form-group">
                   			<label>Company Logo</label><br>
-                  				<img style="background:transparent;" src="./images/tokopedia.png" width="300px" name="compLogo" id="compLogo" class="centered">
+                  				<img style="background:transparent;border: 2px solid #C0C0C0;border-radius: 5px;" src="./images/no_image.png" width="300px" name="compLogo" id="compLogo" class="centered">
                   			</fieldset>
                   			<fieldset class="form-group">
                   				<label for="basicInputFile">Change Logo</label>

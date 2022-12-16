@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-12-09 20:14:42
+/* Smarty version 4.1.0, created on 2022-12-16 09:30:22
   from '/var/www/html/talif-blog/templates/biznews/category.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_639334c26e64e0_77762048',
+  'unifunc' => 'content_639bd83e266176_59794933',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1691792efaaee4e0f3e2e58e2979fd846bb03187' => 
     array (
       0 => '/var/www/html/talif-blog/templates/biznews/category.tpl',
-      1 => 1670591538,
+      1 => 1670986038,
       2 => 'file',
     ),
   ),
@@ -22,8 +22,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_639334c26e64e0_77762048 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '1719454047639334c26d0105_83339300';
+function content_639bd83e266176_59794933 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '1611172847639bd83e1b0207_28413784';
 ?>
     <?php $_smarty_tpl->_subTemplateRender("file:header_1.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -133,7 +133,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
                         </div>
                         <div class="bg-white text-center border border-top-0 p-3">
-                            <a href="https://adminlte.io" target="_blank"><img class="img-fluid rounded" alt="Sponsor Logo" src="./images/envato_logo.jpg" alt=""></a>
+                            <a href="https://www.envato.com" target="_blank"><img class="img-fluid rounded" alt="Sponsor Logo" src="./images/no_image.png" alt=""></a>
                         </div>
                     </div>
                     <!-- Ads End -->

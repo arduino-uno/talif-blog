@@ -1,10 +1,15 @@
 <?php
 // Sets the PHP options
 ini_set('memory_limit','256M');
-ini_set('upload_max_filesize','12M');
-ini_set('post_max_size','12M');
+ini_set('max_execution_time', '300');
+ini_set('max_input_time', '-1');
+ini_set('upload_max_filesize','25M');
+ini_set('post_max_size','20M');
+ini_set('max_input_vars','10000');
 ini_set('file_uploads', 'On');
-ini_set('max_execution_time', '180');
+ini_set('suhosin.get.max_vars', '10000');
+ini_set('suhosin.post.max_vars', '10000');
+ini_set('suhosin.request.max_vars', '10000');
 // Set Database Config
 define( "DB_HOST", "localhost" );
 define( "DB_USERNAME", "root" );

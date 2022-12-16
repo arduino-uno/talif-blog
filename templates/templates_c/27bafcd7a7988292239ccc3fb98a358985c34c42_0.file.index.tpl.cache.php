@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-12-09 20:14:23
+/* Smarty version 4.1.0, created on 2022-12-14 09:54:26
   from '/var/www/html/talif-blog/templates/biznews/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_639334afb96362_27498666',
+  'unifunc' => 'content_63993ae25a4ae3_09620149',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '27bafcd7a7988292239ccc3fb98a358985c34c42' => 
     array (
       0 => '/var/www/html/talif-blog/templates/biznews/index.tpl',
-      1 => 1670591660,
+      1 => 1670986062,
       2 => 'file',
     ),
   ),
@@ -22,9 +22,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_639334afb96362_27498666 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63993ae25a4ae3_09620149 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/talif-blog/smarty/plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
-$_smarty_tpl->compiled->nocache_hash = '354688792639334afb76609_37447993';
+$_smarty_tpl->compiled->nocache_hash = '109924265263993ae24c8832_54984105';
 ?>
     <?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -164,7 +164,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
                         </div>
                         <div class="bg-white text-center border border-top-0 p-3">
-                            <a href="https://adminlte.io" target="_blank"><img class="img-fluid rounded" alt="Sponsor Logo" src="./images/envato_logo.jpg" alt=""></a>
+                            <a href="https://www.envato.com" target="_blank"><img class="img-fluid rounded" alt="Sponsor Logo" src="./images/no_image.png" alt=""></a>
                         </div>
                     </div>
                     <!-- Ads End -->

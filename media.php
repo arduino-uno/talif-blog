@@ -619,14 +619,14 @@ $(function () {
           class: 'bg-info',
           title: '[ DEMO ] AdminLTE - Talif',
           subtitle: 'Just now ..',
-          body: '<center><span class="arabic-font text-center" style="font-size: 4em;text-shadow: 6px 6px 6px #000;">تأليف</span></center><h4 class="text-center mt-2" style="text-shadow: 6px 6px 6px #000;">Simple WebBlog CMS</h4>',
+          body: '<center><img src="./images/ninja-logo.png" class="img-thumbnail" style="border:0;background:transparent;" alt="Talif-Blog Logo"><span class="arabic-font text-center" style="font-size: 4em;text-shadow: 6px 6px 6px #000;">تأليف</span></center><h4 class="text-center mt-2" style="text-shadow: 6px 6px 6px #000;">Simple WebBlog CMS</h4>',
           image: './images/AdminLTELogo.png',
           imageAlt: 'Application Logo',
           position: 'topRight',
           autohide: true,
           delay: 4000
     })
-    
+
 });
 
 function logoutModal() {

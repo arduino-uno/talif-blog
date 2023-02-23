@@ -144,10 +144,6 @@ If you want to host AdminLTE - Web BLog by yourself, you will need a server with
 <b>By:</b> Agah Nata</br>
 <b>Email:</b> [hashcat80@gmail.com](mailto:hashcat80@gmail.com)
 
-## Thank you for your purchase
-
-Thank you for purchasing our product. If you have any questions that are beyond the scope of this help file, please feel free to email. Thanks so much!.
-
 ## License
 
 Copyright © 2022
